@@ -4,8 +4,6 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { Providers } from '@/components/Providers'
-import BackgroundCursorEffects from '@/components/BackgroundCursorEffects'
-import MagneticCursor from '@/components/MagneticCursor'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,8 +30,6 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <Providers>
-                    <BackgroundCursorEffects />
-                    <MagneticCursor />
                     <Navigation />
                     <main>{children}</main>
                     <Footer />
