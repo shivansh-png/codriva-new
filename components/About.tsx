@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
+import Link from 'next/link'
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger)
 }
@@ -192,18 +192,18 @@ const About = () => {
                             solutions that drive growth, efficiency, and innovation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button
-                                onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
+                        <Link
+                            href="/services"
                                 className="btn-primary"
                             >
                                 Our Services
-                            </button>
-                            <button
-                                onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                            </Link>
+                        <Link
+                            href="/portfolio"
                                 className="btn-outline"
                             >
                                 View Portfolio
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

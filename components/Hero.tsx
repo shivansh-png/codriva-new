@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-
+import Link from 'next/link'
 const Hero = () => {
     const heroRef = useRef<HTMLDivElement>(null)
     const titleRef = useRef<HTMLHeadingElement>(null)
@@ -139,18 +139,18 @@ const Hero = () => {
                     </p>
 
                     <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button
-                            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                        <Link
+                            href="/contact"
                             className="btn-primary text-lg px-8 py-3 magnetic"
                         >
                             Start your project
-                        </button>
-                        <button
-                            onClick={() => document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                        </Link>
+                        <Link
+                            href="/portfolio"
                             className="btn-outline text-lg px-8 py-3 magnetic"
                         >
                             View our work
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Stats */}

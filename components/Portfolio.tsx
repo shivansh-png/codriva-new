@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Link from 'next/link'
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger)
@@ -302,12 +303,12 @@ const Portfolio = () => {
                             Let's work together to create something amazing.
                             We're always excited to take on new challenges.
                         </p>
-                        <button
-                            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                        <Link
+                            href="/contact"
                             className="btn-primary"
                         >
                             Start Your Project
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

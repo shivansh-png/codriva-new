@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
+import Link from 'next/link'
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger)
 }
@@ -36,10 +36,10 @@ const Footer = () => {
 
     const footerLinks = {
         Company: [
-            { name: 'About', href: '#about' },
-            { name: 'Services', href: '#services' },
-            { name: 'Portfolio', href: '#portfolio' },
-            { name: 'Contact', href: '#contact' }
+            { name: 'About', href: '/about' },
+            { name: 'Services', href: '/services' },
+            { name: 'Portfolio', href: '/portfolio' },
+            { name: 'Contact', href: '/contact' }
         ],
         Services: [
             { name: 'Web Development', href: '#' },
@@ -61,12 +61,12 @@ const Footer = () => {
         ]
     }
 
-    const scrollToSection = (id: string) => {
-        const element = document.querySelector(id)
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' })
-        }
-    }
+   // const scrollToSection = (id: string) => {
+   //     const element = document.querySelector(id)
+   //     if (element) {
+   //         element.scrollIntoView({ behavior: 'smooth' })
+   //     }
+   // }
 
     return (
         <footer ref={footerRef} className="relative text-white overflow-hidden">
@@ -134,22 +134,30 @@ const Footer = () => {
                             <div key={title}>
                                 <h3 className="font-semibold text-white mb-4">{title}</h3>
                                 <ul className="space-y-3">
-                                    {links.map((link) => (
-                                        <li key={link.name}>
-                                            <a
-                                                href={link.href}
-                                                onClick={(e) => {
-                                                    if (link.href.startsWith('#')) {
-                                                        e.preventDefault()
-                                                        scrollToSection(link.href)
-                                                    }
-                                                }}
-                                                className="text-[#8b949e] hover:text-white transition-colors duration-200 text-sm"
-                                            >
-                                                {link.name}
-                                            </a>
-                                        </li>
-                                    ))}
+                                     {links.map((link) => {
+        const isInternal = link.href.startsWith('/')
+        return (
+          <li key={link.name}>
+            {isInternal ? (
+              <Link
+                href={link.href}
+                className="text-[#8b949e] hover:text-white transition-colors duration-200 text-sm"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                href={link.href}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="text-[#8b949e] hover:text-white transition-colors duration-200 text-sm"
+              >
+                {link.name}
+              </a>
+            )}
+          </li>
+        )
+      })}
                                 </ul>
                             </div>
                         ))}
