@@ -213,7 +213,7 @@ const Contact = () => {
 
                 <div className="grid lg:grid-cols-2 gap-16">
                     {/* Contact Form */}
-                    <div ref={formRef}>
+                    <div>
                         <div className="card p-8">
                             <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
                                 Send us a message
@@ -245,7 +245,7 @@ const Contact = () => {
                                 </div>
                             )}
 
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] mb-2">
