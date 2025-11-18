@@ -1,128 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
+'use client'
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events & Ticketing</title>
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/main1.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Link from 'next/link'
+import Image from 'next/image'
+import Advantages from '@/components/Advantages'
+import CTA from '@/components/CTA'
+import News from '@/components/News'
 
-<body>
-  <div data-include="header.html"></div>
-  <section class=" hero-section section-full-width">
-    <img src="assets/images/unsplash_50.png" alt="fintech" class="bg-image" />
-    <div class="smallrectangle">
-      <img src="assets/images/Group 65.png" alt="containersm">
-    </div>
-    <a href="contact.html" class="btn btn-mid-light-primary abtbtn btn-shadow">Let's Talk <i
-        class="fas fa-arrow-right"></i></a>
-    <div class="retail-img1 rectangle-img"></div>
-    <p class="indtext1">Digital Solutions for Smarter Events
-    </p>
-  </section>
-  <!-- Logistics section-->
-  <div class="inosec">
-    <div class="ino-biglet">
-      <h1>End-to-End Solutions for the Event Industry</h1>
-    </div>
-    <p>The Events and Ticketing industry demands seamless solutions that simplify event management, ticket sales, and
-      attendee engagement. At Codriva, we develop comprehensive software platforms that streamline the entire event
-      lifecycle—from planning and promotion to ticketing and post-event analytics.</p>
-    <p>Our solutions include intuitive ticket booking systems, secure payment processing, real-time seat selection, and
-      digital ticket delivery to ensure a smooth and user-friendly experience for attendees. We also offer tools for
-      event organizers such as attendee management, access control, and marketing automation to maximize reach and
-      operational efficiency.</p>
-    <p>By integrating mobile apps, social media, and analytics dashboards, Codriva empowers event organizers to boost
-      engagement, track performance, and gather valuable insights for future planning. Our scalable platforms support a
-      wide range of events, from concerts and conferences to sports and community gatherings, ensuring reliability and
-      security at every step.</p>
-    <p>With Codriva’s advanced Events & Ticketing solutions, businesses can elevate their event experiences, drive
-      higher attendance, and create lasting connections with their audiences.</p>
-  </div>
-  <!-- Solotion section-->
-  <div class="main-description">
-    <div class="descrip-heading">
-      <span>Solutions We Serve</span>
-    </div>
-    <div class="description-container rest left">
-      <div class="sec1 image-left">
-        <div class="desimg">
-          <img src="assets/images/unsplash_51.png" alt="">
-        </div>
-      </div>
-      <div class="sec3">
-        <div class="desheading2">
-          <span>Online Ticket Booking Platforms</span>
-        </div>
-        <div class="lists">
-          <p>Custom-built systems for event discovery, real-time seat selection, secure payments, and ticket delivery.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!------>
-    <div class="description-container rest right">
-      <div class="sec1 image-right">
-        <div class="desimg">
-          <img src="assets/images/unsplash_52.png" alt="">
-        </div>
-      </div>
-      <div class="sec3">
-        <div class="desheading2">
-          <span> Event Mobile Applications</span>
-        </div>
-        <div class="lists">
-          <p>User-friendly apps for attendees to browse events, book tickets, get updates, and access digital passes.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!------>
-    <div class="description-container rest left">
-      <div class="sec1 image-left">
-        <div class="desimg">
-          <img src="assets/images/unsplash_53.png" alt="">
-        </div>
-      </div>
-      <div class="sec3">
-        <div class="desheading2">
-          <span> Event Management Dashboards</span>
-        </div>
-        <div class="lists">
-          <p>Comprehensive tools for organizers to manage event listings, ticket inventory, pricing, and analytics.</p>
-        </div>
-      </div>
-    </div>
-    <!------>
-    <div class="description-container rest right">
-      <div class="sec1 image-right">
-        <div class="desimg">
-          <img src="assets/images/unsplash_54.png" alt="">
-        </div>
-      </div>
-      <div class="sec3">
-        <div class="desheading2">
-          <span>QR Code-Based Check-In Systems</span>
-        </div>
-        <div class="lists">
-          <p>Frictionless entry experience with QR code scanning and real-time attendance tracking.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div data-include="advantages.html"></div>
-  <div data-include="cta.html"></div>
-  <div data-include="news.html"></div>
-  <div data-include="footer.html"></div>
-</body>
-<!-- Scripts -->
-<script src="js/main.js"></script>
+if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger)
+}
 
-</html>
+const Events = () => {
+    const sectionRef = useRef<HTMLDivElement>(null)
+    const heroRef = useRef<HTMLDivElement>(null)
+    const innovateRef = useRef<HTMLDivElement>(null)
+    const solutionsRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const ctx = gsap.context(() => {
+                // Hero section animation
+                gsap.fromTo(heroRef.current, {
+                    opacity: 0,
+                    y: 50
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: heroRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
+
+                // Innovate section animation
+                gsap.fromTo(innovateRef.current, {
+                    opacity: 0,
+                    x: -50
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: innovateRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
+
+                // Solutions section animation
+                gsap.fromTo('.solution-item', {
+                    opacity: 0,
+                    y: 30
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: solutionsRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
+
+            }, sectionRef)
+
+            return () => ctx.revert()
+        }
+    }, [])
+
+    const solutions = [
+        {
+            title: 'Online Ticket Booking Platforms',
+            image: '/assets/images/unsplash_51.png',
+            points: [
+                'Custom-built systems for event discovery',
+                'Real-time seat selection and secure payments',
+                'Digital ticket delivery and management'
+            ]
+        },
+        {
+            title: 'Event Mobile Applications',
+            image: '/assets/images/unsplash_52.png',
+            points: [
+                'User-friendly apps for browsing events',
+                'Real-time updates and notifications',
+                'Digital passes and check-in features'
+            ]
+        },
+        {
+            title: 'Event Management Dashboards',
+            image: '/assets/images/unsplash_53.png',
+            points: [
+                'Comprehensive tools for event listings',
+                'Ticket inventory and dynamic pricing',
+                'Analytics and performance tracking'
+            ]
+        },
+        {
+            title: 'QR Code-Based Check-In Systems',
+            image: '/assets/images/unsplash_54.png',
+            points: [
+                'Frictionless entry with QR code scanning',
+                'Real-time attendance tracking',
+                'Automated check-in and validation'
+            ]
+        }
+    ]
+
+    return (
+        <section id="events" ref={sectionRef} className="relative">
+            {/* Hero Section */}
+            <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
+                <div className="absolute inset-0">
+                    <Image
+                        src="/assets/images/unsplash_50.png"
+                        alt="Events & Ticketing"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 z-10 text-center text-white px-4 pb-20">
+                    <div className="smallrectangle absolute top-20 right-20">
+                        <Image
+                            src="/assets/images/Group 65.png"
+                            alt="containersm"
+                            width={100}
+                            height={100}
+                        />
+                    </div>
+                    <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors mb-8"
+                    >
+                        Let's Talk <i className="fas fa-arrow-right"></i>
+                    </Link>
+                    <div className="retail-img1 rectangle-img"></div>
+                    <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+                        Digital Solutions for Smarter Events
+                    </p>
+                </div>
+            </div>
+
+            {/* Innovate section */}
+            <div ref={innovateRef} className="py-20 bg-gray-50 dark:bg-gray-900">
+                <div className="container-max">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                            End-to-End Solutions for the Event Industry
+                        </h2>
+                    </div>
+                    <div className="max-w-4xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6">
+                        <p>The Events and Ticketing industry demands seamless solutions that simplify event management, ticket sales, and attendee engagement. At Codriva, we develop comprehensive software platforms that streamline the entire event lifecycle—from planning and promotion to ticketing and post-event analytics.</p>
+                        <p>Our solutions include intuitive ticket booking systems, secure payment processing, real-time seat selection, and digital ticket delivery to ensure a smooth and user-friendly experience for attendees. We also offer tools for event organizers such as attendee management, access control, and marketing automation to maximize reach and operational efficiency.</p>
+                        <p>By integrating mobile apps, social media, and analytics dashboards, Codriva empowers event organizers to boost engagement, track performance, and gather valuable insights for future planning. Our scalable platforms support a wide range of events, from concerts and conferences to sports and community gatherings, ensuring reliability and security at every step.</p>
+                        <p>With Codriva's advanced Events & Ticketing solutions, businesses can elevate their event experiences, drive higher attendance, and create lasting connections with their audiences.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Solutions section */}
+            <div ref={solutionsRef} className="py-20 bg-white dark:bg-gray-800">
+                <div className="container-max">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                            Solutions We Serve
+                        </h2>
+                    </div>
+                    <div className="space-y-16">
+                        {solutions.map((solution, index) => (
+                            <div key={index} className={`solution-item flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
+                                <div className="flex-1">
+                                    <Image
+                                        src={solution.image}
+                                        alt={solution.title}
+                                        width={600}
+                                        height={400}
+                                        className="rounded-lg shadow-lg"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                                        {solution.title}
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {solution.points.map((point, idx) => (
+                                            <li key={idx} className="flex items-start gap-3">
+                                                <i className="fas fa-check text-blue-600 mt-1"></i>
+                                                <span className="text-gray-600 dark:text-gray-300">{point}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <Advantages />
+            <CTA />
+            <News />
+        </section>
+    )
+}
+
+export default Events
