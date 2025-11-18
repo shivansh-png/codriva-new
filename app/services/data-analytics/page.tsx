@@ -1,33 +1,38 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'Data Analytics | Codriva',
-  description: 'Transform data into actionable insights through advanced analytics and visualization.',
-}
-
-export default function DataAnalyticsPage() {
+export default function DataAnalytics() {
   return (
-    <section className="min-h-screen pt-32 pb-20 container-max">
-      <div className="max-w-4xl mx-auto">
-        <Link href="/services" className="inline-flex items-center text-[#24292f] dark:text-[#f0f6fc] hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 mb-8">
-          <span className="mr-2">←</span> Back to Services
-        </Link>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
+            Data & Analytics
+          </h1>
+          <div className="w-24 h-1 bg-[#0969da] mx-auto mb-8"></div>
+        </div>
 
-        <h1 className="text-4xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">Data Analytics</h1>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="relative">
+            <Image
+              src="/assets/images/technology-hologram.png"
+              alt="Data & Analytics"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
+              <span className="text-[#0969da] font-semibold">Data analytics</span> is the process of gathering, organizing, and analyzing raw data to uncover valuable insights, patterns, and trends that drive informed decision-making. Using advanced tools and techniques, it transforms complex data into clear, actionable information. Businesses leverage data analytics to enhance performance, forecast outcomes, understand customer behavior, and solve challenges efficiently. This field encompasses various types, including descriptive, diagnostic, predictive, and prescriptive analytics.
+            </p>
+          </div>
+        </div>
 
-        <p className="text-lg text-[#656d76] dark:text-[#8b949e] mb-8 leading-relaxed">
-          Turn complex data into meaningful insights through custom dashboards, reports, and business intelligence tools.
-        </p>
-
-        <ul className="space-y-3 text-[#656d76] dark:text-[#8b949e] list-disc pl-6">
-          <li>Data Visualization & Reporting</li>
-          <li>Business Intelligence Systems</li>
-          <li>ETL & Data Warehousing</li>
-          <li>Interactive Dashboards</li>
-        </ul>
-
-        <div className="mt-12">
-          <Link href="/contact" className="btn-primary px-8 py-3 inline-block">Discuss Analytics</Link>
+        <div className="text-center">
+          <Link href="/contact" className="btn-primary">
+            Get Started
+          </Link>
         </div>
       </div>
     </section>

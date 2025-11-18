@@ -211,6 +211,12 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-16">
+          <Link href="/services/all" className="btn-secondary mb-8">
+            More Services
+          </Link>
+        </div>
+
+        <div className="text-center mt-16">
           <div className="card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-4">
               Ready to start your project?
