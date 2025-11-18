@@ -3,13 +3,13 @@
 import React, { useState, useEffect } from 'react'
 import SimpleThemeToggle from './SimpleThemeToggle'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Services', href: '/services/all' },
+  { name: 'Industries', href: '/industries' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -17,6 +17,7 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -38,24 +39,26 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-200 ${
-        isScrolled
+      className={`fixed w-full z-50 transition-all duration-200 ${isScrolled
           ? 'bg-white/80 dark:bg-[#0d1117]/80 backdrop-blur-md border-b border-[#d0d7de] dark:border-[#30363d]'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="container-max">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 dark:from-blue-500 dark:to-blue-700 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <span className="text-white font-bold text-lg font-display">C</span>
-              </div>
-              <span className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] font-display group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                Codriva
-              </span>
-            </Link>
+            <a
+              href="#home"
+              onClick={(e) => { e.preventDefault(); scrollToSection('#home') }}
+              className="flex items-center space-x-3 group"
+            >
+              <img
+                src="/images/codriva-logo.svg"
+                alt="Codriva Logo"
+                className="w-40 h-40 object-contain group-hover:scale-105 transition-all duration-300"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -64,7 +67,8 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d]"
+                className={`nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black ${pathname === item.href ? 'bg-[#0969da] text-white hover:bg-[#0969da]/90' : ''
+                  }`}
               >
                 {item.name}
               </Link>
@@ -98,7 +102,10 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-3 py-2 text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] rounded-md"
+                  className={`block w-full text-left px-3 py-2 text-sm font-medium rounded-md ${pathname === item.href
+                      ? 'bg-[#0969da] text-white'
+                      : 'text-[#24292f] dark:text-[#f0f6fc] hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black'
+                    }`}
                 >
                   {item.name}
                 </button>

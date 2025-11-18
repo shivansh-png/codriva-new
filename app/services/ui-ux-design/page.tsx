@@ -1,33 +1,44 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'UI/UX Design | Codriva',
-  description: 'Designing delightful user experiences and modern, intuitive interfaces.',
-}
-
-export default function UIDesignPage() {
+export default function UiUxDesign() {
   return (
-    <section className="min-h-screen pt-32 pb-20 container-max">
-      <div className="max-w-4xl mx-auto">
-        <Link href="/services" className="inline-flex items-center text-[#24292f] dark:text-[#f0f6fc] hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 mb-8">
-          <span className="mr-2">←</span> Back to Services
-        </Link>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
+            UI/UX Design
+          </h1>
+          <div className="w-24 h-1 bg-[#0969da] mx-auto mb-8"></div>
+        </div>
 
-        <h1 className="text-4xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">UI/UX Design</h1>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="space-y-6">
+            <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
+              <span className="text-[#0969da] font-semibold">User interface (UI)</span> and user experience (UX) design are at the heart of impactful digital products. At Codriva, we create intuitive, responsive, and aesthetically engaging interfaces that enhance usability and ensure seamless user journeys across all platforms and devices.
+            </p>
+            <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
+              In the context of support systems and business applications, effective UI design simplifies complex interactions — enabling users to report issues, request assistance, and track progress with ease. Our design approach balances visual appeal with functional clarity, using purposeful layouts, meaningful iconography, and interactive elements that guide users effortlessly through your software.
+            </p>
+            <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
+              With a focus on accessibility, responsiveness, and user behavior, our UI/UX solutions don't just look good — they make every digital touchpoint more efficient, enjoyable, and aligned with your brand's values.
+            </p>
+          </div>
+          <div className="relative">
+            <Image
+              src="/assets/images/ui-ux-design.png"
+              alt="UI/UX Design"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
 
-        <p className="text-lg text-[#656d76] dark:text-[#8b949e] mb-8 leading-relaxed">
-          Our team creates user-centric designs focused on usability, accessibility, and aesthetics to deliver smooth, intuitive interfaces.
-        </p>
-
-        <ul className="space-y-3 text-[#656d76] dark:text-[#8b949e] list-disc pl-6">
-          <li>Wireframing and Prototyping</li>
-          <li>Usability Testing</li>
-          <li>Design Systems and Style Guides</li>
-          <li>Mobile-first responsive design</li>
-        </ul>
-
-        <div className="mt-12">
-          <Link href="/contact" className="btn-primary px-8 py-3 inline-block">Discuss Design</Link>
+        <div className="text-center">
+          <Link href="/contact" className="btn-primary">
+            Get Started
+          </Link>
         </div>
       </div>
     </section>

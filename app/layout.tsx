@@ -18,6 +18,13 @@ export const metadata: Metadata = {
         type: 'website',
         locale: 'en_US',
     },
+    icons: {
+        icon: [
+            { url: '/images/favicon.jpeg', type: 'image/jpeg', sizes: '32x32' },
+            { url: '/favicon.ico', sizes: '32x32' }
+        ],
+        apple: { url: '/images/favicon.jpeg', sizes: '32x32' },
+    },
     metadataBase: new URL('https://codriva.com'),
 }
 

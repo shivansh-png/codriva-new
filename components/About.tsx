@@ -4,143 +4,102 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
+import Image from 'next/image'
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger)
 }
 
-const features = [
-    {
-        icon: '🚀',
-        title: 'Innovation',
-        description: 'Cutting-edge solutions that push the boundaries of what\'s possible'
-    },
-    {
-        icon: '🔒',
-        title: 'Security',
-        description: 'Enterprise-grade security built into every solution'
-    },
-    {
-        icon: '⚡',
-        title: 'Performance',
-        description: 'Lightning-fast applications optimized for scale'
-    },
-    {
-        icon: '🎯',
-        title: 'Precision',
-        description: 'Pixel-perfect designs and flawless execution'
-    }
-]
-
 const About = () => {
     const sectionRef = useRef<HTMLDivElement>(null)
-    const titleRef = useRef<HTMLHeadingElement>(null)
-    const contentRef = useRef<HTMLDivElement>(null)
-    const featuresRef = useRef<HTMLDivElement>(null)
+    const heroRef = useRef<HTMLDivElement>(null)
+    const guidingRef = useRef<HTMLDivElement>(null)
+    const companyRef = useRef<HTMLDivElement>(null)
+    const growthRef = useRef<HTMLDivElement>(null)
+    const valuesRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const ctx = gsap.context(() => {
-                // Enhanced title animation with dramatic effect
-                gsap.fromTo(titleRef.current, {
+                // Hero section animation
+                gsap.fromTo(heroRef.current, {
                     opacity: 0,
-                    y: 80,
-                    scale: 0.8,
-                    rotationX: 45
+                    y: 50
                 }, {
                     opacity: 1,
                     y: 0,
-                    scale: 1,
-                    rotationX: 0,
                     duration: 1.2,
-                    ease: 'back.out(1.7)',
+                    ease: 'power3.out',
                     scrollTrigger: {
-                        trigger: titleRef.current,
-                        start: 'top 85%',
+                        trigger: heroRef.current,
+                        start: 'top 80%',
                         toggleActions: 'play none none reverse'
                     }
                 })
 
-                // Enhanced content animation with stagger
-                gsap.fromTo(contentRef.current, {
+                // Guiding principles animation
+                gsap.fromTo(guidingRef.current, {
                     opacity: 0,
-                    y: 60,
-                    scale: 0.9
+                    x: -50
                 }, {
                     opacity: 1,
-                    y: 0,
-                    scale: 1,
+                    x: 0,
                     duration: 1,
                     ease: 'power3.out',
                     scrollTrigger: {
-                        trigger: contentRef.current,
+                        trigger: guidingRef.current,
                         start: 'top 80%',
                         toggleActions: 'play none none reverse'
                     }
                 })
 
-                // Enhanced feature cards with 3D effect
-                gsap.fromTo('.feature-card', {
+                // Company breakdown animation
+                gsap.fromTo('.company-part', {
                     opacity: 0,
-                    y: 50,
-                    scale: 0.8,
-                    rotationY: 15
+                    scale: 0.8
+                }, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    ease: 'back.out(1.7)',
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: companyRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
+
+                // Growth section animation
+                gsap.fromTo(growthRef.current, {
+                    opacity: 0,
+                    y: 50
                 }, {
                     opacity: 1,
                     y: 0,
-                    scale: 1,
-                    rotationY: 0,
-                    duration: 0.8,
+                    duration: 1,
                     ease: 'power3.out',
-                    stagger: {
-                        amount: 0.6,
-                        from: "start"
-                    },
                     scrollTrigger: {
-                        trigger: featuresRef.current,
+                        trigger: growthRef.current,
                         start: 'top 80%',
                         toggleActions: 'play none none reverse'
                     }
                 })
 
-                // Add hover animations to feature cards
-                gsap.utils.toArray('.feature-card').forEach((card: any) => {
-                    card.addEventListener('mouseenter', () => {
-                        gsap.to(card, {
-                            scale: 1.05,
-                            y: -10,
-                            duration: 0.3,
-                            ease: 'power2.out'
-                        })
-                    })
-
-                    card.addEventListener('mouseleave', () => {
-                        gsap.to(card, {
-                            scale: 1,
-                            y: 0,
-                            duration: 0.3,
-                            ease: 'power2.out'
-                        })
-                    })
-                })
-
-                // Text reveal animation
-                gsap.utils.toArray('.about-text').forEach((text: any) => {
-                    gsap.fromTo(text, {
-                        opacity: 0,
-                        y: 30,
-                        scale: 0.9
-                    }, {
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                        duration: 0.8,
-                        ease: 'power3.out',
-                        scrollTrigger: {
-                            trigger: text,
-                            start: 'top 85%',
-                            toggleActions: 'play none none reverse'
-                        }
-                    })
+                // Values section animation
+                gsap.fromTo('.value-item', {
+                    opacity: 0,
+                    y: 30
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: valuesRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
                 })
 
             }, sectionRef)
@@ -150,99 +109,223 @@ const About = () => {
     }, [])
 
     return (
-        <section id="about" ref={sectionRef} className="section-padding relative overflow-hidden">
-            {/* Blue Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-blue-900/20 dark:to-indigo-900/30"></div>
-
-            {/* Background Image */}
-            <div className="absolute inset-0 opacity-10 dark:opacity-20">
-                <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&auto=format&q=80")`
-                }}></div>
-            </div>
-
-            {/* Floating Elements */}
-            <div className="absolute top-10 right-10 w-20 h-20 bg-blue-400/20 dark:bg-blue-500/30 rounded-full blur-2xl animate-pulse"></div>
-            <div className="absolute bottom-10 left-10 w-32 h-32 bg-indigo-400/20 dark:bg-indigo-500/30 rounded-full blur-3xl animate-pulse"></div>
-            <div className="container-max relative z-10">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6 font-display">
-                        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600">Codriva</span>
-                    </h2>
-                    <p className="about-text text-xl text-[#656d76] dark:text-[#8b949e] max-w-3xl mx-auto">
-                        We're a trusted technology partner specializing in custom software development,
-                        digital transformation, and innovative solutions that drive business growth.
+        <section id="about" ref={sectionRef} className="relative">
+            {/* Hero Section */}
+            <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
+                <div className="absolute inset-0">
+                    <Image
+                        src="/assets/images/unsplash_60.png"
+                        alt="Fintech background"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 z-10 text-center text-white px-4 pb-20">
+                    <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors mb-8"
+                    >
+                        Let's Talk <i className="fas fa-arrow-right"></i>
+                    </Link>
+                    <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+                        Get to know us a little better and see what we're all about
                     </p>
                 </div>
+                {/* <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                    <Image
+                        src="/assets/images/two arrow.png"
+                        alt="Arrow"
+                        width={50}
+                        height={50}
+                        className="animate-bounce"
+                    />
+                </div> */}
+            </div>
 
-                {/* Main Content */}
-                <div ref={contentRef} className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-                    <div>
-                        <h3 className="text-3xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
-                            Crafting digital excellence
-                        </h3>
-                        <p className="about-text text-lg text-[#656d76] dark:text-[#8b949e] mb-6 leading-relaxed">
-                            At Codriva, we believe in the power of technology to transform businesses.
-                            Our name combines "Code" with "Riva" (flow), representing our commitment
-                            to creating seamless, flowing digital solutions.
-                        </p>
-                        <p className="about-text text-lg text-[#656d76] dark:text-[#8b949e] mb-8 leading-relaxed">
-                            We work with startups and enterprises alike, delivering custom software
-                            solutions that drive growth, efficiency, and innovation.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
-                            href="/services"
-                                className="btn-primary"
+            {/* Guiding Principles */}
+            <div ref={guidingRef} className="py-20 bg-gray-50 dark:bg-gray-900">
+                <div className="container-max">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                                Our Guiding<br />
+                                <span className="text-blue-600">Principles</span>
+                            </h2>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                At Codriva, our guiding principles shape every decision and drive our commitment to excellence. We believe
+                                in innovation, integrity, and collaboration as the foundation for building lasting partnerships and
+                                delivering impactful solutions. Our customer-centric approach ensures that we always prioritize your needs,
+                                while our dedication to quality and continuous improvement empowers us to stay ahead in a rapidly evolving
+                                digital landscape. These principles inspire our team to create technology that not only meets but exceeds
+                                expectations, fostering trust and long-term success.
+                            </p>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                             >
-                                Our Services
-                            </Link>
-                        <Link
-                            href="/portfolio"
-                                className="btn-outline"
-                            >
-                                View Portfolio
+                                Let's Talk <i className="fas fa-arrow-right"></i>
                             </Link>
                         </div>
-                    </div>
-
-                    <div className="relative">
-                        <div className="card p-8">
-                            <div className="grid grid-cols-2 gap-6">
-                                {features.map((feature, index) => (
-                                    <div key={index} className="feature-card text-center p-6 hover-card rounded-lg">
-                                        <div className="text-4xl mb-4">{feature.icon}</div>
-                                        <h4 className="font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-2">
-                                            {feature.title}
-                                        </h4>
-                                        <p className="text-sm text-[#656d76] dark:text-[#8b949e]">
-                                            {feature.description}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
+                        <div className="relative">
+                            <Image
+                                src="/assets/images/group-people-working-team.png"
+                                alt="Guiding principles"
+                                width={600}
+                                height={400}
+                                className="rounded-lg shadow-lg"
+                            />
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Stats */}
-                <div ref={featuresRef} className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-[#0969da] dark:text-[#58a6ff] mb-2">100+</div>
-                        <div className="text-[#656d76] dark:text-[#8b949e]">Projects</div>
+            {/* Company Name Breakdown */}
+            <div ref={companyRef} className="py-20" style={{color: "#ffffff", fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"}}>
+                <div className="container-max text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12">
+                        We are shaping the company of tomorrow
+                    </h2>
+
+                    <div className="flex justify-center mb-8">
+                        <Image
+                            src="/images/codriva-logo.svg"
+                            alt="Codriva Logo"
+                            width={200}
+                            height={60}
+                        />
                     </div>
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-[#0969da] dark:text-[#58a6ff] mb-2">50+</div>
-                        <div className="text-[#656d76] dark:text-[#8b949e]">Clients</div>
+
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+                        <div className="company-part text-center">
+                            <h3 className="text-3xl font-bold text-blue-600 mb-2">Cod</h3>
+                            <p className="text-gray-600 dark:text-gray-300">An evident connection to coding, software development & technology.</p>
+                        </div>
+                        <div className="company-part text-2xl font-bold text-gray-400">+</div>
+                        <div className="company-part text-center">
+                            <h3 className="text-3xl font-bold text-blue-600 mb-2">riva</h3>
+                            <p className="text-gray-600 dark:text-gray-300">A smooth flow (like a river) — representing innovation, delivery & agility.</p>
+                        </div>
                     </div>
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-[#0969da] dark:text-[#58a6ff] mb-2">5+</div>
-                        <div className="text-[#656d76] dark:text-[#8b949e]">Years</div>
+
+                    <div className="mb-12">
+                        <p className="text-xl text-gray-700 dark:text-gray-200 mb-2">
+                            "Where code meets innovation" &<br />
+                            <span className="text-blue-600">"Flow of smart solutions through code"</span>
+                        </p>
                     </div>
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-[#0969da] dark:text-[#58a6ff] mb-2">24/7</div>
-                        <div className="text-[#656d76] dark:text-[#8b949e]">Support</div>
+
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            href="/services/all"
+                            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                        >
+                            View all Services
+                        </Link>
+                        <Link
+                            href="/portfolio"
+                            className="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                        >
+                            View all Industries
+                        </Link>
+                    </div>
+
+                    <p className="text-gray-500 dark:text-gray-400 mt-8">
+                        Implying "we help you arrive at success through code."
+                    </p>
+                </div>
+            </div>
+
+            {/* Growth Section */}
+            <div ref={growthRef} className="py-20 bg-gray-50 dark:bg-gray-900">
+                <div className="container-max">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                                Our Growth
+                            </h2>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                At Codriva, growth is more than just numbers — it's a reflection of our unwavering commitment to innovation,
+                                quality, and client success. Since our inception, we have consistently expanded our capabilities, embraced
+                                emerging technologies, and forged strong partnerships to deliver exceptional digital solutions. Our growth
+                                story is fueled by a passionate team, forward-thinking strategies, and a customer-first mindset that drives us
+                                to exceed expectations. As we evolve, we remain dedicated to empowering businesses worldwide and shaping the
+                                future of technology.
+                            </p>
+                        </div>
+                        <div className="relative">
+                            <Image
+                                src="/assets/images/worldmap.png"
+                                alt="Growth chart illustration"
+                                width={600}
+                                height={400}
+                                className="rounded-lg shadow-lg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Values Section */}
+            <div ref={valuesRef} className="py-20" style={{color: "#ffffff", fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"}}>
+                <div className="container-max text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        The Value We Stand For
+                    </h2>
+                    <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">
+                        Our core values lie at the heart of everything we do and define who we are.
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                        <div className="value-item">
+                            <Image
+                                src="/assets/images/Group 46.png"
+                                alt="Quality value"
+                                width={200}
+                                height={200}
+                                className="mx-auto"
+                            />
+                        </div>
+                        <div className="value-item">
+                            <Image
+                                src="/assets/images/Group 47.png"
+                                alt="Transparency value"
+                                width={200}
+                                height={200}
+                                className="mx-auto"
+                            />
+                        </div>
+                        <div className="value-item">
+                            <Image
+                                src="/assets/images/Group 48.png"
+                                alt="Collaboration value"
+                                width={200}
+                                height={200}
+                                className="mx-auto"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                        <div className="value-item">
+                            <Image
+                                src="/assets/images/Group 49.png"
+                                alt="Integrity value"
+                                width={200}
+                                height={200}
+                                className="mx-auto"
+                            />
+                        </div>
+                        <div className="value-item">
+                            <Image
+                                src="/assets/images/Group 50.png"
+                                alt="Ownership value"
+                                width={200}
+                                height={200}
+                                className="mx-auto"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

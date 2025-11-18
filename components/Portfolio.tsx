@@ -12,73 +12,68 @@ if (typeof window !== 'undefined') {
 const projects = [
     {
         id: 1,
-        title: 'E-Commerce Platform',
-        description: 'A full-stack e-commerce solution with advanced features like real-time inventory, payment processing, and analytics dashboard.',
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&auto=format&q=80',
-        tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-        category: 'web',
-        github: 'https://github.com',
-        live: 'https://example.com'
+        title: 'Retail & E-Commerce',
+        description: 'Custom e-commerce platforms with advanced inventory management, payment gateways, and omnichannel retail solutions.',
+        image: '/assets/images/retail-ecom.png',
+        tags: ['E-commerce', 'POS Systems', 'Payment Integration'],
+        category: 'retail',
+        link: '/industries/retail'
     },
     {
         id: 2,
-        title: 'Mobile Banking App',
-        description: 'A secure mobile banking application with biometric authentication, real-time transactions, and financial insights.',
-        image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&auto=format&q=80',
-        tags: ['React Native', 'Node.js', 'PostgreSQL', 'AWS'],
-        category: 'mobile',
-        github: 'https://github.com',
-        live: 'https://example.com'
+        title: 'Telecom',
+        description: 'Comprehensive telecom software solutions including billing systems, network management, and customer portals.',
+        image: '/assets/images/telecom-pic.png',
+        tags: ['Billing Systems', 'Network Management', 'CRM'],
+        category: 'telecom',
+        link: '/industries/telecom'
     },
     {
         id: 3,
-        title: 'AI-Powered Analytics',
-        description: 'Machine learning platform that analyzes business data to provide actionable insights and predictions.',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format&q=80',
-        tags: ['Python', 'TensorFlow', 'Docker', 'Kubernetes'],
-        category: 'ai',
-        github: 'https://github.com',
-        live: 'https://example.com'
+        title: 'FinTech & Banking',
+        description: 'Secure financial technology solutions with advanced security, compliance, and real-time transaction processing.',
+        image: '/assets/images/fintech-pic.png',
+        tags: ['Banking Apps', 'Payment Processing', 'Security'],
+        category: 'fintech',
+        link: '/industries/fintech'
     },
     {
         id: 4,
-        title: 'SaaS Dashboard',
-        description: 'A comprehensive dashboard for managing SaaS operations with real-time monitoring and user management.',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&auto=format&q=80',
-        tags: ['Vue.js', 'Express', 'Redis', 'Docker'],
-        category: 'web',
-        github: 'https://github.com',
-        live: 'https://example.com'
+        title: 'Logistics & Supply Chain',
+        description: 'End-to-end logistics solutions with real-time tracking, warehouse management, and supply chain optimization.',
+        image: '/assets/images/logistics-pic.png',
+        tags: ['Supply Chain', 'Warehouse Management', 'Tracking'],
+        category: 'logistics',
+        link: '/industries/logistics'
     },
     {
         id: 5,
-        title: 'IoT Monitoring System',
-        description: 'Real-time monitoring system for IoT devices with data visualization and alert management.',
-        image: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&h=400&fit=crop&auto=format&q=80',
-        tags: ['React', 'Python', 'MQTT', 'InfluxDB'],
-        category: 'iot',
-        github: 'https://github.com',
-        live: 'https://example.com'
+        title: 'Real Estate and PropTech',
+        description: 'Property technology solutions including property management systems, virtual tours, and real estate marketplaces.',
+        image: '/assets/images/real-estate-pic.png',
+        tags: ['Property Management', 'Virtual Tours', 'Marketplaces'],
+        category: 'realestate',
+        link: '/industries/realestate'
     },
     {
         id: 6,
-        title: 'Blockchain Voting',
-        description: 'Secure voting platform built on blockchain technology ensuring transparency and immutability.',
-        image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&auto=format&q=80',
-        tags: ['Solidity', 'Web3', 'React', 'Ethereum'],
-        category: 'blockchain',
-        github: 'https://github.com',
-        live: 'https://example.com'
+        title: 'On Demand Platforms',
+        description: 'Scalable on-demand service platforms for ride-sharing, delivery, and service-based businesses.',
+        image: '/assets/images/ondemand-pic.png',
+        tags: ['Ride-Sharing', 'Delivery Apps', 'Service Platforms'],
+        category: 'ondemand',
+        link: '/industries/ondemand'
     }
 ]
 
 const categories = [
-    { id: 'all', name: 'All' },
-    { id: 'web', name: 'Web' },
-    { id: 'mobile', name: 'Mobile' },
-    { id: 'ai', name: 'AI/ML' },
-    { id: 'iot', name: 'IoT' },
-    { id: 'blockchain', name: 'Blockchain' }
+    { id: 'all', name: 'All Industries' },
+    { id: 'retail', name: 'Retail & E-Commerce' },
+    { id: 'telecom', name: 'Telecom' },
+    { id: 'fintech', name: 'FinTech & Banking' },
+    { id: 'logistics', name: 'Logistics & Supply Chain' },
+    { id: 'realestate', name: 'Real Estate & PropTech' },
+    { id: 'ondemand', name: 'On Demand Platforms' }
 ]
 
 const Portfolio = () => {
@@ -212,11 +207,10 @@ const Portfolio = () => {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6 font-display">
-                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600">Portfolio</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600">Industries</span>
                     </h2>
-                    <p className="portfolio-text text-xl text-[#656d76] dark:text-[#8b949e] max-w-3xl mx-auto mb-8">
-                        Explore our recent projects and see how we've helped businesses
-                        transform their digital presence.
+                    <p className="portfolio-text text-xl text-[#656d76] dark:text-[#8b949e] max-w-3xl mx-auto mb-6">
+                        Discover how we transform businesses across diverse industries with innovative digital solutions.
                     </p>
 
                     {/* Category Filter */}
@@ -247,28 +241,12 @@ const Portfolio = () => {
                                     className="w-full h-48 object-cover"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                                    <div className="opacity-0 hover:opacity-100 transition-opacity duration-300 flex space-x-2">
-                                        <a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-2 bg-white rounded-md hover:bg-gray-100 transition-colors duration-200"
-                                        >
-                                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd" />
-                                            </svg>
-                                        </a>
-                                        <a
-                                            href={project.live}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-2 bg-white rounded-md hover:bg-gray-100 transition-colors duration-200"
-                                        >
-                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                            </svg>
-                                        </a>
-                                    </div>
+                                    <Link
+                                        href={project.link}
+                                        className="inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-900 rounded-md hover:bg-gray-100 transition-colors duration-200 font-medium"
+                                    >
+                                        Know more →
+                                    </Link>
                                 </div>
                             </div>
                             <div className="p-6">
@@ -297,18 +275,26 @@ const Portfolio = () => {
                 <div className="text-center mt-16">
                     <div className="card p-8 max-w-2xl mx-auto">
                         <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-4">
-                            Have a project in mind?
+                            Ready to Transform Your Industry?
                         </h3>
                         <p className="text-[#656d76] dark:text-[#8b949e] mb-6">
-                            Let's work together to create something amazing.
-                            We're always excited to take on new challenges.
+                            Discover how our industry-specific solutions can drive your business forward.
+                            Let's discuss your unique challenges and opportunities.
                         </p>
-                        <Link
-                            href="/contact"
-                            className="btn-primary"
-                        >
-                            Start Your Project
-                        </Link>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link
+                                href="/industries"
+                                className="btn-primary"
+                            >
+                                More Industries
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-lg font-medium hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-colors duration-200"
+                            >
+                                Get Started
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
