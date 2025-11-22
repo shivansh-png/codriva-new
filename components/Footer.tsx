@@ -62,12 +62,12 @@ const Footer = () => {
         ]
     }
 
-   const scrollToSection = (id: string) => {
-       const element = document.querySelector(id)
-       if (element) {
-           element.scrollIntoView({ behavior: 'smooth' })
-       }
-   }
+    const scrollToSection = (id: string) => {
+        const element = document.querySelector(id)
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
 
     return (
         <footer ref={footerRef} className="relative text-white overflow-hidden">
@@ -142,30 +142,30 @@ const Footer = () => {
                             <div key={title}>
                                 <h3 className="font-semibold text-white mb-4">{title}</h3>
                                 <ul className="space-y-3">
-                                     {links.map((link) => {
-        const isInternal = link.href.startsWith('/')
-        return (
-          <li key={link.name}>
-            {isInternal ? (
-              <Link
-                href={link.href}
-                className="text-[#8b949e] hover:text-white transition-colors duration-200 text-sm"
-              >
-                {link.name}
-              </Link>
-            ) : (
-              <a
-                href={link.href}
-                target={link.href.startsWith('http') ? '_blank' : undefined}
-                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="text-[#8b949e] hover:text-white transition-colors duration-200 text-sm"
-              >
-                {link.name}
-              </a>
-            )}
-          </li>
-        )
-      })}
+                                    {links.map((link) => {
+                                        const isInternal = link.href.startsWith('/')
+                                        return (
+                                            <li key={link.name}>
+                                                {isInternal ? (
+                                                    <Link
+                                                        href={link.href}
+                                                        className="text-[#8b949e] hover:text-white transition-colors duration-200 text-sm"
+                                                    >
+                                                        {link.name}
+                                                    </Link>
+                                                ) : (
+                                                    <a
+                                                        href={link.href}
+                                                        target={link.href.startsWith('http') ? '_blank' : undefined}
+                                                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                                        className="text-[#8b949e] hover:text-white transition-colors duration-200 text-sm"
+                                                    >
+                                                        {link.name}
+                                                    </a>
+                                                )}
+                                            </li>
+                                        )
+                                    })}
                                 </ul>
                             </div>
                         ))}
@@ -176,7 +176,7 @@ const Footer = () => {
                 <div className="border-t border-[#30363d] py-8">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-[#8b949e] text-sm mb-4 md:mb-0">
-                            © 2024 Codriva. All rights reserved.
+                            © {new Date().getFullYear()} Codriva copy right
                         </p>
                         <div className="flex space-x-6 text-sm">
                             <a href="#" className="text-[#8b949e] hover:text-white transition-colors duration-200">

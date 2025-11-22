@@ -1,217 +1,218 @@
-"use client";
+'use client'
 
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
-import Link from "next/link";
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Link from 'next/link'
+import Image from 'next/image'
+import Advantages from '@/components/Advantages'
+import CTA from '@/components/CTA'
+import News from '@/components/News'
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger)
 }
 
-export default function Travel() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const heroRef = useRef<HTMLDivElement>(null);
-  const introRef = useRef<HTMLDivElement>(null);
-  const solutionsRef = useRef<HTMLDivElement>(null);
+const Travel = () => {
+    const sectionRef = useRef<HTMLDivElement>(null)
+    const heroRef = useRef<HTMLDivElement>(null)
+    const innovateRef = useRef<HTMLDivElement>(null)
+    const solutionsRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const ctx = gsap.context(() => {
-        gsap.fromTo(
-          heroRef.current,
-          { opacity: 0, y: 50 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1.2,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: heroRef.current,
-              start: "top 85%",
-            },
-          }
-        );
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const ctx = gsap.context(() => {
+                // Hero section animation
+                gsap.fromTo(heroRef.current, {
+                    opacity: 0,
+                    y: 50
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: heroRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
 
-        gsap.fromTo(
-          introRef.current,
-          { opacity: 0, x: -50 },
-          {
-            opacity: 1,
-            x: 0,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: introRef.current,
-              start: "top 85%",
-            },
-          }
-        );
+                // Innovate section animation
+                gsap.fromTo(innovateRef.current, {
+                    opacity: 0,
+                    x: -50
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: innovateRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
 
-        gsap.fromTo(
-          ".solution-item",
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power3.out",
-            stagger: 0.2,
-            scrollTrigger: {
-              trigger: solutionsRef.current,
-              start: "top 85%",
-            },
-          }
-        );
-      }, sectionRef);
+                // Solutions section animation
+                gsap.fromTo('.solution-item', {
+                    opacity: 0,
+                    y: 30
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: solutionsRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
 
-      return () => ctx.revert();
-    }
-  }, []);
+            }, sectionRef)
 
-  const solutions = [
-    {
-      title: "Hotel Booking Platforms",
-      image: "/assets/images/unsplash_26.png",
-      text:
-        "End-to-end systems for room reservations, payment integration, and guest management.",
-    },
-    {
-      title: "Tour & Itinerary Management Apps",
-      image: "/assets/images/unsplash_27.png",
-      text:
-        "Custom apps for travel agencies to manage packages, itineraries, and real-time updates.",
-    },
-    {
-      title: "Customer Experience Portals",
-      image: "/assets/images/unsplash_28.png",
-      text:
-        "Engaging front-end platforms to help guests explore, book, and review services effortlessly.",
-    },
-    {
-      title: "Smart Travel Portals",
-      image: "/assets/images/unsplash_29.png",
-      text: "Custom-built travel websites and apps with real-time availability.",
-    },
-  ];
+            return () => ctx.revert()
+        }
+    }, [])
 
-  return (
-    <section ref={sectionRef} className="relative">
-      {/* HERO */}
-      <div ref={heroRef} className="relative h-[90vh] flex items-end pb-24">
-        <Image
-          src="/assets/images/unsplash_25.png"
-          alt="Travel"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40"></div>
+    const solutions = [
+        {
+            title: 'Travel Booking Platforms',
+            image: '/assets/images/unsplash_44.png',
+            points: [
+                'Multi-vendor booking engine with real-time availability',
+                'Dynamic pricing and inventory management',
+                'Secure payment processing and booking confirmation'
+            ]
+        },
+        {
+            title: 'Hotel Management Systems',
+            image: '/assets/images/unsplash_45.png',
+            points: [
+                'Property management and reservation systems',
+                'Channel manager integration and rate optimization',
+                'Guest experience and loyalty program management'
+            ]
+        },
+        {
+            title: 'Travel Experience Platforms',
+            image: '/assets/images/unsplash_46.png',
+            points: [
+                'Personalized itinerary planning and recommendations',
+                'Virtual concierge and travel assistance services',
+                'Social travel features and community building'
+            ]
+        },
+        {
+            title: 'Travel Analytics & Insights',
+            image: '/assets/images/unsplash_47.png',
+            points: [
+                'Booking trends and market analysis',
+                'Customer behavior and preference insights',
+                'Revenue management and yield optimization'
+            ]
+        }
+    ]
 
-        <div className="relative z-10 text-center text-white w-full pb-10">
-          <div className="mb-6 flex justify-center">
-            <Image
-              src="/assets/images/Group 67.png"
-              alt="shape"
-              width={130}
-              height={130}
-            />
-          </div>
-
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-lg font-medium mb-6"
-          >
-            Let&apos;s Talk <i className="fas fa-arrow-right" />
-          </Link>
-
-          <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-            Redefining Travel Through Technology
-          </p>
-        </div>
-      </div>
-
-      {/* INTRO */}
-      <div ref={introRef} className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container-max max-w-4xl mx-auto space-y-6 text-gray-700 dark:text-gray-300 text-lg">
-          <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">
-            Bringing the World Closer with Code
-          </h2>
-
-          <p>
-            The Travel and Hospitality industry thrives on delivering exceptional
-            guest experiences while managing complex operations across bookings,
-            inventory, and customer service. At Codriva, we create innovative
-            software solutions designed to streamline these processes and enhance
-            traveler engagement.
-          </p>
-          <p>
-            Our expertise includes developing booking engines, property
-            management systems, and customer relationship management (CRM) tools
-            tailored for hotels, airlines, travel agencies, and tour operators.
-            We also integrate real-time pricing, availability updates, and
-            personalized offers to optimize revenue management and satisfaction.
-          </p>
-          <p>
-            By leveraging mobile apps, AI-driven recommendations, and analytics,
-            we enable personalized experiences, seamless check-ins, and efficient
-            service management.
-          </p>
-        </div>
-      </div>
-
-      {/* SOLUTIONS */}
-      <div ref={solutionsRef} className="py-20 bg-white dark:bg-gray-800">
-        <div className="container-max">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-            Solutions We Serve
-          </h2>
-
-          <div className="space-y-16">
-            {solutions.map((item, idx) => (
-              <div
-                key={idx}
-                className={`solution-item flex flex-col ${
-                  idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                } items-center gap-12`}
-              >
-                <div className="flex-1">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={650}
-                    height={450}
-                    className="rounded-lg shadow-lg"
-                  />
+    return (
+        <section id="travel" ref={sectionRef} className="relative">
+            {/* Hero Section */}
+            <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
+                <div className="absolute inset-0">
+                    <Image
+                        src="/assets/images/unsplash_48.png"
+                        alt="Travel & Hospitality"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-black/40"></div>
                 </div>
-
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300">{item.text}</p>
+                <div className="absolute bottom-0 left-0 right-0 z-10 text-center text-white px-4 pb-20">
+                    <div className="smallrectangle absolute top-20 right-20">
+                        <Image
+                            src="/assets/images/Group 67.png"
+                            alt="containersm"
+                            width={100}
+                            height={100}
+                        />
+                    </div>
+                    <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors mb-8"
+                    >
+                        Let's Talk <i className="fas fa-arrow-right"></i>
+                    </Link>
+                    <div className="retail-img1 rectangle-img"></div>
+                    <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+                        Creating Unforgettable Travel Experiences
+                    </p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+            </div>
 
-      {/* CTA */}
-      <div className="py-20 bg-blue-600 text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          Ready to Build the Future of Travel?
-        </h2>
-        <p className="text-lg mb-8 max-w-2xl mx-auto">
-          Let’s create seamless travel experiences with cutting-edge technology.
-        </p>
-        <Link
-          href="/contact"
-          className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-medium"
-        >
-          Contact Us <i className="fas fa-arrow-right" />
-        </Link>
-      </div>
-    </section>
-  );
+            {/* Innovate section */}
+            <div ref={innovateRef} className="py-20 bg-gray-50 dark:bg-gray-900">
+                <div className="container-max">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                            Transforming Travel and Hospitality with Technology
+                        </h2>
+                    </div>
+                    <div className="max-w-4xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6">
+                        <p>The Travel and Hospitality industry is experiencing unprecedented digital transformation, with technology playing a crucial role in enhancing guest experiences and operational efficiency. At Codriva, we develop innovative travel technology solutions that connect travelers with destinations, accommodations, and experiences worldwide.</p>
+                        <p>Our expertise includes travel booking platforms, hotel management systems, travel experience platforms, and comprehensive analytics. We leverage AI and machine learning to provide personalized recommendations, optimize pricing strategies, and enhance customer service.</p>
+                        <p>Codriva's travel solutions feature seamless integration with global distribution systems, payment gateways, and third-party services. Our platforms support everything from online travel agencies and hotel chains to boutique properties and experience providers.</p>
+                        <p>With a focus on user experience and operational excellence, Codriva helps travel and hospitality businesses adapt to changing consumer preferences, improve booking conversions, and deliver exceptional experiences that create lasting memories.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Solutions section */}
+            <div ref={solutionsRef} className="py-20 bg-white dark:bg-gray-800">
+                <div className="container-max">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                            Solutions We Serve
+                        </h2>
+                    </div>
+                    <div className="space-y-16">
+                        {solutions.map((solution, index) => (
+                            <div key={index} className={`solution-item flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
+                                <div className="flex-1">
+                                    <Image
+                                        src={solution.image}
+                                        alt={solution.title}
+                                        width={600}
+                                        height={400}
+                                        className="rounded-lg shadow-lg"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                                        {solution.title}
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {solution.points.map((point, idx) => (
+                                            <li key={idx} className="flex items-start gap-3">
+                                                <i className="fas fa-check text-blue-600 mt-1"></i>
+                                                <span className="text-gray-600 dark:text-gray-300">{point}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <Advantages />
+            <CTA />
+            <News />
+        </section>
+    )
 }
+
+export default Travel

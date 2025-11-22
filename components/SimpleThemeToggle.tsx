@@ -37,7 +37,7 @@ const SimpleThemeToggle = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 cursor-pointer hover:bg-gray-400 dark:hover:bg-gray-500"
+            className="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-colors duration-300 focus:outline-none ring-2 ring-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 cursor-pointer hover:bg-gray-400 dark:hover:bg-gray-500"
             aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
             type="button"
         >

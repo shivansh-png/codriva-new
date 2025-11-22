@@ -16,7 +16,7 @@ const services = [
     description:
       'Tailored solutions built from the ground up to meet your unique business needs.',
     features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
-    link: '/services/web-development',
+    link: '/services/custom-software-development',
   },
   {
     icon: '🎨',
@@ -172,7 +172,7 @@ const Services = () => {
 
         <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="service-card card hover-card p-8">
+            <div key={index} className="service-card card hover-card p-8 flex flex-col h-full">
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-4">
                 {service.title}
@@ -202,7 +202,7 @@ const Services = () => {
                 ))}
               </ul>
               {service.link ? (
-                <Link href={service.link} className="btn-secondary">
+                <Link href={service.link} className="btn-secondary mt-auto">
                   Learn More
                 </Link>
               ) : null}
@@ -229,7 +229,7 @@ const Services = () => {
               <Link href="/contact" className="btn-primary">
                 Get Started
               </Link>
-              <Link href="/portfolio" className="btn-outline">
+              <Link href="/portfolio" className="btn-outline dark:text-white dark:border-white">
                 View Portfolio
               </Link>
             </div>

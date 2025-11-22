@@ -1,160 +1,218 @@
-import Link from "next/link";
+'use client'
 
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Link from 'next/link'
+import Image from 'next/image'
+import Advantages from '@/components/Advantages'
+import CTA from '@/components/CTA'
+import News from '@/components/News'
 
-
-export default function RestaurantPage() {
-  return (
-    <section className="min-h-screen pt-32 pb-20">
-
-      {/* HERO */}
-      <section className="hero-section section-full-width relative">
-        <img
-          src="/assets/images/unsplash_40.png"
-          alt="restaurant tech"
-          className="bg-image"
-        />
-
-        <div className="smallrectangle">
-          <img src="/assets/images/Group 63.png" alt="rectangle" />
-        </div>
-
-        <Link
-          href="/contact"
-          className="btn btn-mid-light-primary abtbtn btn-shadow"
-        >
-          Let's Talk <i className="fas fa-arrow-right"></i>
-        </Link>
-
-        <div className="retail-img1 rectangle-img"></div>
-
-        <p className="indtext1">
-          Redefining Dining with Technology
-        </p>
-      </section>
-
-      {/* INTRO */}
-      <div className="inosec container-max">
-        <div className="ino-biglet">
-          <h1>Elevating Restaurant Operations with Code</h1>
-        </div>
-
-        <p>
-          The Restaurant and Cloud Kitchen industry is rapidly evolving, driven by
-          changing consumer preferences and the rise of digital ordering. Codriva
-          delivers innovative software solutions that empower restaurants and cloud
-          kitchens to optimize operations, enhance customer engagement, and scale
-          efficiently.
-        </p>
-
-        <p>
-          Our expertise includes developing order management systems, kitchen display
-          solutions, delivery tracking, and integrated payment gateways that streamline
-          workflows and reduce order errors. We also build customer loyalty programs,
-          personalized marketing tools, and analytics platforms to help businesses
-          understand customer preferences and drive repeat business.
-        </p>
-
-        <p>
-          With a focus on seamless online ordering and contactless delivery, Codriva’s
-          technology supports both traditional dine-in and delivery-only cloud kitchen
-          models. Our solutions improve operational efficiency, reduce costs, and enable
-          businesses to adapt quickly to market demands while providing exceptional
-          dining experiences.
-        </p>
-      </div>
-
-      {/* SOLUTIONS */}
-      <div className="main-description container-max">
-        <div className="descrip-heading">
-          <span>Solutions We Serve</span>
-        </div>
-
-        {/* Online Ordering */}
-        <div className="description-container rest left">
-          <div className="sec1 image-left">
-            <div className="desimg">
-              <img src="/assets/images/unsplash_41.png" alt="ordering" />
-            </div>
-          </div>
-
-          <div className="sec3">
-            <div className="desheading2">
-              <span>Online Ordering & Delivery Platforms</span>
-            </div>
-            <div className="lists">
-              <p>
-                Custom-built platforms to manage online orders, track deliveries, and
-                ensure seamless customer experience.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Kitchen Management */}
-        <div className="description-container rest right">
-          <div className="sec1 image-right">
-            <div className="desimg">
-              <img src="/assets/images/unsplash_42.png" alt="kitchen software" />
-            </div>
-          </div>
-
-          <div className="sec3">
-            <div className="desheading2">
-              <span>Kitchen Management Software</span>
-            </div>
-            <div className="lists">
-              <p>
-                Tools to optimize kitchen workflows, manage inventory, track orders,
-                and reduce food wastage.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* POS */}
-        <div className="description-container rest left">
-          <div className="sec1 image-left">
-            <div className="desimg">
-              <img src="/assets/images/unsplash_43.png" alt="pos" />
-            </div>
-          </div>
-
-          <div className="sec3">
-            <div className="desheading2">
-              <span>POS (Point of Sale) Systems</span>
-            </div>
-            <div className="lists">
-              <p>
-                Integrated POS systems for quick order processing, inventory tracking,
-                and sales reporting.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Cloud Kitchen Solutions */}
-        <div className="description-container rest right">
-          <div className="sec1 image-right">
-            <div className="desimg">
-              <img src="/assets/images/unsplash_44.png" alt="cloud kitchen" />
-            </div>
-          </div>
-
-          <div className="sec3">
-            <div className="desheading2">
-              <span>Cloud Kitchen Management Solutions</span>
-            </div>
-            <div className="lists">
-              <p>
-                End-to-end solutions for cloud kitchen operations — order routing,
-                driver management, and customer feedback.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA + NEWS + FOOTER handled globally */}
-    </section>
-  );
+if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger)
 }
+
+const Restaurant = () => {
+    const sectionRef = useRef<HTMLDivElement>(null)
+    const heroRef = useRef<HTMLDivElement>(null)
+    const innovateRef = useRef<HTMLDivElement>(null)
+    const solutionsRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const ctx = gsap.context(() => {
+                // Hero section animation
+                gsap.fromTo(heroRef.current, {
+                    opacity: 0,
+                    y: 50
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: heroRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
+
+                // Innovate section animation
+                gsap.fromTo(innovateRef.current, {
+                    opacity: 0,
+                    x: -50
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: innovateRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
+
+                // Solutions section animation
+                gsap.fromTo('.solution-item', {
+                    opacity: 0,
+                    y: 30
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: solutionsRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                })
+
+            }, sectionRef)
+
+            return () => ctx.revert()
+        }
+    }, [])
+
+    const solutions = [
+        {
+            title: 'Restaurant Management Systems',
+            image: '/assets/images/unsplash_34.png',
+            points: [
+                'Point-of-sale systems and order management',
+                'Inventory tracking and supplier management',
+                'Staff scheduling and performance monitoring'
+            ]
+        },
+        {
+            title: 'Online Ordering Platforms',
+            image: '/assets/images/unsplash_35.png',
+            points: [
+                'Mobile-first ordering apps and websites',
+                'Real-time order tracking and delivery updates',
+                'Integration with popular delivery services'
+            ]
+        },
+        {
+            title: 'Cloud Kitchen Management',
+            image: '/assets/images/unsplash_36.png',
+            points: [
+                'Centralized kitchen operations management',
+                'Multi-brand menu and recipe management',
+                'Quality control and compliance tracking'
+            ]
+        },
+        {
+            title: 'Restaurant Analytics',
+            image: '/assets/images/unsplash_37.png',
+            points: [
+                'Sales performance and trend analysis',
+                'Customer behavior and preference insights',
+                'Operational efficiency and cost optimization'
+            ]
+        }
+    ]
+
+    return (
+        <section id="restaurant" ref={sectionRef} className="relative">
+            {/* Hero Section */}
+            <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
+                <div className="absolute inset-0">
+                    <Image
+                        src="/assets/images/unsplash_38.png"
+                        alt="Restaurant & Cloud Kitchen"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 z-10 text-center text-white px-4 pb-20">
+                    <div className="smallrectangle absolute top-20 right-20">
+                        <Image
+                            src="/assets/images/Group 62.png"
+                            alt="containersm"
+                            width={100}
+                            height={100}
+                        />
+                    </div>
+                    <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors mb-8"
+                    >
+                        Let's Talk <i className="fas fa-arrow-right"></i>
+                    </Link>
+                    <div className="retail-img1 rectangle-img"></div>
+                    <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+                        Revolutionizing the Food Service Industry
+                    </p>
+                </div>
+            </div>
+
+            {/* Innovate section */}
+            <div ref={innovateRef} className="py-20 bg-gray-50 dark:bg-gray-900">
+                <div className="container-max">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                            Transforming Dining and Delivery Experiences
+                        </h2>
+                    </div>
+                    <div className="max-w-4xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6">
+                        <p>The Restaurant and Cloud Kitchen industry is rapidly evolving with changing consumer preferences and technological advancements. At Codriva, we develop comprehensive food service technology solutions that enhance operational efficiency, improve customer experiences, and drive business growth in the competitive food industry.</p>
+                        <p>Our expertise includes restaurant management systems, online ordering platforms, cloud kitchen operations, and food delivery integrations. We leverage AI and data analytics to optimize menu planning, predict demand, and personalize customer experiences.</p>
+                        <p>Codriva's restaurant solutions feature seamless integration with POS systems, delivery platforms, and inventory management tools. Our platforms support everything from traditional dine-in restaurants to cloud kitchens and food delivery services, ensuring scalability and reliability.</p>
+                        <p>With a focus on user experience and operational excellence, Codriva helps restaurant owners and operators adapt to digital transformation, reduce costs, increase efficiency, and deliver exceptional dining experiences in an increasingly competitive market.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Solutions section */}
+            <div ref={solutionsRef} className="py-20 bg-white dark:bg-gray-800">
+                <div className="container-max">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                            Solutions We Serve
+                        </h2>
+                    </div>
+                    <div className="space-y-16">
+                        {solutions.map((solution, index) => (
+                            <div key={index} className={`solution-item flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
+                                <div className="flex-1">
+                                    <Image
+                                        src={solution.image}
+                                        alt={solution.title}
+                                        width={600}
+                                        height={400}
+                                        className="rounded-lg shadow-lg"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                                        {solution.title}
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {solution.points.map((point, idx) => (
+                                            <li key={idx} className="flex items-start gap-3">
+                                                <i className="fas fa-check text-blue-600 mt-1"></i>
+                                                <span className="text-gray-600 dark:text-gray-300">{point}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <Advantages />
+            <CTA />
+            <News />
+        </section>
+    )
+}
+
+export default Restaurant

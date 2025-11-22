@@ -160,7 +160,7 @@ const Contact = () => {
         {
             icon: '📧',
             title: 'Email',
-            value: 'hello@codriva.com',
+            value: 'info@codriva.com',
             href: 'mailto:hello@codriva.com'
         },
         {
@@ -172,7 +172,7 @@ const Contact = () => {
         {
             icon: '📍',
             title: 'Location',
-            value: 'San Francisco, CA',
+            value: 'ITHUM TOWER, Tower B,6th Floor(616,617),Sector 62, Noida, Uttar Pradesh 201309',
             href: '#'
         },
         {
@@ -359,7 +359,7 @@ const Contact = () => {
                                     Business Hours
                                 </h4>
                                 <div className="space-y-2 text-sm text-[#656d76] dark:text-[#8b949e]">
-                                    <div>Monday - Friday: 9:00 AM - 6:00 PM</div>
+                                    <div>Monday - Friday: 9:30 AM - 6:30 PM</div>
                                     <div>Saturday: 10:00 AM - 4:00 PM</div>
                                     <div>Sunday: Closed</div>
                                 </div>

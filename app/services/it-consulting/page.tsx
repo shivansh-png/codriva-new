@@ -12,7 +12,7 @@ export default function ItConsulting() {
           <div className="w-24 h-1 bg-[#0969da] mx-auto mb-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
               <span className="text-[#0969da] font-semibold">IT consulting</span> helps businesses align their technology strategies with core business objectives. From selecting the right software and infrastructure to enhancing cybersecurity and optimizing operations, IT consultants provide expert guidance for effective and efficient technology use. Whether planning a digital transformation or seeking ongoing tech support, IT consulting delivers customized solutions that drive growth, innovation, and competitive advantage.
