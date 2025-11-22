@@ -1,11 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'Web Development | Codriva',
-  description: 'Professional web development services by Codriva',
-}
-
 export default function WebDevelopmentPage() {
   return (
     <section className="min-h-screen pt-32 pb-20 container-max">

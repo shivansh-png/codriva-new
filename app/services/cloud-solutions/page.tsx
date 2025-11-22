@@ -1,9 +1,6 @@
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'Cloud Solutions | Codriva',
-  description: 'Cloud infrastructure and DevOps solutions that scale with your business.',
-}
+
 
 export default function CloudSolutionsPage() {
   return (

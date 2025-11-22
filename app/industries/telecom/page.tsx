@@ -1,129 +1,188 @@
-<!DOCTYPE html>
-<html lang="en">
+'use client';
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telecom</title>
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/main1.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
+import Image from 'next/image';
 
-<body>
-  <div data-include="header.html"></div>
-  <section class=" hero-section section-full-width">
-    <img src="assets/images/unsplash_30.png" alt="fintech" class="bg-image" />
-    <div class="smallrectangle tele">
-      <img src="assets/images/Group 111.png" alt="containersm">
-      <span class="telecom-text">Telecom</span>
-    </div>
-    <a href="contact.html" class="btn btn-mid-light-primary abtbtn btn-shadow">Let's Talk <i
-        class="fas fa-arrow-right"></i></a>
-    <div class="retail-img1 rectangle-img"></div>
-    <p class="indtext1">Connecting the World, One Line of Code at a Time
-    </p>
-  </section>
-  <!-- Logistics section-->
-  <div class="inosec">
-    <div class="ino-biglet">
-      <h1>Powering the Pulse of Global Communication</h1>
-    </div>
-    <p>The telecommunications industry is the backbone of global connectivity, driving communication and data exchange
-      across the world. At Codriva, we deliver advanced software solutions designed to meet the unique demands of
-      telecom providers, enabling them to optimize network performance, manage complex infrastructure, and deliver
-      superior customer experiences.</p>
-    <p>Our expertise includes developing scalable platforms for billing and revenue management, customer relationship
-      management (CRM), and service assurance systems. We also support network automation, real-time monitoring, and
-      analytics to improve operational efficiency and reduce downtime. By leveraging cutting-edge technologies like 5G,
-      IoT, and cloud computing, we help telecom companies stay ahead in a rapidly evolving market.</p>
-    <p>Codriva’s solutions empower telecom providers to launch new services faster, enhance network security, and
-      deliver personalized experiences that drive customer satisfaction and loyalty. From managing large-scale data
-      flows to integrating emerging technologies, we help shape the future of telecommunications with innovation and
-      reliability.</p>
-  </div>
-  <!-- Solotion section-->
-  <div class="main-description">
-    <div class="descrip-heading">
-      <span>Solutions We Serve</span>
-    </div>
-    <div class="description-container rest left">
-      <div class="sec1 image-left">
-        <div class="desimg">
-          <img src="assets/images/unsplash_31.png" alt="">
-        </div>
-      </div>
-      <div class="sec3">
-        <div class="desheading2">
-          <span> Chatbots & AI Support Systems</span>
-        </div>
-        <div class="lists">
-          <p> Automated customer service tools to handle FAQs, complaints, and account queries — reducing support load
-            and improving response time.</p>
-        </div>
-      </div>
-    </div>
-    <!------>
-    <div class="description-container rest right">
-      <div class="sec1 image-right">
-        <div class="desimg">
-          <img src="assets/images/unsplash_32.png" alt="">
-        </div>
-      </div>
-      <div class="sec3">
-        <div class="desheading2">
-          <span> Network Monitoring Dashboards</span>
-        </div>
-        <div class="lists">
-          <p>Real-time dashboards to visualize network health, track outages, and generate performance analytics for
-            telecom engineers.</p>
-        </div>
-      </div>
-    </div>
-    <!------>
-    <div class="description-container rest left">
-      <div class="sec1 image-left">
-        <div class="desimg">
-          <img src="assets/images/unsplash_33.png" alt="">
-        </div>
-      </div>
-      <div class="sec3">
-        <div class="desheading2">
-          <span> Billing & Payment Systems</span>
-        </div>
-        <div class="lists">
-          <p> Robust billing engines with usage-based charging, invoice generation, and secure payment integration.</p>
-        </div>
-      </div>
-    </div>
-    <!------>
-    <div class="description-container rest right">
-      <div class="sec1 image-right">
-        <div class="desimg">
-          <img src="assets/images/unsplash_34.png" alt="">
-        </div>
-      </div>
-      <div class="sec3">
-        <div class="desheading2">
-          <span> CRM for Telecom Providers</span>
-        </div>
-        <div class="lists">
-          <p>Custom CRM systems to manage customers, track usage, resolve issues, and improve retention with targeted
-            communication.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div data-include="advantages.html"></div>
-  <div data-include="cta.html"></div>
-  <div data-include="news.html"></div>
-  <div data-include="footer.html"></div>
-</body>
-<!-- Scripts -->
-<script src="js/main.js"></script>
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
-</html>
+
+
+export default function Telecom() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const introRef = useRef<HTMLDivElement>(null);
+  const solutionsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const ctx = gsap.context(() => {
+
+        gsap.fromTo(
+          heroRef.current,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.1,
+            ease: "power3.out",
+            scrollTrigger: { trigger: heroRef.current, start: "top 80%" }
+          }
+        );
+
+        gsap.fromTo(
+          introRef.current,
+          { opacity: 0, x: -50 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: { trigger: introRef.current, start: "top 80%" }
+          }
+        );
+
+        gsap.fromTo(
+          ".solution-item",
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            stagger: 0.25,
+            ease: "power3.out",
+            scrollTrigger: { trigger: solutionsRef.current, start: "top 80%" }
+          }
+        );
+
+      }, sectionRef);
+
+      return () => ctx.revert();
+    }
+  }, []);
+
+  const solutions = [
+    {
+      title: "Chatbots & AI Support Systems",
+      image: "/assets/images/unsplash_31.png",
+      text:
+        "Automated customer service tools to handle FAQs, complaints, and account queries — reducing support load and improving response time."
+    },
+    {
+      title: "Network Monitoring Dashboards",
+      image: "/assets/images/unsplash_32.png",
+      text:
+        "Real-time dashboards to visualize network health, track outages, and generate performance analytics for telecom engineers."
+    },
+    {
+      title: "Billing & Payment Systems",
+      image: "/assets/images/unsplash_33.png",
+      text:
+        "Robust billing engines with usage-based charging, invoice generation, and secure payment integration."
+    },
+    {
+      title: "CRM for Telecom Providers",
+      image: "/assets/images/unsplash_34.png",
+      text:
+        "Custom CRM systems to manage customers, track usage, resolve issues, and improve retention with targeted communication."
+    },
+  ];
+
+  return (
+    <section ref={sectionRef} className="relative">
+
+      {/* HERO SECTION */}
+      <section
+        ref={heroRef}
+        className="hero-section section-full-width relative"
+      >
+        <img
+          src="/assets/images/unsplash_30.png"
+          alt="telecom"
+          className="bg-image"
+        />
+
+        <div className="smallrectangle tele">
+          <img src="/assets/images/Group 111.png" alt="telecom badge" />
+          <span className="telecom-text">Telecom</span>
+        </div>
+
+        <Link href="/contact" className="btn btn-mid-light-primary abtbtn btn-shadow">
+          Let's Talk <i className="fas fa-arrow-right"></i>
+        </Link>
+
+        <div className="retail-img1 rectangle-img"></div>
+
+        <p className="indtext1">
+          Connecting the World, One Line of Code at a Time
+        </p>
+      </section>
+
+      {/* INTRO SECTION */}
+      <div ref={introRef} className="inosec container-max">
+        <div className="ino-biglet">
+          <h1>Powering the Pulse of Global Communication</h1>
+        </div>
+
+        <p>
+          The telecommunications industry is the backbone of global connectivity,
+          driving communication and data exchange across the world. At Codriva,
+          we deliver advanced software solutions designed to meet the unique
+          demands of telecom providers, enabling them to optimize network performance,
+          manage complex infrastructure, and deliver superior customer experiences.
+        </p>
+
+        <p>
+          Our expertise includes scalable platforms for billing and revenue management,
+          CRM, and service assurance systems. We also support network automation,
+          real-time monitoring, and analytics to improve operational efficiency
+          and reduce downtime. With 5G, IoT, and cloud technologies, we help telecom
+          companies stay ahead in a rapidly evolving market.
+        </p>
+
+        <p>
+          Codriva empowers telecom providers to launch new services faster, enhance
+          network security, and deliver personalized experiences that drive customer
+          satisfaction and loyalty.
+        </p>
+      </div>
+
+      {/* SOLUTIONS */}
+      <div ref={solutionsRef} className="main-description container-max">
+        <div className="descrip-heading">
+          <span>Solutions We Serve</span>
+        </div>
+
+        {solutions.map((sol, i) => (
+          <div
+            key={i}
+            className={`solution-item description-container rest ${
+              i % 2 === 0 ? "left" : "right"
+            }`}
+          >
+            <div className={`sec1 ${i % 2 === 0 ? "image-left" : "image-right"}`}>
+              <div className="desimg">
+                <img src={sol.image} alt={sol.title} />
+              </div>
+            </div>
+
+            <div className="sec3">
+              <div className="desheading2">
+                <span>{sol.title}</span>
+              </div>
+              <div className="lists">
+                <p>{sol.text}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* OTHER GLOBAL SECTIONS (included by layout) */}
+    </section>
+  );
+}
