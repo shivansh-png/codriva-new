@@ -98,6 +98,18 @@
     section:not([id="home"]) {
         scroll-margin-top: 80px;
     }
+
+    /* Animated gradient background */
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .animated-gradient {
+        background-size: 200% 200%;
+        animation: gradientShift 15s ease infinite;
+    }
 }
 
 @layer components {
@@ -120,7 +132,7 @@
     }
 
     .btn-outline {
-        @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-[#24292f] bg-transparent border border-[#d0d7de] rounded-md hover:bg-[#f6f8fa] focus:outline-none focus:ring-2 focus:ring-[#0969da] focus:ring-offset-2 transition-colors duration-200;
+        @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-[#24292f] bg-[#f6f8fa] border border-[#d0d7de] rounded-md hover:bg-[#f6f8fa] focus:outline-none focus:ring-2 focus:ring-[#0969da] focus:ring-offset-2 transition-colors duration-200;
     }
 
     .dark .btn-outline {
@@ -129,11 +141,13 @@
 
     /* GitHub-style cards */
     .card {
-        @apply bg-white border border-[#d0d7de] rounded-lg shadow-sm;
+        @apply border border-[#d0d7de] rounded-lg shadow-sm;
+        background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
     }
 
     .dark .card {
-        @apply bg-[#161b22] border-[#30363d];
+        @apply border-[#30363d];
+        background: linear-gradient(135deg, #161b22 0%, #1e293b 100%);
     }
 
     .card-header {
@@ -150,11 +164,11 @@
 
     /* GitHub-style navigation */
     .nav-link {
-        @apply text-[#24292f] hover:text-[#0969da] px-3 py-2 text-sm font-medium transition-colors duration-200;
+        @apply text-white hover:text-[#0969da] px-3 py-2 text-base font-medium transition-colors duration-200;
     }
 
     .dark .nav-link {
-        @apply text-[#f0f6fc] hover:text-[#58a6ff];
+        @apply text-white hover:text-[#58a6ff];
     }
 
     /* GitHub-style form elements */
@@ -212,5 +226,27 @@
 
     .dark .hover-card {
         @apply hover:shadow-2xl;
+    }
+
+    /* Line clamp utility */
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Slider animation */
+    .animate-slide {
+        animation: slide 30s linear infinite;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
     }
 }

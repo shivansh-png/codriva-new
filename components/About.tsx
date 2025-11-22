@@ -109,7 +109,7 @@ const About = () => {
     }, [])
 
     return (
-        <section id="about" ref={sectionRef} className="relative">
+        <section id="about" ref={sectionRef} className="relative min-h-screen">
             {/* Hero Section */}
             <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
                 <div className="absolute inset-0">
@@ -282,27 +282,27 @@ const About = () => {
                             <Image
                                 src="/assets/images/Group 46.png"
                                 alt="Quality value"
-                                width={200}
-                                height={200}
-                                className="mx-auto"
+                                width={250}
+                                height={250}
+                                className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
                             />
                         </div>
                         <div className="value-item">
                             <Image
                                 src="/assets/images/Group 47.png"
                                 alt="Transparency value"
-                                width={200}
-                                height={200}
-                                className="mx-auto"
+                                width={250}
+                                height={250}
+                                className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
                             />
                         </div>
                         <div className="value-item">
                             <Image
                                 src="/assets/images/Group 48.png"
                                 alt="Collaboration value"
-                                width={200}
-                                height={200}
-                                className="mx-auto"
+                                width={250}
+                                height={250}
+                                className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
                             />
                         </div>
                     </div>
@@ -312,18 +312,18 @@ const About = () => {
                             <Image
                                 src="/assets/images/Group 49.png"
                                 alt="Integrity value"
-                                width={200}
-                                height={200}
-                                className="mx-auto"
+                                width={250}
+                                height={250}
+                                className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
                             />
                         </div>
                         <div className="value-item">
                             <Image
                                 src="/assets/images/Group 50.png"
                                 alt="Ownership value"
-                                width={200}
-                                height={200}
-                                className="mx-auto"
+                                width={250}
+                                height={250}
+                                className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
                             />
                         </div>
                     </div>

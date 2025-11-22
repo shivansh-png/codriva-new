@@ -12,7 +12,7 @@ export default function MobileAppDevelopment() {
           <div className="w-24 h-1 bg-[#0969da] mx-auto mb-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="relative">
             <Image
               src="/assets/images/representations.png"

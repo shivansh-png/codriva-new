@@ -12,7 +12,7 @@ export default function AiMachineLearning() {
           <div className="w-24 h-1 bg-[#0969da] mx-auto mb-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
               <span className="text-[#0969da] font-semibold">Artificial intelligence (AI)</span> is a branch of computer science focused on enabling machines to simulate human intelligence—ranging from language comprehension to autonomous decision-making. A key subset, Machine Learning (ML), empowers systems to learn from data and improve over time without explicit programming. Together, AI and ML are revolutionizing industries by automating processes, enhancing user experiences, and enabling smarter, data-driven decisions.

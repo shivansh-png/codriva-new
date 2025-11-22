@@ -8,6 +8,7 @@ const Hero = () => {
     const titleRef = useRef<HTMLHeadingElement>(null)
     const subtitleRef = useRef<HTMLParagraphElement>(null)
     const ctaRef = useRef<HTMLDivElement>(null)
+    const videoRef = useRef<HTMLVideoElement>(null)
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -63,6 +64,11 @@ const Hero = () => {
                     }
                 })
 
+                // Slow down the video playback speed
+                if (videoRef.current) {
+                    videoRef.current.playbackRate = 0.5; // 50% of normal speed for a subtle slow effect
+                }
+
                 // Add text reveal animation on scroll
                 gsap.utils.toArray('.hero-text').forEach((element: any) => {
                     gsap.fromTo(element, {
@@ -95,14 +101,21 @@ const Hero = () => {
             ref={heroRef}
             className="relative min-h-screen flex items-center justify-center overflow-hidden"
         >
-            {/* Blue Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-200 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900"></div>
-
-            {/* Background Image */}
-            <div className="absolute inset-0 opacity-20 dark:opacity-30">
-                <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-                    backgroundImage: `url("https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop&auto=format&q=80")`
-                }}></div>
+            {/* Background Video */}
+            <div className="absolute inset-0">
+                <video
+                    ref={videoRef}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                >
+                    <source src="/videos/Landing_Page2.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                {/* Overlay for better text readability */}
+                <div className="absolute inset-0 bg-black/40"></div>
             </div>
 
             {/* Overlay Pattern */}
@@ -122,17 +135,17 @@ const Hero = () => {
                 <div className="text-center max-w-4xl mx-auto">
                     <h1
                         ref={titleRef}
-                        className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6 leading-tight font-display"
+                        className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-display"
                     >
                         Transform your business with{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200">
                             digital innovation
                         </span>
                     </h1>
 
                     <p
                         ref={subtitleRef}
-                        className="hero-text text-xl md:text-2xl text-[#656d76] dark:text-[#8b949e] mb-8 max-w-3xl mx-auto leading-relaxed"
+                        className="hero-text text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
                     >
                         We deliver exceptional software solutions, digital transformation services,
                         and technology consulting to help your business scale and succeed.
@@ -151,22 +164,6 @@ const Hero = () => {
                         >
                             View our work
                         </Link>
-                    </div>
-
-                    {/* Stats */}
-                    <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-                        <div className="text-center magnetic">
-                            <div className="text-3xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-2">100+</div>
-                            <div className="text-[#656d76] dark:text-[#8b949e]">Projects Completed</div>
-                        </div>
-                        <div className="text-center magnetic">
-                            <div className="text-3xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-2">50+</div>
-                            <div className="text-[#656d76] dark:text-[#8b949e]">Happy Clients</div>
-                        </div>
-                        <div className="text-center magnetic">
-                            <div className="text-3xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-2">5+</div>
-                            <div className="text-[#656d76] dark:text-[#8b949e]">Years Experience</div>
-                        </div>
                     </div>
                 </div>
             </div>

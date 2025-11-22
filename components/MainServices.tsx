@@ -128,20 +128,22 @@ const MainServices = () => {
     <div ref={sectionRef} className="mt-16">
       <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {allServices.map((service, index) => (
-          <div key={index} className="main-service-card card hover-card p-8">
-            <div className="mb-4 overflow-hidden rounded-lg">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
-              />
+          <div key={index} className="main-service-card card hover-card p-8 flex flex-col h-full">
+            <div className="flex-grow">
+              <div className="mb-4 overflow-hidden rounded-lg">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-4">
+                {service.title}
+              </h3>
+              <p className="text-[#656d76] dark:text-[#8b949e] leading-relaxed mb-6">
+                {service.description}
+              </p>
             </div>
-            <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-4">
-              {service.title}
-            </h3>
-            <p className="text-[#656d76] dark:text-[#8b949e] leading-relaxed mb-6">
-              {service.description}
-            </p>
             <Link href={`/services/${service.slug}`} className="btn-secondary">
               Learn More
             </Link>

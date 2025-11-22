@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
 
 const navItems = [
-  { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services/all' },
   { name: 'Industries', href: '/industries' },
@@ -24,6 +23,12 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    if (pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [pathname])
 
   // Only keep this for same-page scrolls (not routes)
   const scrollToSection = (id: string) => {
@@ -48,9 +53,14 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a
-              href="#home"
-              onClick={(e) => { e.preventDefault(); scrollToSection('#home') }}
+            <button
+              onClick={() => {
+                if (pathname === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                } else {
+                  window.location.href = '/'
+                }
+              }}
               className="flex items-center space-x-3 group"
             >
               <img
@@ -58,7 +68,7 @@ const Navigation = () => {
                 alt="Codriva Logo"
                 className="w-40 h-40 object-contain group-hover:scale-105 transition-all duration-300"
               />
-            </a>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
@@ -67,7 +77,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black ${pathname === item.href ? 'bg-[#0969da] text-white hover:bg-[#0969da]/90' : ''
+                className={`nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black ${isScrolled ? 'text-black' : ''} ${pathname === item.href ? 'bg-[#0969da] text-white hover:bg-[#0969da]/90' : ''
                   }`}
               >
                 {item.name}
