@@ -156,13 +156,13 @@ const Hero = () => {
                             href="/contact"
                             className="btn-primary text-lg px-8 py-3 magnetic"
                         >
-                            Start your project
+                            Get a free Consultation
                         </Link>
                         <Link
-                            href="/portfolio"
+                            href="/industries"
                             className="btn-outline text-lg px-8 py-3 magnetic"
                         >
-                            View our work
+                            Our Expertise
                         </Link>
                     </div>
                 </div>

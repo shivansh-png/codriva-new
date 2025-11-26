@@ -227,10 +227,10 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
-                Get Started
+                Get a free Consultation
               </Link>
-              <Link href="/portfolio" className="btn-outline dark:text-white dark:border-white">
-                View Portfolio
+              <Link href="/industries" className="btn-outline dark:text-white dark:border-white">
+                Our Expertise
               </Link>
             </div>
           </div>

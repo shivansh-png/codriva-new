@@ -173,7 +173,7 @@ const Contact = () => {
             icon: '📍',
             title: 'Location',
             value: 'ITHUM TOWER, Tower B,6th Floor(616,617),Sector 62, Noida, Uttar Pradesh 201309',
-            href: '#'
+            href: 'https://www.google.com/maps?q=28.627342575507704, 77.37247588037425'
         },
         {
             icon: '💼',
@@ -216,7 +216,7 @@ const Contact = () => {
                     <div>
                         <div className="card p-8">
                             <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
-                                Send us a message
+                                Get a free consultation
                             </h3>
 
                             {submitStatus === 'success' && (
@@ -337,6 +337,8 @@ const Contact = () => {
                             <div className="space-y-6">
                                 {contactInfo.map((info, index) => (
                                     <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         key={index}
                                         href={info.href}
                                         className="flex items-center p-4 rounded-lg hover:bg-white dark:hover:bg-[#161b22] transition-colors duration-200 group"

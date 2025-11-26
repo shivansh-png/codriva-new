@@ -292,7 +292,7 @@ const Portfolio = () => {
                                 href="/contact"
                                 className="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-lg font-medium hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-colors duration-200"
                             >
-                                Get Started
+                                Get a free consultation
                             </Link>
                         </div>
                     </div>

@@ -136,7 +136,7 @@
     }
 
     .dark .btn-outline {
-        @apply text-[#f0f6fc] border-[#30363d] hover:bg-[#21262d];
+        @apply text-[#f0f6fc] bg-[#161b22] border-[#30363d] hover:bg-[#21262d];
     }
 
     /* GitHub-style cards */

@@ -89,7 +89,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-3">
             <SimpleThemeToggle />
             <button onClick={() => router.push('/contact')} className="btn-primary">
-              Get Started
+              Free Consultations
             </button>
 
             {/* Mobile menu button */}
