@@ -16,7 +16,7 @@ export default function ClientLayout({
         <Providers>
             <Navigation />
             <main className="flex-grow">{children}</main>
-            {pathname === '/' && <Footer />}
+            <Footer />
         </Providers>
     )
 }

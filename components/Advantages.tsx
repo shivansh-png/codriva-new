@@ -1,3 +1,5 @@
+import { Code2, Users, Rocket } from 'lucide-react'
+
 const Advantages = () => {
     return (
         <section className="py-20 bg-white dark:bg-gray-800">
@@ -10,27 +12,39 @@ const Advantages = () => {
                         We deliver exceptional results through our expertise, innovation, and commitment to excellence.
                     </p>
                 </div>
+
                 <div className="grid md:grid-cols-3 gap-8">
+                    {/* Expert Development */}
                     <div className="text-center">
                         <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i className="fas fa-code text-white text-2xl"></i>
+                            <Code2 className="text-white w-8 h-8" />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Expert Development</h3>
-                        <p className="text-gray-600 dark:text-gray-300">Cutting-edge technologies and best practices for robust solutions.</p>
+                        <p className="text-gray-600 dark:text-gray-300">
+                            Cutting-edge technologies and best practices for robust solutions.
+                        </p>
                     </div>
+
+                    {/* Dedicated Team */}
                     <div className="text-center">
                         <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i className="fas fa-users text-white text-2xl"></i>
+                            <Users className="text-white w-8 h-8" />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Dedicated Team</h3>
-                        <p className="text-gray-600 dark:text-gray-300">Experienced professionals committed to your project's success.</p>
+                        <p className="text-gray-600 dark:text-gray-300">
+                            Experienced professionals committed to your project's success.
+                        </p>
                     </div>
+
+                    {/* Fast Delivery */}
                     <div className="text-center">
                         <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i className="fas fa-rocket text-white text-2xl"></i>
+                            <Rocket className="text-white w-8 h-8" />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Fast Delivery</h3>
-                        <p className="text-gray-600 dark:text-gray-300">Efficient processes to deliver high-quality solutions on time.</p>
+                        <p className="text-gray-600 dark:text-gray-300">
+                            Efficient processes to deliver high-quality solutions on time.
+                        </p>
                     </div>
                 </div>
             </div>

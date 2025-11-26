@@ -209,7 +209,7 @@ const Portfolio = () => {
                     <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6 font-display">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600">Industries</span>
                     </h2>
-                    <p className="portfolio-text text-xl text-[#656d76] dark:text-[#8b949e] max-w-3xl mx-auto mb-6">
+                    <p className="portfolio-text text-xl text-[#656d76] dark:text-[#f0f6fc] max-w-3xl mx-auto mb-6">
                         Discover how we transform businesses across diverse industries with innovative digital solutions.
                     </p>
 
@@ -220,8 +220,8 @@ const Portfolio = () => {
                                 key={category.id}
                                 onClick={() => setActiveCategory(category.id)}
                                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${activeCategory === category.id
-                                    ? 'bg-[#0969da] text-white dark:bg-[#58a6ff] dark:text-[#0d1117]'
-                                    : 'text-[#656d76] dark:text-[#8b949e] hover:bg-[#f6f8fa] dark:hover:bg-[#21262d]'
+                                    ? 'bg-[#0969da] text-white dark:bg-[#58a6ff] dark:text-[#f0f6fc ]'
+                                    : 'text-[#656d76] dark:text-[#f0f6fc] hover:bg-[#f0f6fc] dark:hover:bg-[#21262d]'
                                     }`}
                             >
                                 {category.name}
@@ -253,7 +253,7 @@ const Portfolio = () => {
                                 <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-2">
                                     {project.title}
                                 </h3>
-                                <p className="text-[#656d76] dark:text-[#8b949e] mb-4 text-sm leading-relaxed">
+                                <p className="text-[#656d76] dark:text-[#f0f6fc] mb-4 text-sm leading-relaxed">
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2">
@@ -277,7 +277,7 @@ const Portfolio = () => {
                         <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-4">
                             Ready to Transform Your Industry?
                         </h3>
-                        <p className="text-[#656d76] dark:text-[#8b949e] mb-6">
+                        <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6">
                             Discover how our industry-specific solutions can drive your business forward.
                             Let's discuss your unique challenges and opportunities.
                         </p>

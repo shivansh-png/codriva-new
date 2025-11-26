@@ -49,7 +49,7 @@ const Navigation = () => {
           : 'bg-transparent'
         }`}
     >
-      <div className="container-max">
+      
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -77,7 +77,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black ${isScrolled ? 'text-black' : ''} ${pathname === item.href ? 'bg-[#0969da] text-white hover:bg-[#0969da]/90' : ''
+                className={`text-xl nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black ${isScrolled ? 'text-black' : ''} ${pathname === item.href ? 'bg-[#0969da] text-white hover:bg-[#0969da]/90' : ''
                   }`}
               >
                 {item.name}
@@ -88,7 +88,7 @@ const Navigation = () => {
           {/* Right side actions */}
           <div className="flex items-center space-x-3">
             <SimpleThemeToggle />
-            <button onClick={() => router.push('/contact')} className="btn-primary">
+            <button onClick={() => router.push('/contact')} className="text-xl btn-primary">
               Free Consultations
             </button>
 
@@ -123,7 +123,7 @@ const Navigation = () => {
             </div>
           </div>
         )}
-      </div>
+      
     </nav>
   )
 }

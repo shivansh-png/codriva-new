@@ -164,7 +164,7 @@ const Services = () => {
               Services
             </span>
           </h2>
-          <p className="services-text text-xl text-[#656d76] dark:text-[#8b949e] max-w-3xl mx-auto">
+          <p className="services-text text-xl text-[#656d76] dark:text-[#f0f6fc] max-w-3xl mx-auto">
             We offer a comprehensive range of digital services to help your business thrive in the
             modern world.
           </p>
@@ -177,14 +177,14 @@ const Services = () => {
               <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-4">
                 {service.title}
               </h3>
-              <p className="text-[#656d76] dark:text-[#8b949e] mb-6 leading-relaxed">
+              <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6 leading-relaxed">
                 {service.description}
               </p>
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
-                    className="flex items-center text-sm text-[#656d76] dark:text-[#8b949e]"
+                    className="flex items-center text-sm text-[#656d76] dark:text-[#f0f6fc]"
                   >
                     <svg
                       className="w-4 h-4 text-[#0969da] dark:text-[#58a6ff] mr-2"
@@ -221,7 +221,7 @@ const Services = () => {
             <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-4">
               Ready to start your project?
             </h3>
-            <p className="text-[#656d76] dark:text-[#8b949e] mb-6">
+            <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6">
               Let's discuss how we can help bring your vision to life with our cutting-edge
               technology solutions.
             </p>
