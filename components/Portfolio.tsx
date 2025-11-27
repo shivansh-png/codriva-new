@@ -4,6 +4,9 @@ import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
+import Lottie from "lottie-react"
+import DotLottie from './DotLottie'
+
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger)
@@ -14,25 +17,28 @@ const projects = [
         id: 1,
         title: 'Retail & E-Commerce',
         description: 'Custom e-commerce platforms with advanced inventory management, payment gateways, and omnichannel retail solutions.',
-        image: '/assets/images/retail-ecom.png',
+        image: 'https://lottie.host/45aec96d-c60f-48e2-bcab-caca2d4faee1/JgNqUG4t1M.lottie',
         tags: ['E-commerce', 'POS Systems', 'Payment Integration'],
         category: 'retail',
         link: '/industries/retail'
     },
     {
-        id: 2,
-        title: 'Telecom',
-        description: 'Comprehensive telecom software solutions including billing systems, network management, and customer portals.',
-        image: '/assets/images/telecom-pic.png',
-        tags: ['Billing Systems', 'Network Management', 'CRM'],
-        category: 'telecom',
-        link: '/industries/telecom'
+        
+    id: 2,
+    title: 'EdTech',
+    description: 'Innovative education technology solutions including LMS platforms, virtual classrooms, mobile learning apps, and AI-powered personalized learning experiences.',
+    image: 'https://lottie.host/ec99b463-a384-4c6c-ad6c-e855caed9da6/mLC7PWXoZw.lottie',
+    tags: ['LMS', 'Virtual Classroom', 'E-Learning', 'AI Learning'],
+    category: 'edtech',
+    link: '/industries/edtech'
+
+
     },
     {
         id: 3,
         title: 'FinTech & Banking',
         description: 'Secure financial technology solutions with advanced security, compliance, and real-time transaction processing.',
-        image: '/assets/images/fintech-pic.png',
+        image: 'https://lottie.host/9f1ea2cf-0e7b-4dad-8277-b1809846f4fd/5De4ysgqVx.lottie',
         tags: ['Banking Apps', 'Payment Processing', 'Security'],
         category: 'fintech',
         link: '/industries/fintech'
@@ -41,7 +47,7 @@ const projects = [
         id: 4,
         title: 'Logistics & Supply Chain',
         description: 'End-to-end logistics solutions with real-time tracking, warehouse management, and supply chain optimization.',
-        image: '/assets/images/logistics-pic.png',
+        image: 'https://lottie.host/8578b848-0614-4e6d-8e69-59d10eef7409/POo2B7iI12.lottie',
         tags: ['Supply Chain', 'Warehouse Management', 'Tracking'],
         category: 'logistics',
         link: '/industries/logistics'
@@ -50,7 +56,7 @@ const projects = [
         id: 5,
         title: 'Real Estate and PropTech',
         description: 'Property technology solutions including property management systems, virtual tours, and real estate marketplaces.',
-        image: '/assets/images/real-estate-pic.png',
+        image: 'https://lottie.host/6d7c6dd5-064a-4848-ba96-edf17c2f44d2/wugQgJQdSv.lottie',
         tags: ['Property Management', 'Virtual Tours', 'Marketplaces'],
         category: 'realestate',
         link: '/industries/realestate'
@@ -59,7 +65,7 @@ const projects = [
         id: 6,
         title: 'On Demand Platforms',
         description: 'Scalable on-demand service platforms for ride-sharing, delivery, and service-based businesses.',
-        image: '/assets/images/ondemand-pic.png',
+        image: 'https://lottie.host/270fdcae-11f5-46a1-998b-c9941ccb23ac/LEZKTOZ4xI.lottie',
         tags: ['Ride-Sharing', 'Delivery Apps', 'Service Platforms'],
         category: 'ondemand',
         link: '/industries/ondemand'
@@ -234,20 +240,16 @@ const Portfolio = () => {
                 <div ref={projectsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredProjects.map((project) => (
                         <div key={project.id} className="project-card card hover-card overflow-hidden">
-                            <div className="relative">
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                                    <Link
+                            <Link
                                         href={project.link}
-                                        className="inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-900 rounded-md hover:bg-gray-100 transition-colors duration-200 font-medium"
+                                        //className="inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-900 rounded-md hover:bg-gray-100 transition-colors duration-200 font-medium"
                                     >
-                                        Know more →
-                                    </Link>
-                                </div>
+                            <div className="relative">
+                                <DotLottie 
+                                    src={project.image}
+                                    className="w-full h-64 object-cover"
+                                 />
+
                             </div>
                             <div className="p-6">
                                 <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-2">
@@ -267,6 +269,7 @@ const Portfolio = () => {
                                     ))}
                                 </div>
                             </div>
+                             </Link>
                         </div>
                     ))}
                 </div>
