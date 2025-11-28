@@ -31,7 +31,7 @@ export default function QaTesting() {
 
         <div className="text-center">
           <Link href="/contact" className="btn-primary">
-            Get Started
+            Get a free consultation
           </Link>
         </div>
       </div>

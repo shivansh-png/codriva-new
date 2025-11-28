@@ -216,7 +216,7 @@ export default function Retail() {
             href="/contact"
             className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-colors"
           >
-            Get Started <i className="fas fa-arrow-right"></i>
+            Get a free consultation <i className="fas fa-arrow-right"></i>
           </Link>
         </div>
       </div>

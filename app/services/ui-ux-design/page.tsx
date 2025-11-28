@@ -37,7 +37,7 @@ export default function UiUxDesign() {
 
         <div className="text-center">
           <Link href="/contact" className="btn-primary">
-            Get Started
+            Get a free consultation
           </Link>
         </div>
       </div>
