@@ -172,6 +172,7 @@ const Services = () => {
 
         <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
+             <Link href={service.link} className="">
             <div key={index} className="service-card card hover-card p-8 flex flex-col h-full">
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-4">
@@ -201,12 +202,8 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              {service.link ? (
-                <Link href={service.link} className="btn-secondary mt-auto">
-                  Learn More
-                </Link>
-              ) : null}
             </div>
+            </Link>
           ))}
         </div>
 

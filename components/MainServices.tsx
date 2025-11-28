@@ -128,6 +128,7 @@ const MainServices = () => {
     <div ref={sectionRef} className="mt-16">
       <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {allServices.map((service, index) => (
+            <Link href={`/services/${service.slug}`} className="">
           <div key={index} className="main-service-card card hover-card p-8 flex flex-col h-full">
             <div className="flex-grow">
               <div className="mb-4 overflow-hidden rounded-lg">
@@ -144,10 +145,8 @@ const MainServices = () => {
                 {service.description}
               </p>
             </div>
-            <Link href={`/services/${service.slug}`} className="btn-secondary">
-              Learn More
-            </Link>
           </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -139,22 +139,37 @@ const Contact = () => {
         }))
     }
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-        setIsSubmitting(true)
-        setSubmitStatus('idle')
+const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
 
-        try {
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 2000))
-            setSubmitStatus('success')
-            setFormData({ name: '', email: '', company: '', message: '' })
-        } catch (error) {
-            setSubmitStatus('error')
-        } finally {
-            setIsSubmitting(false)
-        }
+    const googleFormURL =
+        "https://docs.google.com/forms/d/e/1FAIpQLSesXV-fCO8oYN1cvrODy6cqGf0Ao-DhvPgtrR_-0jNrWAY1gg/formResponse";
+
+    const formBody = new FormData();
+    formBody.append("entry.1034807482", formData.name);      // Name
+    formBody.append("entry.748039128", formData.email);       // Email
+    formBody.append("entry.1517918904", formData.company);    // Company
+    formBody.append("entry.1350125836", formData.message);    // Message
+
+    try {
+        await fetch(googleFormURL, {
+            method: "POST",
+            mode: "no-cors",
+            body: formBody,
+        });
+
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', company: '', message: '' });
+
+    } catch (error) {
+        setSubmitStatus('error');
+        console.error("Google Form submission error:", error);
+    } finally {
+        setIsSubmitting(false);
     }
+};
 
     const contactInfo = [
         {
