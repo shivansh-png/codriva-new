@@ -38,7 +38,7 @@ export default function ChatBotPopup({ delayMs = 4000 }) {
     setVisible(true);
     setMinimized(false); // grow bot
   };
-  
+
   if (pathname === "/contact") return null;
   if (!ready) return null; // nothing until delay completes
 
@@ -67,15 +67,24 @@ export default function ChatBotPopup({ delayMs = 4000 }) {
 
       {/* Bot Animation */}
       <button
-  onClick={reopen}
-  aria-label="Open bot"
-  className={`transition-all duration-300 ease-out hover:scale-105 ${ready && !minimized ? "animate-bot" : ""}`}
-  style={{
-    width: minimized ? "100px" : "250px",
-    height: minimized ? "100px" : "250px",
-  }}
->
-
+        onClick={() => {
+          if (minimized) {
+            // Small bot → reopen bubble
+            reopen();
+          } else {
+            // Big bot → go to contact page
+            window.location.href = "/contact";
+          }
+        }}
+        aria-label="Open bot"
+        className={`transition-all duration-300 ease-out hover:scale-105 ${
+          ready && !minimized ? "animate-bot" : ""
+        }`}
+        style={{
+          width: minimized ? "100px" : "250px",
+          height: minimized ? "100px" : "250px",
+        }}
+      >
         <DotLottie
           src={BOT_LOTTIE}
           autoplay={true}
@@ -84,41 +93,40 @@ export default function ChatBotPopup({ delayMs = 4000 }) {
         />
       </button>
 
-     <style jsx>{`
-  .animate-bubble {
-    animation: slideInStrong 650ms cubic-bezier(.01,.76,.91,.16);
-  }
+      <style jsx>{`
+        .animate-bubble {
+          animation: slideInStrong 650ms cubic-bezier(0.01, 0.76, 0.91, 0.16);
+        }
 
-  @keyframes slideInStrong {
-    from {
-      opacity: 1;
-      transform: translateX(60px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+        @keyframes slideInStrong {
+          from {
+            opacity: 1;
+            transform: translateX(60px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
 
-  /* BOT SLIDE-IN ANIMATION */
-  .animate-bot {
-    animation: botSlideIn 450ms cubic-bezier(.93,.01,.38,.99);
-  }
+        /* BOT SLIDE-IN ANIMATION */
+        .animate-bot {
+          animation: botSlideIn 450ms cubic-bezier(0.93, 0.01, 0.38, 0.99);
+        }
 
-  @keyframes botSlideIn {
-    from {
-      opacity: 1; 
-      transform: translateX(80px); /* stronger movement */
-    }
-    80% {
-      transform: translateX(-8px); /* small overshoot */
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-`}</style>
-
+        @keyframes botSlideIn {
+          from {
+            opacity: 1;
+            transform: translateX(80px); /* stronger movement */
+          }
+          80% {
+            transform: translateX(-8px); /* small overshoot */
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </div>
   );
 }

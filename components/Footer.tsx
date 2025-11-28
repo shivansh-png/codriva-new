@@ -49,16 +49,11 @@ const Footer = () => {
             { name: 'Cloud Solutions', href: 'services/cloud-devops' }
         ],
         Resources: [
-            { name: 'Blog', href: '#' },
-            { name: 'Documentation', href: '#' },
-            { name: 'Support', href: '#' },
             { name: 'Privacy Policy', href: '#' }
         ],
         Connect: [
-            { name: 'GitHub', href: 'https://github.com' },
-            { name: 'LinkedIn', href: 'https://linkedin.com' },
+            { name: 'LinkedIn', href: 'https://linkedin.com/company/codriva'},
             { name: 'Twitter', href: 'https://twitter.com' },
-            { name: 'Email', href: 'mailto:hello@codriva.com' }
         ]
     }
 
