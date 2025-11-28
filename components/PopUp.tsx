@@ -9,7 +9,6 @@ const BOT_LOTTIE =
 
 export default function ChatBotPopup({ delayMs = 4000 }) {
   const pathname = usePathname();
-  if (pathname === "/contact") return null;
   const [visible, setVisible] = useState(false); // bubble visible?
   const [ready, setReady] = useState(false); // delay passed?
   const [minimized, setMinimized] = useState(false); // bot small or big?
@@ -39,7 +38,8 @@ export default function ChatBotPopup({ delayMs = 4000 }) {
     setVisible(true);
     setMinimized(false); // grow bot
   };
-
+  
+  if (pathname === "/contact") return null;
   if (!ready) return null; // nothing until delay completes
 
   return (
