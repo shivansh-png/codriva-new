@@ -9,7 +9,7 @@ const navItems = [
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services/all' },
   { name: 'Industries', href: '/industries' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Careers', href: '/careers' },
 ]
 
 const Navigation = () => {
@@ -50,7 +50,7 @@ const Navigation = () => {
         }`}
     >
       
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 px-6 md:px-10">
           {/* Logo */}
           <div className="flex items-center">
             <button

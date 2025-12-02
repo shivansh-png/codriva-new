@@ -1,71 +1,94 @@
-'use client'
+"use client";
 
-import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Link from 'next/link'
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
+import Image from "next/image";
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 const services = [
   {
-    icon: '💻',
-    title: 'Custom Software Development',
+    icon: "💻",
+    title: "Custom Software Development",
     description:
-      'Tailored solutions built from the ground up to meet your unique business needs.',
-    features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
-    link: '/services/custom-software-development',
+      "Tailored solutions built from the ground up to meet your unique business needs.",
+    features: [
+      "Web Applications",
+      "Mobile Apps",
+      "API Development",
+      "System Integration",
+    ],
+    link: "/services/custom-software-development",
+    bg: "/assets/images/4380747.jpg",
   },
   {
-    icon: '🎨',
-    title: 'UI/UX Design',
+    icon: "🎨",
+    title: "UI/UX Design",
     description:
-      'Beautiful, intuitive interfaces that users love and businesses benefit from.',
-    features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
-    link: '/services/ui-ux-design',
+      "Beautiful, intuitive interfaces that users love and businesses benefit from.",
+    features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
+    link: "/services/ui-ux-design",
+    bg: "/assets/images/5783930.jpg",
   },
   {
-    icon: '☁️',
-    title: 'Cloud Solutions',
+    icon: "☁️",
+    title: "Cloud Solutions",
     description:
-      'Scalable, secure cloud infrastructure that grows with your business.',
-    features: ['AWS/Azure/GCP', 'DevOps', 'Microservices', 'Containerization'],
-    link: '/services/cloud-solutions',
+      "Scalable, secure cloud infrastructure that grows with your business.",
+    features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Containerization"],
+    link: "/services/cloud-solutions",
+    bg: "/assets/images/23128917_1902.i039.011.P.m004.c30.cloud services isometric icons-15.jpg",
   },
   {
-    icon: '🧠',
-    title: 'AI & Machine Learning',
+    icon: "🧠",
+    title: "AI & Machine Learning",
     description:
-      'Intelligent solutions that automate processes and provide valuable insights.',
-    features: ['Predictive Analytics', 'NLP', 'Computer Vision', 'Automation'],
-    link: '/services/ai-machine-learning',
+      "Intelligent solutions that automate processes and provide valuable insights.",
+    features: ["Predictive Analytics", "NLP", "Computer Vision", "Automation"],
+    link: "/services/ai-machine-learning",
+    bg: "/assets/images/43868976_2304.i039.016.F.m004.c9.AI generated art AI powered content creation isometric.jpg",
   },
   {
-    icon: '🔒',
-    title: 'Cybersecurity',
-    description: 'Comprehensive security measures to protect your digital assets.',
-    features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Monitoring'],
-    link: '/services/cybersecurity',
+    icon: "🔒",
+    title: "Cybersecurity",
+    description:
+      "Comprehensive security measures to protect your digital assets.",
+    features: [
+      "Security Audits",
+      "Penetration Testing",
+      "Compliance",
+      "Monitoring",
+    ],
+    link: "/services/cybersecurity",
+    bg: "/assets/images/cyber-security-concept-digital-art.jpg",
   },
   {
-    icon: '📊',
-    title: 'Data Analytics',
+    icon: "📊",
+    title: "Data Analytics",
     description:
-      'Transform raw data into actionable insights for better decision making.',
-    features: ['Data Visualization', 'Business Intelligence', 'Reporting', 'Dashboards'],
-    link: '/services/data-analytics',
+      "Transform raw data into actionable insights for better decision making.",
+    features: [
+      "Data Visualization",
+      "Business Intelligence",
+      "Reporting",
+      "Dashboards",
+    ],
+    link: "/services/data-analytics",
+    bg: "/assets/images/12643932_5031659.jpg",
   },
-]
+];
 
 const Services = () => {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
-  const cardsRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const ctx = gsap.context(() => {
         gsap.fromTo(
           titleRef.current,
@@ -76,17 +99,17 @@ const Services = () => {
             scale: 1,
             rotationX: 0,
             duration: 1.2,
-            ease: 'back.out(1.7)',
+            ease: "back.out(1.7)",
             scrollTrigger: {
               trigger: titleRef.current,
-              start: 'top 85%',
-              toggleActions: 'play none none reverse',
+              start: "top 85%",
+              toggleActions: "play none none reverse",
             },
           }
-        )
+        );
 
         gsap.fromTo(
-          '.service-card',
+          ".service-card",
           { opacity: 0, y: 60, scale: 0.8, rotationY: 20 },
           {
             opacity: 1,
@@ -94,26 +117,38 @@ const Services = () => {
             scale: 1,
             rotationY: 0,
             duration: 0.8,
-            ease: 'power3.out',
-            stagger: { amount: 0.8, from: 'start' },
+            ease: "power3.out",
+            stagger: { amount: 0.8, from: "start" },
             scrollTrigger: {
               trigger: cardsRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
+              start: "top 80%",
+              toggleActions: "play none none reverse",
             },
           }
-        )
+        );
 
-        gsap.utils.toArray('.service-card').forEach((card: any) => {
-          card.addEventListener('mouseenter', () => {
-            gsap.to(card, { scale: 1.05, y: -15, rotationY: 5, duration: 0.4, ease: 'power2.out' })
-          })
-          card.addEventListener('mouseleave', () => {
-            gsap.to(card, { scale: 1, y: 0, rotationY: 0, duration: 0.4, ease: 'power2.out' })
-          })
-        })
+        gsap.utils.toArray(".service-card").forEach((card: any) => {
+          card.addEventListener("mouseenter", () => {
+            gsap.to(card, {
+              scale: 1.05,
+              y: -15,
+              rotationY: 5,
+              duration: 0.4,
+              ease: "power2.out",
+            });
+          });
+          card.addEventListener("mouseleave", () => {
+            gsap.to(card, {
+              scale: 1,
+              y: 0,
+              rotationY: 0,
+              duration: 0.4,
+              ease: "power2.out",
+            });
+          });
+        });
 
-        gsap.utils.toArray('.services-text').forEach((text: any) => {
+        gsap.utils.toArray(".services-text").forEach((text: any) => {
           gsap.fromTo(
             text,
             { opacity: 0, y: 30, scale: 0.9 },
@@ -122,23 +157,27 @@ const Services = () => {
               y: 0,
               scale: 1,
               duration: 0.8,
-              ease: 'power3.out',
+              ease: "power3.out",
               scrollTrigger: {
                 trigger: text,
-                start: 'top 85%',
-                toggleActions: 'play none none reverse',
+                start: "top 85%",
+                toggleActions: "play none none reverse",
               },
             }
-          )
-        })
-      }, sectionRef)
+          );
+        });
+      }, sectionRef);
 
-      return () => ctx.revert()
+      return () => ctx.revert();
     }
-  }, [])
+  }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="section-padding relative overflow-hidden">
+    <section
+      id="services"
+      ref={sectionRef}
+      className="section-padding relative overflow-hidden"
+    >
       {/* Backgrounds and floating elements unchanged */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-200 dark:from-slate-800 dark:via-blue-900/30 dark:to-indigo-900/40"></div>
       <div className="absolute inset-0 opacity-10 dark:opacity-20">
@@ -159,50 +198,70 @@ const Services = () => {
             ref={titleRef}
             className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6 font-display"
           >
-            Our{' '}
+            Our{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600">
               Services
             </span>
           </h2>
           <p className="services-text text-xl text-[#656d76] dark:text-[#f0f6fc] max-w-3xl mx-auto">
-            We offer a comprehensive range of digital services to help your business thrive in the
-            modern world.
+            We offer a comprehensive range of digital services to help your
+            business thrive in the modern world.
           </p>
         </div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          ref={cardsRef}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {services.map((service, index) => (
-  <Link key={service.title} href={service.link} className="">
-    <div className="service-card card hover-card p-8 flex flex-col h-full">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-4">
-                {service.title}
-              </h3>
-              <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li
-                    key={featureIndex}
-                    className="flex items-center text-sm text-[#656d76] dark:text-[#f0f6fc]"
-                  >
-                    <svg
-                      className="w-4 h-4 text-[#0969da] dark:text-[#58a6ff] mr-2"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <Link key={service.title} href={service.link} className="">
+              <div className="service-card card hover-card p-8 flex flex-col h-full relative overflow-hidden rounded-2xl">
+                {/* Background Image */}
+                <Image
+                  src={service.bg} // "/assets/images/ai-chip-artificial.png"
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
+
+                {/* Optional overlay for readability */}
+                <div className="absolute inset-0 bg-white/40 dark:bg-black/30 backdrop-blur-sm"></div>
+
+                {/* Foreground content */}
+                <div className="relative z-10">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+
+                  <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-4">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center text-sm text-[#656d76] dark:text-[#f0f6fc]"
+                      >
+                        <svg
+                          className="w-4 h-4 text-[#0969da] dark:text-[#58a6ff] mr-2"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </Link>
           ))}
         </div>
@@ -219,14 +278,17 @@ const Services = () => {
               Ready to start your project?
             </h3>
             <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6">
-              Let's discuss how we can help bring your vision to life with our cutting-edge
-              technology solutions.
+              Let's discuss how we can help bring your vision to life with our
+              cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
                 Get a free Consultation
               </Link>
-              <Link href="/industries" className="btn-outline dark:text-white dark:border-white">
+              <Link
+                href="/services/all"
+                className="btn-outline dark:text-white dark:border-white"
+              >
                 Our Expertise
               </Link>
             </div>
@@ -234,7 +296,7 @@ const Services = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
