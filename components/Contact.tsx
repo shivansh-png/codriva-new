@@ -209,7 +209,7 @@ const Contact = () => {
       icon: <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
       title: "Location",
       value:
-        "616-617,6th Floor, Tower-B, Ithum, Plot A-40, Sector-62, Noida, Uttar Pradesh 201309",
+        "616-617, 6th Floor, Tower-B, Ithum, Plot A-40, Sector-62, Noida, Uttar Pradesh 201309",
       href: "https://www.google.com/maps?q=28.627342575507704,77.37247588037425",
     },
     {

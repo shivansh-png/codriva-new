@@ -58,7 +58,10 @@ export default function CareersPage() {
     try {
       await fetch(
         "https://docs.google.com/forms/d/e/1FAIpQLSeRUSanucmjbdZy4AfBXfuoM8duALZxf9-7yEQNlU2UC0HsEg/formResponse",
-        { method: "POST", mode: "no-cors", body: (() => {
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: (() => {
             const body = new FormData();
             body.append("entry.1034807482", formData.Name);
             body.append("entry.748039128", formData.email);
@@ -67,7 +70,8 @@ export default function CareersPage() {
             body.append("entry.1517918904", formData.linkedin);
             body.append("entry.534075004", formData.location);
             return body;
-        })() }
+          })(),
+        }
       );
 
       setSubmitStatus("success");
@@ -92,140 +96,137 @@ export default function CareersPage() {
       {/* ================================================= */}
       {/* HERO — FULL SCREEN WIDTH WITH BACKGROUND ONLY HERE */}
       {/* ================================================= */}
-    <section
-  id="careers-hero"
-  className="relative min-h-screen flex items-center justify-center overflow-hidden"
->
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <Image
-      src="/assets/images/Rectangle 46.png"
-      alt="Careers Background"
-      fill
-      className="w-full h-full object-cover"
-    />
-    {/* Dark overlay */}
-    <div className="absolute inset-0 bg-black/40"></div>
-  </div>
-
-  {/* Overlay Pattern (same as homepage) */}
-  <div className="absolute inset-0 opacity-10">
-    <div
-      className="absolute inset-0"
-      style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        backgroundSize: "40px 40px",
-      }}
-    ></div>
-  </div>
-
-  {/* HERO CONTENT */}
-  <div className="relative z-10">
-    <div className="text-center max-w-4xl mx-auto">
-      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-display">
-        Join a Team That Builds the{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200">
-          Future
-        </span>
-      </h1>
-
-      <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-3xl mx-auto leading-relaxed">
-        At Codriva, we don’t just develop software — we build solutions that
-        transform industries and create real-world impact.
-      </p>
-
-      <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-        We're more than just a workplace — we're a community that fosters
-        growth, creativity, and balance.
-      </p>
-
-      {/* === THREE CARDS (kept same, just spaced like homepage) === */}
-      <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-12 max-w-6xl mx-auto px-6">
-
-        {/* Card 1 */}
-        <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
-          <div className="w-full h-40 relative">
-            <Image
-              src="/assets/images/1527661_213882-P085GI-613.jpg"
-              alt="Experience"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6">
-            <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
-              20+ Years
-            </h3>
-            <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
-              Combined Team Experience
-            </p>
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
-          <div className="w-full h-40 relative">
-            <Image
-              src="/assets/images/776922_more10.jpg"
-              alt="Industries"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6">
-            <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
-              4+ Industries
-            </h3>
-            <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
-              Served
-            </p>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
-          <div className="w-full h-40 relative">
-            <Image
-              src="/assets/images/422093080_80671624-b25f-4674-8409-a236ee5f8426.jpg"
-              alt="Growth"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6">
-            <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
-              Fast-Growing
-            </h3>
-            <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
-              Strong Engineering Culture
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  {/* Scroll Indicator – matching homepage */}
-  <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-    <div className="animate-bounce">
-      <svg
-        className="w-6 h-6 text-white/70"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
+      <section
+        id="careers-hero"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"
-        />
-      </svg>
-    </div>
-  </div>
-</section>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/images/Rectangle 46.png"
+            alt="Careers Background"
+            fill
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
 
+        {/* Overlay Pattern (same as homepage) */}
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: "40px 40px",
+            }}
+          ></div>
+        </div>
+
+        {/* HERO CONTENT */}
+        <div className="relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-display">
+              Join a Team That Builds the{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200">
+                Future
+              </span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-3xl mx-auto leading-relaxed">
+              At Codriva, we don’t just develop software — we build solutions
+              that transform industries and create real-world impact.
+            </p>
+
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+              We're more than just a workplace — we're a community that fosters
+              growth, creativity, and balance.
+            </p>
+
+            {/* === THREE CARDS (kept same, just spaced like homepage) === */}
+            <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-12 max-w-6xl mx-auto px-6">
+              {/* Card 1 */}
+              <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
+                <div className="w-full h-40 relative">
+                  <Image
+                    src="/assets/images/1527661_213882-P085GI-613.jpg"
+                    alt="Experience"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
+                    20+ Years
+                  </h3>
+                  <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
+                    Combined Team Experience
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
+                <div className="w-full h-40 relative">
+                  <Image
+                    src="/assets/images/776922_more10.jpg"
+                    alt="Industries"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
+                    4+ Industries
+                  </h3>
+                  <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
+                    Served
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
+                <div className="w-full h-40 relative">
+                  <Image
+                    src="/assets/images/422093080_80671624-b25f-4674-8409-a236ee5f8426.jpg"
+                    alt="Growth"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
+                    Fast-Growing
+                  </h3>
+                  <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
+                    Strong Engineering Culture
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator – matching homepage */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <div className="animate-bounce">
+            <svg
+              className="w-6 h-6 text-white/70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
 
       <div className="">
         {/* ================================================= */}
@@ -437,6 +438,7 @@ export default function CareersPage() {
               ["location", "Location *"],
             ].map(([name, label]) => (
               <div className="relative" key={name}>
+                <label className="floating-label">{label}</label>
                 <input
                   type="text"
                   name={name}
@@ -446,11 +448,11 @@ export default function CareersPage() {
                   className="form-input peer pt-6 pb-3"
                   placeholder=" "
                 />
-                <label className="floating-label">{label}</label>
               </div>
             ))}
 
             <div className="relative">
+              <label className="floating-label">Message (optional)</label>
               <textarea
                 name="message"
                 rows={5}
@@ -459,7 +461,6 @@ export default function CareersPage() {
                 className="form-input peer pt-6 pb-3 resize-none"
                 placeholder=" "
               />
-              <label className="floating-label">Message (optional)</label>
             </div>
 
             <button

@@ -34,7 +34,7 @@ useLayoutEffect(() => {
       { name: "About", href: "/about" },
       { name: "Services", href: "/services" },
       { name: "Industries", href: "/industries" },
-      { name: "Contact", href: "/contact" },
+      { name: "Careers", href: "/careers" },
     ],
     Services: [
       { name: "Custom Software", href: "services/custom-software-development" },

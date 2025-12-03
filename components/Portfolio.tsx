@@ -83,7 +83,6 @@ const projects = [
 const categories = [
   { id: "all", name: "All Industries" },
   { id: "retail", name: "Retail & E-Commerce" },
-  { id: "telecom", name: "Telecom" },
   { id: "fintech", name: "FinTech & Banking" },
   { id: "logistics", name: "Logistics & Supply Chain" },
   { id: "realestate", name: "Real Estate & PropTech" },
