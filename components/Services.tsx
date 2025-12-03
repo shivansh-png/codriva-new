@@ -40,7 +40,7 @@ const services = [
     description:
       "Scalable, secure cloud infrastructure that grows with your business.",
     features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Containerization"],
-    link: "/services/cloud-solutions",
+    link: "/services/cloud-devops",
     bg: "/assets/images/23128917_1902.i039.011.P.m004.c30.cloud services isometric icons-15.jpg",
   },
   {
@@ -235,7 +235,7 @@ const Services = () => {
                     {service.title}
                   </h3>
 
-                  <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6 leading-relaxed">
+                  <p className="text-[#24292f] dark:text-[#f0f6fc] mb-6 leading-relaxed">
                     {service.description}
                   </p>
 
@@ -243,7 +243,7 @@ const Services = () => {
                     {service.features.map((feature, i) => (
                       <li
                         key={i}
-                        className="flex items-center text-sm text-[#656d76] dark:text-[#f0f6fc]"
+                        className="flex items-center text-sm text-[#24292f] dark:text-[#f0f6fc]"
                       >
                         <svg
                           className="w-4 h-4 text-[#0969da] dark:text-[#58a6ff] mr-2"

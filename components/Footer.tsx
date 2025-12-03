@@ -13,33 +13,21 @@ if (typeof window !== "undefined") {
 const Footer = () => {
   const footerRef = useRef<HTMLDivElement>(null);
 
- useLayoutEffect(() => {
+useLayoutEffect(() => {
+  if (!footerRef.current) return;
 
-    if (typeof window !== "undefined") {
-      const ctx = gsap.context(() => {
-        gsap.fromTo(
-          ".footer-content",
-          {
-            opacity: 0,
-            y: 30,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: footerRef.current,
-              start: "top 80%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }, footerRef);
-
-      return () => ctx.revert();
+  gsap.fromTo(
+    footerRef.current,
+    { opacity: 0, y: 30 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      ease: "power3.out",
     }
-  }, []);
+  );
+}, []);
+
 
   const footerLinks = {
     Company: [
