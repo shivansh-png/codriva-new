@@ -189,10 +189,10 @@ const Hero = () => {
           {/* NEW EXPERTISE CARDS HERE (3 cards like the reference image) */}
           {/* ------------------------------------------------------------- */}
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-12 max-w-6xl mx-auto px-6">
 
   {/* Card 1 */}
-  <div className="rounded-2xl overflow-hidden bg-white dark:bg-[#0d1117] border border-gray-200 dark:border-gray-700 shadow-lg">
+  <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
     
     {/* IMAGE (full width like reference) */}
     <div className="w-full h-40 relative">
@@ -216,7 +216,7 @@ const Hero = () => {
   </div>
 
   {/* Card 2 */}
-  <div className="rounded-2xl overflow-hidden bg-white dark:bg-[#0d1117] border border-gray-200 dark:border-gray-700 shadow-lg">
+  <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117]  shadow-lg">
     <div className="w-full h-40 relative">
       <Image
         src="/assets/images/776922_more10.jpg"
@@ -237,7 +237,7 @@ const Hero = () => {
   </div>
 
   {/* Card 3 */}
-  <div className="rounded-2xl overflow-hidden bg-white dark:bg-[#0d1117] border border-gray-200 dark:border-gray-700 shadow-lg">
+  <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117]  shadow-lg">
     <div className="w-full h-40 relative">
       <Image
         src="/assets/images/422093080_80671624-b25f-4674-8409-a236ee5f8426.jpg"

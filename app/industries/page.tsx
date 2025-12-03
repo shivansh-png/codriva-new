@@ -133,38 +133,48 @@ const Industries = () => {
   ];
 
   return (
-    <section id="industries" ref={sectionRef} className="relative">
+    <section id="industries" ref={sectionRef} className="relative bg-[#C9E0F1]">
       {/* HERO */}
-      <div
-        ref={heroRef}
-        className="relative h-screen flex items-end justify-center pb-32 overflow-hidden"
-      >
-        <div className="absolute inset-0">
-          <Image
-            src="/assets/images/supervisor.png"
-            alt="Industries"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+<div
+  ref={heroRef}
+  className="relative h-[85vh] flex items-center justify-center text-center px-6 overflow-hidden"
+>
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src="/assets/images/supervisor.png"
+      alt="Industries Hero"
+      fill
+      className="object-cover"
+      priority
+    />
+    <div className="absolute inset-0 bg-black/50"></div>
+  </div>
 
-        <div className="absolute bottom-0 left-0 right-0 z-10 text-center text-white px-4 pb-20">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors mb-8"
-          >
-            Let&apos;s Talk <i className="fas fa-arrow-right"></i>
-          </Link>
-          <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-            Transforming Industries with Digital Solutions
-          </p>
-        </div>
-      </div>
+  {/* HERO CONTENT */}
+  <div className="relative z-10 max-w-4xl mx-auto">
+    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      Empowering Industries with Innovative Solutions
+    </h1>
+
+    <p className="text-lg md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+      From FinTech and Retail to Healthcare and Travel, we build scalable digital
+      solutions tailored to your industry's needs.
+    </p>
+
+    {/* CTA Button */}
+    <Link
+      href="/contact"
+      className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+    >
+      Let&apos;s Talk <i className="fas fa-arrow-right"></i>
+    </Link>
+  </div>
+</div>
+
 
       {/* INDUSTRIES GRID */}
-      <div ref={focusedRef} className="py-20 bg-gray-50 dark:bg-gray-900">
+      <div ref={focusedRef} className="py-20  bg-[#C9E0F1] dark:bg-gray-900">
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -174,7 +184,7 @@ const Industries = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <div key={index} className="focus-image group">
+              <div key={index} className="focus-image group bg-gray-50 dark:bg-gray-800">
                 <Link
                   href={industry.href}
                   className="block relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-white-700"
