@@ -1,9 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import Advantages from "@/components/Advantages";
+import CTA from "@/components/CTA";
 
 export default function ApiSystemIntegration() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+   <>  
+<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
@@ -15,7 +18,18 @@ export default function ApiSystemIntegration() {
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
-              <span className="text-[#0969da] font-semibold">API system integration</span> involves connecting diverse software systems and applications through Application Programming Interfaces (APIs) to enable seamless communication and data sharing. This integration allows disparate systems—such as payment gateways, customer databases, or third-party services—to function together as a unified platform. By automating workflows and enabling real-time data exchange, API integration reduces manual effort, enhances operational efficiency, and delivers a cohesive user experience across multiple platforms.
+              <span className="text-[#0969da] font-semibold">
+                API system integration
+              </span>{" "}
+              involves connecting diverse software systems and applications
+              through Application Programming Interfaces (APIs) to enable
+              seamless communication and data sharing. This integration allows
+              disparate systems—such as payment gateways, customer databases, or
+              third-party services—to function together as a unified platform.
+              By automating workflows and enabling real-time data exchange, API
+              integration reduces manual effort, enhances operational
+              efficiency, and delivers a cohesive user experience across
+              multiple platforms.
             </p>
           </div>
           <div className="relative">
@@ -29,12 +43,11 @@ export default function ApiSystemIntegration() {
           </div>
         </div>
 
-        <div className="text-center">
-          <Link href="/contact" className="btn-primary">
-            Get a free consultation
-          </Link>
-        </div>
-      </div>
+         
+       </div>
     </section>
-  )
+      <Advantages />
+      <CTA />
+</>
+  );
 }

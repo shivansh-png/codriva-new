@@ -76,7 +76,7 @@ export default function Retail() {
   const solutions = [
     {
       title: 'E-commerce Website & App Development',
-      image: '/assets/images/unsplash.png',
+      image: '/assets/images/retail-ecom.png',
       points: [
         'Custom e-commerce portals (B2B / B2C)',
         'Shopify, WooCommerce, Magento, OpenCart development',

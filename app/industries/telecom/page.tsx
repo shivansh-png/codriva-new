@@ -80,7 +80,7 @@ const Telecom = () => {
     const solutions = [
         {
             title: 'Network Management Systems',
-            image: '/assets/images/unsplash_39.png',
+            image: '/assets/images/unsplash_30.png',
             points: [
                 'Real-time network monitoring and performance tracking',
                 'Automated fault detection and resolution',
@@ -98,7 +98,7 @@ const Telecom = () => {
         },
         {
             title: 'IoT Connectivity Solutions',
-            image: '/assets/images/unsplash_41.png',
+            image: '/assets/images/telecom-pic.png',
             points: [
                 'Device management and connectivity platforms',
                 'IoT data analytics and insights',
@@ -107,7 +107,7 @@ const Telecom = () => {
         },
         {
             title: 'Telecom Analytics & BI',
-            image: '/assets/images/unsplash_42.png',
+            image: '/assets/images/services2.png',
             points: [
                 'Network performance and usage analytics',
                 'Customer behavior and churn prediction',
@@ -122,7 +122,7 @@ const Telecom = () => {
             <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/images/unsplash_43.png"
+                        src="/assets/images/unsplash_35.png"
                         alt="Telecom"
                         fill
                         className="object-cover"
@@ -210,7 +210,7 @@ const Telecom = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

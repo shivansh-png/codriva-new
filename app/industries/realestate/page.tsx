@@ -80,7 +80,7 @@ const RealEstate = () => {
     const solutions = [
         {
             title: 'Property Management Systems',
-            image: '/assets/images/unsplash_29.png',
+            image: '/assets/images/unsplash_58.png',
             points: [
                 'Comprehensive property listing and management',
                 'Tenant screening and lease management',
@@ -89,7 +89,7 @@ const RealEstate = () => {
         },
         {
             title: 'Real Estate Marketplaces',
-            image: '/assets/images/unsplash_30.png',
+            image: '/assets/images/unsplash_56.png',
             points: [
                 'Advanced property search and filtering',
                 'Virtual tours and 3D property visualization',
@@ -98,7 +98,7 @@ const RealEstate = () => {
         },
         {
             title: 'PropTech Analytics Platforms',
-            image: '/assets/images/unsplash_31.png',
+            image: '/assets/images/unsplash_57.png',
             points: [
                 'Market trend analysis and investment insights',
                 'Portfolio performance tracking and reporting',
@@ -107,7 +107,7 @@ const RealEstate = () => {
         },
         {
             title: 'Smart Building Management',
-            image: '/assets/images/unsplash_32.png',
+            image: '/assets/images/real-estate-pic.png',
             points: [
                 'IoT integration for building automation',
                 'Energy management and sustainability tracking',
@@ -122,7 +122,7 @@ const RealEstate = () => {
             <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/images/unsplash_33.png"
+                        src="/assets/images/unsplash_55.png"
                         alt="Real Estate and PropTech"
                         fill
                         className="object-cover"
@@ -210,7 +210,7 @@ const RealEstate = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

@@ -1,9 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import Advantages from "@/components/Advantages";
+import CTA from "@/components/CTA";
 
 export default function BigDataSolution() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+   <>  
+<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
@@ -24,17 +27,24 @@ export default function BigDataSolution() {
           </div>
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
-              <span className="text-[#0969da] font-semibold">Big data</span> Solutions enable businesses to process and analyze vast amounts of structured and unstructured data to extract valuable insights. Utilizing advanced tools and technologies, these solutions support smarter decision-making, real-time analytics, and enhanced operational efficiency. From customer behavior analysis to predictive maintenance and market forecasting, big data empowers organizations to stay competitive in today's data-driven landscape.
+              <span className="text-[#0969da] font-semibold">Big data</span>{" "}
+              Solutions enable businesses to process and analyze vast amounts of
+              structured and unstructured data to extract valuable insights.
+              Utilizing advanced tools and technologies, these solutions support
+              smarter decision-making, real-time analytics, and enhanced
+              operational efficiency. From customer behavior analysis to
+              predictive maintenance and market forecasting, big data empowers
+              organizations to stay competitive in today's data-driven
+              landscape.
             </p>
           </div>
         </div>
 
-        <div className="text-center">
-          <Link href="/contact" className="btn-primary">
-            Get a free consultation
-          </Link>
-        </div>
-      </div>
+         
+       </div>
     </section>
-  )
+      <Advantages />
+      <CTA />
+</>
+  );
 }

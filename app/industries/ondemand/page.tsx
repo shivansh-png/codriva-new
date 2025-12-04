@@ -80,7 +80,7 @@ const OnDemand = () => {
     const solutions = [
         {
             title: 'Ride-Sharing Platforms',
-            image: '/assets/images/unsplash_24.png',
+            image: '/assets/images/2149236739.jpg',
             points: [
                 'Real-time ride matching and dispatch systems',
                 'GPS tracking and route optimization',
@@ -89,7 +89,7 @@ const OnDemand = () => {
         },
         {
             title: 'Delivery Management Systems',
-            image: '/assets/images/unsplash_25.png',
+            image: '/assets/images/unsplash_36.png',
             points: [
                 'Order tracking and delivery scheduling',
                 'Multi-stop route optimization',
@@ -98,7 +98,7 @@ const OnDemand = () => {
         },
         {
             title: 'Service Marketplace Platforms',
-            image: '/assets/images/unsplash_26.png',
+            image: '/assets/images/unsplash_37.png',
             points: [
                 'Service provider onboarding and verification',
                 'Dynamic pricing and availability management',
@@ -107,7 +107,7 @@ const OnDemand = () => {
         },
         {
             title: 'On-Demand Analytics',
-            image: '/assets/images/unsplash_27.png',
+            image: '/assets/images/industries1.png',
             points: [
                 'Performance analytics and demand forecasting',
                 'Revenue optimization and pricing strategies',
@@ -122,7 +122,7 @@ const OnDemand = () => {
             <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/images/unsplash_28.png"
+                        src="/assets/images/2150169844.jpg"
                         alt="On Demand Platforms"
                         fill
                         className="object-cover"
@@ -210,7 +210,7 @@ const OnDemand = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

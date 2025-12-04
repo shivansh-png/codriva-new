@@ -7,7 +7,7 @@ import { useRouter, usePathname } from "next/navigation";
 
 const navItems = [
   { name: "About", href: "/about" },
-  { name: "Services", href: "/services/all" },
+  { name: "Services", href: "/services" },
   { name: "Industries", href: "/industries" },
   { name: "Careers", href: "/careers" },
 ];
@@ -50,7 +50,7 @@ const Navigation = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between h-16 px-6 md:px-10">
+      <div className="flex items-center justify-between h-16 px-4 md:px-10">
         {/* Logo */}
         <div className="flex items-center">
           <button
@@ -63,10 +63,11 @@ const Navigation = () => {
             }}
             className="flex items-center space-x-3 group"
           >
+            {/* responsive logo: height constrained, width auto so it scales proportionally */}
             <img
               src="/images/codriva-logo.svg"
               alt="Codriva Logo"
-              className="w-40 h-40 object-contain group-hover:scale-105 transition-all duration-300"
+              className="h-8 md:h-10 lg:h-12 w-auto object-contain group-hover:scale-105 transition-all duration-300"
             />
           </button>
         </div>
@@ -80,7 +81,9 @@ const Navigation = () => {
               className={`text-xl nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black ${
                 isScrolled ? "text-black" : ""
               } ${
-                pathname === item.href
+                pathname.startsWith(item.href) && item.href !== "/"
+                  ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
+                  : pathname === "/" && item.href === "/"
                   ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
                   : ""
               }`}
@@ -92,17 +95,22 @@ const Navigation = () => {
 
         {/* Right side actions */}
         <div className="flex items-center space-x-3">
-          <SimpleThemeToggle />
+          {/* scale wrapper makes the toggle smaller on small screens */}
+          <div className="transform scale-90 md:scale-100">
+            <SimpleThemeToggle />
+          </div>
+
+          {/* responsive button sizing so it matches logo/toggle visually */}
           <button
             onClick={() => router.push("/contact")}
-            className="btn-primary text-base md:text-xl px-3 py-2 md:px-5 md:py-3 whitespace-nowrap"
+            className="btn-primary text-sm md:text-base px-2 md:px-5 py-1 md:py-3 whitespace-nowrap"
           >
             Free Consultations
           </button>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-[#24292f] dark:text-[#f0f6fc] hover:bg-[#f6f8fa] dark:hover:bg-[#21262d]"
+            className="md:hidden p-2 rounded-md text-[#7c8a9b] dark:text-[#f0f6fc] hover:bg-[#f6f8fa] dark:hover:bg-[#21262d]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg

@@ -80,7 +80,7 @@ const Logistics = () => {
     const solutions = [
         {
             title: 'Supply Chain Management Systems',
-            image: '/assets/images/unsplash_14.png',
+            image: '/assets/images/logistics.png',
             points: [
                 'End-to-end supply chain visibility and tracking',
                 'Inventory management and demand forecasting',
@@ -89,7 +89,7 @@ const Logistics = () => {
         },
         {
             title: 'Fleet Management Solutions',
-            image: '/assets/images/unsplash_15.png',
+            image: '/assets/images/logistics-pic.png',
             points: [
                 'Real-time vehicle tracking and route optimization',
                 'Driver management and performance monitoring',
@@ -98,7 +98,7 @@ const Logistics = () => {
         },
         {
             title: 'Warehouse Management Systems',
-            image: '/assets/images/unsplash_16.png',
+            image: '/assets/images/realstate.png',
             points: [
                 'Automated inventory control and picking systems',
                 'Warehouse layout optimization and space management',
@@ -107,7 +107,7 @@ const Logistics = () => {
         },
         {
             title: 'Logistics Analytics & Reporting',
-            image: '/assets/images/unsplash_17.png',
+            image: '/assets/images/unsplash_53.png',
             points: [
                 'Performance analytics and KPI dashboards',
                 'Predictive analytics for demand planning',
@@ -210,7 +210,7 @@ const Logistics = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

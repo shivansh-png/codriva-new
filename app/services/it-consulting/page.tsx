@@ -1,9 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import Advantages from "@/components/Advantages";
+import CTA from "@/components/CTA";
 
 export default function ItConsulting() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+   <>  
+<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
@@ -15,7 +18,17 @@ export default function ItConsulting() {
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
-              <span className="text-[#0969da] font-semibold">IT consulting</span> helps businesses align their technology strategies with core business objectives. From selecting the right software and infrastructure to enhancing cybersecurity and optimizing operations, IT consultants provide expert guidance for effective and efficient technology use. Whether planning a digital transformation or seeking ongoing tech support, IT consulting delivers customized solutions that drive growth, innovation, and competitive advantage.
+              <span className="text-[#0969da] font-semibold">
+                IT consulting
+              </span>{" "}
+              helps businesses align their technology strategies with core
+              business objectives. From selecting the right software and
+              infrastructure to enhancing cybersecurity and optimizing
+              operations, IT consultants provide expert guidance for effective
+              and efficient technology use. Whether planning a digital
+              transformation or seeking ongoing tech support, IT consulting
+              delivers customized solutions that drive growth, innovation, and
+              competitive advantage.
             </p>
           </div>
           <div className="relative">
@@ -29,12 +42,11 @@ export default function ItConsulting() {
           </div>
         </div>
 
-        <div className="text-center">
-          <Link href="/contact" className="btn-primary">
-            Get a free consultation
-          </Link>
-        </div>
-      </div>
+         
+       </div>
     </section>
-  )
+      <Advantages />
+      <CTA />
+</>
+  );
 }

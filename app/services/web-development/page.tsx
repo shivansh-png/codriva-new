@@ -1,8 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-
+import React from "react";
+import Link from "next/link";
+import Advantages from "@/components/Advantages";
+import CTA from "@/components/CTA";
 export default function WebDevelopmentPage() {
   return (
+    <>
     <section className="min-h-screen pt-32 pb-20 container-max">
       <div className="max-w-4xl mx-auto">
         <Link
@@ -30,7 +32,9 @@ export default function WebDevelopmentPage() {
               What We Offer
             </h2>
             <ul className="space-y-3 text-[#656d76] dark:text-[#8b949e] list-disc pl-6">
-              <li>Responsive front-end development with React and Tailwind CSS</li>
+              <li>
+                Responsive front-end development with React and Tailwind CSS
+              </li>
               <li>Next.js SSR/ISR for SEO-friendly, fast-loading websites</li>
               <li>REST and GraphQL API integration</li>
               <li>CMS-based solutions (Headless WordPress, Sanity, Strapi)</li>
@@ -61,7 +65,10 @@ export default function WebDevelopmentPage() {
             Start a Project
           </Link>
         </div>
-      </div>
+       </div>
     </section>
-  )
+      <Advantages />
+      <CTA />
+</>
+  );
 }

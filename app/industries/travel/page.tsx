@@ -80,7 +80,7 @@ const Travel = () => {
     const solutions = [
         {
             title: 'Travel Booking Platforms',
-            image: '/assets/images/unsplash_44.png',
+            image: '/assets/images/unsplash_29.png',
             points: [
                 'Multi-vendor booking engine with real-time availability',
                 'Dynamic pricing and inventory management',
@@ -89,7 +89,7 @@ const Travel = () => {
         },
         {
             title: 'Hotel Management Systems',
-            image: '/assets/images/unsplash_45.png',
+            image: '/assets/images/unsplash_26.png',
             points: [
                 'Property management and reservation systems',
                 'Channel manager integration and rate optimization',
@@ -98,7 +98,7 @@ const Travel = () => {
         },
         {
             title: 'Travel Experience Platforms',
-            image: '/assets/images/unsplash_46.png',
+            image: '/assets/images/unsplash_25.png',
             points: [
                 'Personalized itinerary planning and recommendations',
                 'Virtual concierge and travel assistance services',
@@ -107,7 +107,7 @@ const Travel = () => {
         },
         {
             title: 'Travel Analytics & Insights',
-            image: '/assets/images/unsplash_47.png',
+            image: '/assets/images/unsplash_27.png',
             points: [
                 'Booking trends and market analysis',
                 'Customer behavior and preference insights',
@@ -122,7 +122,7 @@ const Travel = () => {
             <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/images/unsplash_48.png"
+                        src="/assets/images/unsplash_28.png"
                         alt="Travel & Hospitality"
                         fill
                         className="object-cover"
@@ -210,7 +210,7 @@ const Travel = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

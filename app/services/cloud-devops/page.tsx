@@ -1,9 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import Advantages from "@/components/Advantages";
+import CTA from "@/components/CTA";
 
 export default function CloudDevOps() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+   <>  
+<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
@@ -24,17 +27,26 @@ export default function CloudDevOps() {
           </div>
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
-              <span className="text-[#0969da] font-semibold">Cloud DevOps</span> combines cloud computing with DevOps practices to streamline the development, deployment, and management of applications in cloud environments. It involves automating infrastructure setup, continuous integration and delivery (CI/CD), monitoring, and scaling using platforms like AWS, Azure, and Google Cloud. The goal is to accelerate software delivery, enhance reliability, and foster seamless collaboration between development and operations teams. By adopting Cloud DevOps, organizations can deploy updates faster, resolve issues promptly, and optimize resource management efficiently.
+              <span className="text-[#0969da] font-semibold">Cloud DevOps</span>{" "}
+              combines cloud computing with DevOps practices to streamline the
+              development, deployment, and management of applications in cloud
+              environments. It involves automating infrastructure setup,
+              continuous integration and delivery (CI/CD), monitoring, and
+              scaling using platforms like AWS, Azure, and Google Cloud. The
+              goal is to accelerate software delivery, enhance reliability, and
+              foster seamless collaboration between development and operations
+              teams. By adopting Cloud DevOps, organizations can deploy updates
+              faster, resolve issues promptly, and optimize resource management
+              efficiently.
             </p>
           </div>
         </div>
 
-        <div className="text-center">
-          <Link href="/contact" className="btn-primary">
-            Get a free consultation
-          </Link>
-        </div>
-      </div>
+         
+       </div>
     </section>
-  )
+      <Advantages />
+      <CTA />
+</>
+  );
 }

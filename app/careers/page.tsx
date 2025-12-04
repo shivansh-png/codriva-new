@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ExpertiseCard from "@/components/ExpertiseCard";
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
@@ -19,6 +20,29 @@ export default function CareersPage() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+
+const expertiseData = [
+  {
+    image: "/assets/images/5599109_56683.jpg",
+    title: "Growth-Driven Workplace",
+    subtitle: "Clear career paths, mentorship, and continuous upskilling.",
+  },
+  {
+    image: "/assets/images/2455802_331199-PACCJR-924.jpg",
+    title: "Innovation-First Culture",
+    subtitle: "Work with cutting-edge tools and build future-ready products.",
+  },
+  {
+    image: "/assets/images/13641500_5301618.jpg",
+    title: "Work-Life Flexibility",
+    subtitle: "Hybrid and remote options designed for balance and productivity.",
+  },
+  {
+    image: "/assets/images/13514343_SL.112119.25250.41.jpg",
+    title: "Real-World Impact",
+    subtitle: "Build solutions used across industries that create measurable value.",
+  },
+];
 
   const openPositions = [
     {
@@ -98,7 +122,7 @@ export default function CareersPage() {
       {/* ================================================= */}
       <section
         id="careers-hero"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
       >
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -109,10 +133,10 @@ export default function CareersPage() {
             className="w-full h-full object-cover"
           />
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        {/* Overlay Pattern (same as homepage) */}
+        {/* Overlay Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -123,92 +147,66 @@ export default function CareersPage() {
           ></div>
         </div>
 
-        {/* HERO CONTENT */}
-        <div className="relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-display">
-              Join a Team That Builds the{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200">
-                Future
-              </span>
-            </h1>
+        {/* Floating Blobs (same style as homepage) */}
+        <div className="floating-element absolute top-20 left-20 w-32 h-32 bg-blue-400/20 dark:bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="floating-element absolute bottom-20 right-20 w-40 h-40 bg-indigo-400/20 dark:bg-indigo-500/20 rounded-full blur-3xl"></div>
+        <div className="floating-element absolute top-1/2 right-1/4 w-24 h-24 bg-blue-300/20 dark:bg-blue-400/20 rounded-full blur-2xl"></div>
 
-            <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-3xl mx-auto leading-relaxed">
-              At Codriva, we don’t just develop software — we build solutions
-              that transform industries and create real-world impact.
-            </p>
+        {/* ------------------------------------------------------------- */}
+        {/* HERO TITLE + SUBTITLE (matching homepage typography + spacing) */}
+        {/* ------------------------------------------------------------- */}
+        <div className="relative z-10 mt-20 container-max mx-auto text-center max-w-4xl">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-display">
+            Join a Team That Builds the{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200">
+              Future
+            </span>
+          </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              We're more than just a workplace — we're a community that fosters
-              growth, creativity, and balance.
-            </p>
+          <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-3xl mx-auto leading-relaxed">
+            At Codriva, we don’t just develop software — we create meaningful
+            solutions that transform industries.
+          </p>
 
-            {/* === THREE CARDS (kept same, just spaced like homepage) === */}
-            <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-12 max-w-6xl mx-auto px-6">
-              {/* Card 1 */}
-              <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
-                <div className="w-full h-40 relative">
-                  <Image
-                    src="/assets/images/1527661_213882-P085GI-613.jpg"
-                    alt="Experience"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
-                    20+ Years
-                  </h3>
-                  <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
-                    Combined Team Experience
-                  </p>
-                </div>
-              </div>
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            We're more than just a workplace — we're a community built on
+            innovation, growth, and collaboration.
+          </p>
 
-              {/* Card 2 */}
-              <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
-                <div className="w-full h-40 relative">
-                  <Image
-                    src="/assets/images/776922_more10.jpg"
-                    alt="Industries"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
-                    4+ Industries
-                  </h3>
-                  <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
-                    Served
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="rounded-2xl overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117] shadow-lg">
-                <div className="w-full h-40 relative">
-                  <Image
-                    src="/assets/images/422093080_80671624-b25f-4674-8409-a236ee5f8426.jpg"
-                    alt="Growth"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
-                    Fast-Growing
-                  </h3>
-                  <p className="text-sm text-[#656d76] dark:text-[#8b949e] mt-1">
-                    Strong Engineering Culture
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* CTA Buttons (optional – remove if not needed) */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/careers/openings"
+              className="btn-primary text-lg px-8 py-3 magnetic"
+            >
+              View Open Positions
+            </Link>
+            <Link
+              href="/about"
+              className="btn-outline text-lg px-8 py-3 magnetic"
+            >
+              Learn About Our Culture
+            </Link>
           </div>
         </div>
 
-        {/* Scroll Indicator – matching homepage */}
+        {/* ------------------------------------------------------------- */}
+        {/* CARDS — styled EXACTLY like home expertise cards */}
+        {/* ------------------------------------------------------------- */}
+        <div className="relative z-10 w-full mt-20 pb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-12 max-w-7xl mx-auto px-6">
+            {expertiseData.map((item) => (
+              <ExpertiseCard
+                key={item.title}
+                image={item.image}
+                title={item.title}
+                subtitle={item.subtitle}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <div className="animate-bounce">
             <svg
@@ -272,7 +270,7 @@ export default function CareersPage() {
         {/* ================================================= */}
         {/* ALTERNATING VALUES SECTION (FULL WIDTH IMAGES) */}
         {/* ================================================= */}
-        <section className="mb-32 w-full">
+        <section className="mb-32 w-full hidden">
           <h1 className="text-center text-3xl font-bold mb-16 text-[#24292f] dark:text-[#f0f6fc]">
             Building Tomorrow’s Technology, Today
           </h1>
@@ -341,6 +339,34 @@ export default function CareersPage() {
           </div>
         </section>
 
+                {/* ================================================= */}
+        {/* OPEN POSITIONS */}
+        {/* ================================================= */}
+        <section className="mb-24">
+          <h2 className="text-3xl font-bold text-center mb-10 text-[#24292f] dark:text-[#f0f6fc]">
+            Open Positions
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {openPositions.map((job, i) => (
+              <div key={i} className="card p-8 hover-card transition-all">
+                <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-2">
+                  {job.title}
+                </h3>
+                <p className="text-sm text-[#656d76] dark:text-[#8b949e] mb-2">
+                  {job.type} • {job.location}
+                </p>
+                <p className="text-sm text-[#656d76] dark:text-[#8b949e] mb-4">
+                  {job.description}
+                </p>
+                <Link href="#apply" className="btn-primary text-center">
+                  Apply Now
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* ================================================= */}
         {/* WORK FROM ANYWHERE */}
         {/* ================================================= */}
@@ -374,34 +400,6 @@ export default function CareersPage() {
               thrive in a flexible work culture designed for balance and
               creativity.
             </p>
-          </div>
-        </section>
-
-        {/* ================================================= */}
-        {/* OPEN POSITIONS */}
-        {/* ================================================= */}
-        <section className="mb-24">
-          <h2 className="text-3xl font-bold text-center mb-10 text-[#24292f] dark:text-[#f0f6fc]">
-            Open Positions
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {openPositions.map((job, i) => (
-              <div key={i} className="card p-8 hover-card transition-all">
-                <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-2">
-                  {job.title}
-                </h3>
-                <p className="text-sm text-[#656d76] dark:text-[#8b949e] mb-2">
-                  {job.type} • {job.location}
-                </p>
-                <p className="text-sm text-[#656d76] dark:text-[#8b949e] mb-4">
-                  {job.description}
-                </p>
-                <Link href="#apply" className="btn-primary text-center">
-                  Apply Now
-                </Link>
-              </div>
-            ))}
           </div>
         </section>
 
@@ -466,7 +464,7 @@ export default function CareersPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-primary w-full py-3 text-lg disabled:opacity-50"
+              className="btn-primary bg-blue-600 w-full py-3 text-lg disabled:opacity-50"
             >
               {isSubmitting ? "Submitting..." : "Submit Application"}
             </button>

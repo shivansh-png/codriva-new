@@ -210,7 +210,7 @@ const Events = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

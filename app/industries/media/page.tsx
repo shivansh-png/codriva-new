@@ -80,7 +80,7 @@ const Media = () => {
     const solutions = [
         {
             title: 'Content Management Systems',
-            image: '/assets/images/unsplash_19.png',
+            image: '/assets/images/unsplash_46.png',
             points: [
                 'Advanced CMS platforms for content creation and publishing',
                 'Multi-channel content distribution and syndication',
@@ -89,7 +89,7 @@ const Media = () => {
         },
         {
             title: 'Digital Media Platforms',
-            image: '/assets/images/unsplash_20.png',
+            image: '/assets/images/unsplash_45.png',
             points: [
                 'Video streaming and on-demand platforms',
                 'Interactive media experiences and engagement tools',
@@ -98,7 +98,7 @@ const Media = () => {
         },
         {
             title: 'Media Analytics & Insights',
-            image: '/assets/images/unsplash_21.png',
+            image: '/assets/images/unsplash_49.png',
             points: [
                 'Audience analytics and engagement metrics',
                 'Content performance tracking and optimization',
@@ -107,7 +107,7 @@ const Media = () => {
         },
         {
             title: 'Social Media Management',
-            image: '/assets/images/unsplash_22.png',
+            image: '/assets/images/unsplash_47.png',
             points: [
                 'Social media monitoring and management platforms',
                 'Automated content scheduling and posting',
@@ -122,7 +122,7 @@ const Media = () => {
             <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/images/unsplash_23.png"
+                        src="/assets/images/unsplash_48.png"
                         alt="Media & News"
                         fill
                         className="object-cover"
@@ -210,7 +210,7 @@ const Media = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

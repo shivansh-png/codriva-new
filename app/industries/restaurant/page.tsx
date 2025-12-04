@@ -80,7 +80,7 @@ const Restaurant = () => {
     const solutions = [
         {
             title: 'Restaurant Management Systems',
-            image: '/assets/images/unsplash_34.png',
+            image: '/assets/images/unsplash_42.png',
             points: [
                 'Point-of-sale systems and order management',
                 'Inventory tracking and supplier management',
@@ -89,7 +89,7 @@ const Restaurant = () => {
         },
         {
             title: 'Online Ordering Platforms',
-            image: '/assets/images/unsplash_35.png',
+            image: '/assets/images/unsplash_41.png',
             points: [
                 'Mobile-first ordering apps and websites',
                 'Real-time order tracking and delivery updates',
@@ -98,7 +98,7 @@ const Restaurant = () => {
         },
         {
             title: 'Cloud Kitchen Management',
-            image: '/assets/images/unsplash_36.png',
+            image: '/assets/images/unsplash_44.png',
             points: [
                 'Centralized kitchen operations management',
                 'Multi-brand menu and recipe management',
@@ -107,7 +107,7 @@ const Restaurant = () => {
         },
         {
             title: 'Restaurant Analytics',
-            image: '/assets/images/unsplash_37.png',
+            image: '/assets/images/unsplash_43.png',
             points: [
                 'Sales performance and trend analysis',
                 'Customer behavior and preference insights',
@@ -122,7 +122,7 @@ const Restaurant = () => {
             <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/images/unsplash_38.png"
+                        src="/assets/images/unsplash_40.png"
                         alt="Restaurant & Cloud Kitchen"
                         fill
                         className="object-cover"
@@ -210,7 +210,7 @@ const Restaurant = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

@@ -92,8 +92,6 @@ const Industries = () => {
       lottie:
         "https://lottie.host/270fdcae-11f5-46a1-998b-c9941ccb23ac/LEZKTOZ4xI.lottie",
     },
-
-    // Leave remaining as-is (no lottie given)
     {
       name: "Telecom",
       href: "/industries/telecom",

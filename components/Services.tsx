@@ -25,23 +25,33 @@ const services = [
     link: "/services/custom-software-development",
     bg: "/assets/images/4380747.jpg",
   },
-  {
-    icon: "🎨",
-    title: "UI/UX Design",
+   {
+    icon: "🔗",
+    title: "API & System Integration",
     description:
-      "Beautiful, intuitive interfaces that users love and businesses benefit from.",
-    features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-    link: "/services/ui-ux-design",
-    bg: "/assets/images/5783930.jpg",
+      "Seamless connectivity between your products, tools, and platforms to ensure smooth data flow and optimized operations.",
+    features: [
+      "Third-party API Integration",
+      "Custom API Development",
+      "Legacy System Integration",
+      "Workflow Automation",
+    ],
+    link: "/services/api-system-integration",
+    bg: "/assets/images/7015995.jpg",
   },
   {
-    icon: "☁️",
-    title: "Cloud Solutions",
+    icon: "🔧",
+    title: "Support & Maintenance",
     description:
-      "Scalable, secure cloud infrastructure that grows with your business.",
-    features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Containerization"],
-    link: "/services/cloud-devops",
-    bg: "/assets/images/23128917_1902.i039.011.P.m004.c30.cloud services isometric icons-15.jpg",
+      "Proactive, reliable support to keep your systems secure, updated, and performing at their best.",
+    features: [
+      "Bug Fixes & Issue Resolution",
+      "Performance Optimization",
+      "Security Patching",
+      "Continuous Monitoring",
+    ],
+    link: "/services/support-maintenance",
+    bg: "/assets/images/21502.jpg",
   },
   {
     icon: "🧠",
@@ -53,18 +63,18 @@ const services = [
     bg: "/assets/images/43868976_2304.i039.016.F.m004.c9.AI generated art AI powered content creation isometric.jpg",
   },
   {
-    icon: "🔒",
-    title: "Cybersecurity",
+    icon: "📱",
+    title: "Mobile App Development",
     description:
-      "Comprehensive security measures to protect your digital assets.",
+      "High-performance mobile applications built for great usability, scalability, and engagement across devices.",
     features: [
-      "Security Audits",
-      "Penetration Testing",
-      "Compliance",
-      "Monitoring",
+      "Native iOS & Android Apps",
+      "Cross-platform Solutions",
+      "UI/UX for Mobile",
+      "App Store Deployment & Optimization",
     ],
-    link: "/services/cybersecurity",
-    bg: "/assets/images/cyber-security-concept-digital-art.jpg",
+    link: "/services/mobile-app-development",
+    bg: "/assets/images/Mobile-dev.jpg",
   },
   {
     icon: "📊",
@@ -265,13 +275,6 @@ const Services = () => {
             </Link>
           ))}
         </div>
-
-        <div className="text-center mt-16">
-          <Link href="/services/all" className="btn-secondary mb-8">
-            More Services
-          </Link>
-        </div>
-
         <div className="text-center mt-16">
           <div className="card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-4">
@@ -286,10 +289,10 @@ const Services = () => {
                 Get a free Consultation
               </Link>
               <Link
-                href="/services/all"
+                href="/services"
                 className="btn-outline dark:text-white dark:border-white"
               >
-                Our Expertise
+                More Services
               </Link>
             </div>
           </div>

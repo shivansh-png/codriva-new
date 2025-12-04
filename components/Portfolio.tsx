@@ -23,28 +23,33 @@ const projects = [
     category: "retail",
     link: "/industries/retail",
   },
+
+  // UPDATED
   {
     id: 2,
-    title: "EdTech",
+    title: "Travel & Hospitality",
     description:
-      "Innovative education technology solutions including LMS platforms, virtual classrooms, mobile learning apps, and AI-powered personalized learning experiences.",
+      "End-to-end travel and hospitality solutions including booking engines, hotel management systems, digital check-in, and customer experience automation.",
     image:
-      "https://lottie.host/ec99b463-a384-4c6c-ad6c-e855caed9da6/mLC7PWXoZw.lottie",
-    tags: ["LMS", "Virtual Classroom", "E-Learning", "AI Learning"],
-    category: "edtech",
-    link: "/industries/edtech",
+      "https://lottie.host/2f63fcca-4205-4593-bb7e-a24e0cf7a2f9/ZmzFxUyN6F.lottie",
+    tags: ["Booking Systems", "Hotel Management", "Digital Check-in", "Travel Apps"],
+    category: "travel",
+    link: "/industries/travel",
   },
+
+  // UPDATED
   {
     id: 3,
-    title: "FinTech & Banking",
+    title: "Restaurant & Cloud Kitchen",
     description:
-      "Secure financial technology solutions with advanced security, compliance, and real-time transaction processing.",
+      "Smart restaurant and cloud kitchen solutions featuring online ordering, POS integration, menu management, and real-time delivery tracking.",
     image:
-      "https://lottie.host/9f1ea2cf-0e7b-4dad-8277-b1809846f4fd/5De4ysgqVx.lottie",
-    tags: ["Banking Apps", "Payment Processing", "Security"],
-    category: "fintech",
-    link: "/industries/fintech",
+      "https://lottie.host/00431ad0-ac06-4ffb-ac30-267d7784ced1/mMYyHBa6xX.lottie",
+    tags: ["Online Ordering", "POS Integration", "Kitchen Automation"],
+    category: "restaurant",
+    link: "/industries/restaurant",
   },
+
   {
     id: 4,
     title: "Logistics & Supply Chain",
@@ -56,17 +61,20 @@ const projects = [
     category: "logistics",
     link: "/industries/logistics",
   },
+
+  // UPDATED
   {
     id: 5,
-    title: "Real Estate and PropTech",
+    title: "Healthcare & life Science",
     description:
-      "Property technology solutions including property management systems, virtual tours, and real estate marketplaces.",
+      "Advanced healthcare and life science platforms including patient management systems, telemedicine, EHR/EMR, and health analytics dashboards.",
     image:
-      "https://lottie.host/6d7c6dd5-064a-4848-ba96-edf17c2f44d2/wugQgJQdSv.lottie",
-    tags: ["Property Management", "Virtual Tours", "Marketplaces"],
-    category: "realestate",
-    link: "/industries/realestate",
+      "https://lottie.host/5e0afd1a-a128-4b66-9e1e-0a6fcae83fb9/IEbLAlQjUc.lottie",
+    tags: ["Telemedicine", "EHR/EMR", "Patient Portals", "Health Analytics"],
+    category: "healthcare",
+    link: "/industries/healthcare",
   },
+
   {
     id: 6,
     title: "On Demand Platforms",
@@ -80,12 +88,14 @@ const projects = [
   },
 ];
 
+
 const categories = [
-  { id: "all", name: "All Industries" },
+  { id: "all", name: "Top Industries" },
   { id: "retail", name: "Retail & E-Commerce" },
-  { id: "fintech", name: "FinTech & Banking" },
+  { id: "travel", name: "Travel & Hospitality" },
+  { id: "restaurant", name: "Restaurant & Cloud Kitchen" },
   { id: "logistics", name: "Logistics & Supply Chain" },
-  { id: "realestate", name: "Real Estate & PropTech" },
+  { id: "healthcare", name: "Healthcare & Life Science" },
   { id: "ondemand", name: "On Demand Platforms" },
 ];
 

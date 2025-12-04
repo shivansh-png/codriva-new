@@ -1,9 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import Advantages from "@/components/Advantages";
+import CTA from "@/components/CTA";
 
 export default function QaTesting() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+   <>  
+<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
@@ -24,17 +27,24 @@ export default function QaTesting() {
           </div>
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
-              <span className="text-[#0969da] font-semibold">Quality assurance</span> & Testing ensure that software applications are reliable, secure, and perform optimally before release. Using a blend of manual and automated testing techniques, QA teams detect bugs, performance bottlenecks, and usability issues to deliver a seamless, error-free user experience. A robust QA process enhances product quality while reducing time-to-market and long-term costs.
+              <span className="text-[#0969da] font-semibold">
+                Quality assurance
+              </span>{" "}
+              & Testing ensure that software applications are reliable, secure,
+              and perform optimally before release. Using a blend of manual and
+              automated testing techniques, QA teams detect bugs, performance
+              bottlenecks, and usability issues to deliver a seamless,
+              error-free user experience. A robust QA process enhances product
+              quality while reducing time-to-market and long-term costs.
             </p>
           </div>
         </div>
 
-        <div className="text-center">
-          <Link href="/contact" className="btn-primary">
-            Get a free consultation
-          </Link>
-        </div>
-      </div>
+         
+       </div>
     </section>
-  )
+      <Advantages />
+      <CTA />
+</>
+  );
 }

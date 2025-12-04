@@ -209,7 +209,7 @@ const EdTech = () => {
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

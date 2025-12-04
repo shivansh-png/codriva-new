@@ -77,44 +77,45 @@ const Healthcare = () => {
         }
     }, [])
 
-    const solutions = [
-        {
-            title: 'Electronic Health Records (EHR)',
-            image: '/assets/images/unsplash_9.png',
-            points: [
-                'Comprehensive patient data management systems',
-                'HIPAA-compliant secure data storage',
-                'Interoperable health information exchange'
-            ]
-        },
-        {
-            title: 'Telemedicine Platforms',
-            image: '/assets/images/unsplash_10.png',
-            points: [
-                'Video consultation and remote monitoring',
-                'Secure messaging and prescription management',
-                'Integration with wearable health devices'
-            ]
-        },
-        {
-            title: 'Healthcare Analytics & AI',
-            image: '/assets/images/unsplash_11.png',
-            points: [
-                'Predictive analytics for patient outcomes',
-                'AI-powered diagnostic assistance tools',
-                'Population health management dashboards'
-            ]
-        },
-        {
-            title: 'Medical Practice Management',
-            image: '/assets/images/unsplash_12.png',
-            points: [
-                'Appointment scheduling and billing systems',
-                'Patient portal and communication tools',
-                'Regulatory compliance and reporting'
-            ]
-        }
+ const solutions = [
+  {
+    title: 'Electronic Health Records (EHR)',
+    image: '/assets/images/unsplash.png ',
+    points: [
+      'Comprehensive patient data management systems',
+      'HIPAA-compliant secure data storage',
+      'Interoperable health information exchange'
     ]
+  },
+  {
+    title: 'Telemedicine Platforms',
+    image: '/assets/images/unsplash_6.png',
+    points: [
+      'Video consultation and remote monitoring',
+      'Secure messaging and prescription management',
+      'Integration with wearable health devices'
+    ]
+  },
+  {
+    title: 'Healthcare Analytics & AI',
+    image: '/assets/images/unsplash_7.png',
+    points: [
+      'Predictive analytics for patient outcomes',
+      'AI-powered diagnostic assistance tools',
+      'Population health management dashboards'
+    ]
+  },
+  {
+    title: 'Medical Practice Management',
+    image: '/assets/images/unsplash_8.png',
+    points: [
+      'Appointment scheduling and billing systems',
+      'Patient portal and communication tools',
+      'Regulatory compliance and reporting'
+    ]
+  }
+];
+
 
     return (
         <section id="healthcare" ref={sectionRef} className="relative">
@@ -122,7 +123,7 @@ const Healthcare = () => {
             <div ref={heroRef} className="relative h-screen flex items-end justify-center pb-32 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/assets/images/unsplash_13.png"
+                        src="/assets/images/unsplash_5.png"
                         alt="Healthcare & Life Science"
                         fill
                         className="object-cover"
@@ -203,14 +204,14 @@ const Healthcare = () => {
                                     </ul>
                                 </div>
                             </div>
-                        ))}
+                        ))} 
                     </div>
                 </div>
             </div>
 
             <Advantages />
             <CTA />
-            <News />
+             
         </section>
     )
 }

@@ -1,4 +1,4 @@
-import { Code2, Users, Rocket } from 'lucide-react'
+import { Code2, Users, Rocket, DollarSign } from 'lucide-react'
 
 const Advantages = () => {
     return (
@@ -13,7 +13,7 @@ const Advantages = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-4 gap-8">
                     {/* Expert Development */}
                     <div className="text-center">
                         <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -44,6 +44,17 @@ const Advantages = () => {
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Fast Delivery</h3>
                         <p className="text-gray-600 dark:text-gray-300">
                             Efficient processes to deliver high-quality solutions on time.
+                        </p>
+                    </div>
+
+                    {/* Cost Efficient */}
+                    <div className="text-center">
+                        <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <DollarSign className="text-white w-8 h-8" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Cost Efficient</h3>
+                        <p className="text-gray-600 dark:text-gray-300">
+                            Optimized development processes that reduce cost without compromising quality.
                         </p>
                     </div>
                 </div>

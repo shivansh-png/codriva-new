@@ -1,9 +1,11 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
+import Image from "next/image";
+import Link from "next/link";
+import Advantages from "@/components/Advantages";
+import CTA from "@/components/CTA";
 export default function SupportMaintenance() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+   <>  
+<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6">
@@ -15,7 +17,15 @@ export default function SupportMaintenance() {
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
-              <span className="text-[#0969da] font-semibold">Support & maintenance services</span> ensure your software remains reliable and efficient long after deployment. This includes regular updates, bug fixes, performance monitoring, and responsive technical support to promptly resolve any issues. Through proactive maintenance and continuous care, we help minimize downtime, strengthen security, and keep your systems operating at peak performance.
+              <span className="text-[#0969da] font-semibold">
+                Support & maintenance services
+              </span>{" "}
+              ensure your software remains reliable and efficient long after
+              deployment. This includes regular updates, bug fixes, performance
+              monitoring, and responsive technical support to promptly resolve
+              any issues. Through proactive maintenance and continuous care, we
+              help minimize downtime, strengthen security, and keep your systems
+              operating at peak performance.
             </p>
           </div>
           <div className="relative">
@@ -29,12 +39,11 @@ export default function SupportMaintenance() {
           </div>
         </div>
 
-        <div className="text-center">
-          <Link href="/contact" className="btn-primary">
-            Get a free consultation
-          </Link>
-        </div>
-      </div>
+         
+       </div>
     </section>
-  )
+      <Advantages />
+      <CTA />
+</>
+  );
 }
