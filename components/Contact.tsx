@@ -273,8 +273,8 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
       title: "Phone",
-      value: "9211508849, +91-120-454-8122",
-      href: isMobile ? "tel:9211508849" : undefined,
+      value: "+91-9211508849, +91-120-454-8122",
+      href: isMobile ? "tel:+919211508849" : undefined,
     },
     {
       icon: <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
