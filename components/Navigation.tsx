@@ -93,7 +93,7 @@ const Navigation = () => {
 
   ${
     // FORCE BLACK TEXT for ALL /services/* subpages
-    (pathname.startsWith("/services/") || pathname === "/contact") ? "text-black" : ""
+    (pathname.startsWith("/services/") || pathname === "/contact" || pathname === "/terms-of-service" || pathname === "/privacy-policy") ? "text-black" : ""
   }
 `}
 
