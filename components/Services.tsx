@@ -25,43 +25,6 @@ const services = [
     link: "/services/custom-software-development",
     bg: "/assets/images/4380747.jpg",
   },
-   {
-    icon: "🔗",
-    title: "API & System Integration",
-    description:
-      "Seamless connectivity between your products, tools, and platforms to ensure smooth data flow and optimized operations.",
-    features: [
-      "Third-party API Integration",
-      "Custom API Development",
-      "Legacy System Integration",
-      "Workflow Automation",
-    ],
-    link: "/services/api-system-integration",
-    bg: "/assets/images/7015995.jpg",
-  },
-  {
-    icon: "🔧",
-    title: "Support & Maintenance",
-    description:
-      "Proactive, reliable support to keep your systems secure, updated, and performing at their best.",
-    features: [
-      "Bug Fixes & Issue Resolution",
-      "Performance Optimization",
-      "Security Patching",
-      "Continuous Monitoring",
-    ],
-    link: "/services/support-maintenance",
-    bg: "/assets/images/21502.jpg",
-  },
-  {
-    icon: "🧠",
-    title: "AI & Machine Learning",
-    description:
-      "Intelligent solutions that automate processes and provide valuable insights.",
-    features: ["Predictive Analytics", "NLP", "Computer Vision", "Automation"],
-    link: "/services/ai-machine-learning",
-    bg: "/assets/images/43868976_2304.i039.016.F.m004.c9.AI generated art AI powered content creation isometric.jpg",
-  },
   {
     icon: "📱",
     title: "Mobile App Development",
@@ -77,6 +40,29 @@ const services = [
     bg: "/assets/images/Mobile-dev.jpg",
   },
   {
+    icon: "🔗",
+    title: "API & System Integration",
+    description:
+      "Seamless connectivity between your products, tools, and platforms to ensure smooth data flow and optimized operations.",
+    features: [
+      "Third-party API Integration",
+      "Custom API Development",
+      "Legacy System Integration",
+      "Workflow Automation",
+    ],
+    link: "/services/api-system-integration",
+    bg: "/assets/images/7015995.jpg",
+  },
+  {
+    icon: "🧠",
+    title: "AI & Machine Learning",
+    description:
+      "Intelligent solutions that automate processes and provide valuable insights.",
+    features: ["Predictive Analytics", "NLP", "Computer Vision", "Automation"],
+    link: "/services/ai-machine-learning",
+    bg: "/assets/images/43868976_2304.i039.016.F.m004.c9.AI generated art AI powered content creation isometric.jpg",
+  },
+  {
     icon: "📊",
     title: "Data Analytics",
     description:
@@ -89,6 +75,20 @@ const services = [
     ],
     link: "/services/data-analytics",
     bg: "/assets/images/12643932_5031659.jpg",
+  },
+  {
+    icon: "🔧",
+    title: "Support & Maintenance",
+    description:
+      "Proactive, reliable support to keep your systems secure, updated, and performing at their best.",
+    features: [
+      "Bug Fixes & Issue Resolution",
+      "Performance Optimization",
+      "Security Patching",
+      "Continuous Monitoring",
+    ],
+    link: "/services/support-maintenance",
+    bg: "/assets/images/21502.jpg",
   },
 ];
 

@@ -103,7 +103,7 @@ export default function TermsPage() {
               <li>Ensure lawful ownership of provided materials</li>
             </ul>
 
-            <div className="bg-yellow-100/70 dark:bg-yellow-600/20 p-4 rounded-lg mt-4 text-[14px]">
+            <div className="bg-blue-100/70 dark:bg-yellow-600/20 p-4 rounded-lg mt-4 text-[14px]">
               Note: Delays caused by incomplete inputs are not the responsibility of Codriva Technologies.
             </div>
           </div>

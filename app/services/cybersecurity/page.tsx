@@ -20,7 +20,7 @@ export default function CybersecurityPage() {
         </div>
 
         {/* Image + Text Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-4">
           
           {/* Image */}
           <div className="relative">

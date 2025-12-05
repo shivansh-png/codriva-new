@@ -19,7 +19,7 @@ const allServices = [
     image: "/assets/images/custom-soft.png",
   },
   {
-    title: "UI/UX Design",
+    title: "UI/UX design",
     slug: "ui-ux-design",
     description:
       "User interface (UI) and user experience (UX) design are at the heart of impactful digital products. At Codriva, we create intuitive, responsive, and aesthetically engaging interfaces that enhance usability and ensure seamless user journeys across all platforms and devices.",

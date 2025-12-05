@@ -14,7 +14,7 @@ export default function SupportMaintenance() {
           <div className="w-24 h-1 bg-[#0969da] mx-auto mb-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-4">
           <div className="space-y-6">
             <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
               <span className="text-[#0969da] font-semibold">

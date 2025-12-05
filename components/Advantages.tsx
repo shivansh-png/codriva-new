@@ -2,7 +2,7 @@ import { Code2, Users, Rocket, DollarSign } from 'lucide-react'
 
 const Advantages = () => {
     return (
-        <section className="py-20 bg-white dark:bg-gray-800">
+        <section className="py-6 bg-gray-200 dark:bg-gray-800">
             <div className="container-max">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">

@@ -38,22 +38,67 @@ const Footer = () => {
     ],
 
     Industries: [
-      { name: "Retail & E-Commerce", href: "/industries/retail" },
-      { name: "Travel & Hospitality", href: "/industries/travel" },
-      { name: "Restaurant & Cloud Kitchen", href: "/industries/restaurant" },
-      { name: "Healthcare & Life Science", href: "/industries/healthcare" },
-      { name: "View More ↗", href: "/industries", viewMore: true },
+      {
+        name: "Retail & E-Commerce",
+        href: "/industries/retail",
+      },
+      {
+        name: "Travel & Hospitality",
+        href: "/industries/travel",
+      },
+      {
+        name: "Restaurant & Cloud Kitchen",
+        href: "/industries/restaurant",
+      },
+      {
+        name: "Logistics & Supply Chain",
+        href: "/industries/logistics",
+      },
+      {
+        name: "Healthcare & life Science",
+        href: "/industries/healthcare",
+      },
+      {
+        name: "On Demand Platforms",
+        href: "/industries/ondemand",
+      },
+      {
+        name: "View More ↗",
+        href: "/industries",
+        viewMore: true,
+      },
     ],
 
     Services: [
       {
-        name: "Custom Software",
+        name: "Custom Software Development",
         href: "/services/custom-software-development",
       },
-      { name: "AI & Machine Learning", href: "/services/ai-machine-learning" },
-      { name: "Product Engineering", href: "/services/product-engineering" },
-      { name: "Cloud Solutions", href: "/services/cloud-devops" },
-      { name: "View More ↗", href: "/services", viewMore: true },
+      {
+        name: "Mobile App Development",
+        href: "/services/mobile-app-development",
+      },
+      {
+        name: "API & System Integration",
+        href: "/services/api-system-integration",
+      },
+      {
+        name: "AI & Machine Learning",
+        href: "/services/ai-machine-learning",
+      },
+      {
+        name: "Data Analytics",
+        href: "/services/data-analytics",
+      },
+      {
+        name: "Support & Maintenance",
+        href: "/services/support-maintenance",
+      },
+      {
+        name: "View More ↗",
+        href: "/services",
+        viewMore: true,
+      },
     ],
   };
 
@@ -73,15 +118,12 @@ const Footer = () => {
         ></div>
       </div>
 
-      <div className="px-8 relative z-10">
-        <div className="footer-content py-16">
-
+      <div className="px-10 relative z-10">
+        <div className="footer-content pt-10">
           {/* FIXED GRID: left column + right 3-column block */}
           <div className="grid md:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-12">
-
             {/* LEFT SIDE — Logo + description + icons + connect */}
             <div className="max-w-sm">
-
               <a href="/" className="flex items-center mb-4 group">
                 <Image
                   src="/images/codriva-logo.svg"
@@ -122,7 +164,7 @@ const Footer = () => {
               </div>
 
               {/* CONNECT */}
-              <h3 className="font-semibold text-lg text-white mb-4">Connect</h3>
+              <h3 className="text-white font-bold text-xl tracking-wide mb-3 uppercase">Connect</h3>
               <ul className="space-y-3">
                 <li>
                   <a
@@ -145,16 +187,20 @@ const Footer = () => {
 
             {/* RIGHT SIDE — perfectly aligned 3 columns */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-10">
-
               {Object.entries(footerLinks).map(([title, links]) => (
                 <div key={title}>
-                  <h3 className="font-semibold text-white mb-4">{title}</h3>
+                  <h3 className="text-white font-bold text-xl tracking-wide mb-3 uppercase">
+                    {title}
+                  </h3>
+
                   <ul className="space-y-3">
                     {links.map((link: any) => (
                       <li key={link.name}>
                         <Link
                           href={link.href}
-                          className={`text-lg text-[#f0f6fc] hover:text-white transition ${link.viewMore ? "underline underline-offset-4" : ""}`}
+                          className={`text-lg text-[#f0f6fc] hover:text-white transition ${
+                            link.viewMore ? "underline underline-offset-4" : ""
+                          }`}
                         >
                           {link.name}
                         </Link>
@@ -163,7 +209,6 @@ const Footer = () => {
                   </ul>
                 </div>
               ))}
-
             </div>
           </div>
         </div>
@@ -176,16 +221,21 @@ const Footer = () => {
             </p>
 
             <div className="flex space-x-6 text-sm">
-              <a href="/privacy-policy" className="text-[#f0f6fc] hover:text-white transition">
+              <a
+                href="/privacy-policy"
+                className="text-[#f0f6fc] hover:text-white transition"
+              >
                 Privacy Policy
               </a>
-              <a href="/terms-and-conditions" className="text-[#f0f6fc] hover:text-white transition">
+              <a
+                href="/terms-of-service"
+                className="text-[#f0f6fc] hover:text-white transition"
+              >
                 Terms of Service
               </a>
             </div>
           </div>
         </div>
-
       </div>
     </footer>
   );

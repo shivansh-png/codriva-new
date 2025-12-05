@@ -78,15 +78,25 @@ const Navigation = () => {
             <Link
               key={item.name}
               href={item.href}
-              className={`text-xl nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black ${
-                isScrolled ? "text-black" : ""
-              } ${
-                pathname.startsWith(item.href) && item.href !== "/"
-                  ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
-                  : pathname === "/" && item.href === "/"
-                  ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
-                  : ""
-              }`}
+            className={`
+  text-xl nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black
+  ${isScrolled ? "text-black" : ""}
+
+  ${
+    // highlight active non-root pages
+    pathname.startsWith(item.href) && item.href !== "/"
+      ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
+      : pathname === "/" && item.href === "/"
+      ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
+      : ""
+  }
+
+  ${
+    // FORCE BLACK TEXT for ALL /services/* subpages
+    (pathname.startsWith("/services/") || pathname === "/contact") ? "text-black" : ""
+  }
+`}
+
             >
               {item.name}
             </Link>
@@ -110,13 +120,13 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-[#7c8a9b] dark:text-[#f0f6fc] hover:bg-[#f6f8fa] dark:hover:bg-[#21262d]"
+            className="md:hidden p-2 rounded-md text-[#7c8a9b] dark:text-[#f0f6fc] hover:bg-[#6a9fcaff] dark:hover:bg-[#21262d]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
               className="w-5 h-5"
               fill="none"
-              stroke="currentColor"
+              stroke="#f8f8f8ff"
               viewBox="0 0 24 24"
             >
               <path

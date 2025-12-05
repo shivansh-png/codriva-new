@@ -3,20 +3,43 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, ArrowUpRight } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 const Contact = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth <= 768) setIsMobile(true);
+  }, []);
+  const serviceOptions = [
+    "Software Development",
+    "Mobile App Development",
+    "Website Development",
+    "UI/UX Design",
+    "Cloud & DevOps",
+    "AI & Data Services",
+    "Quality Assurance",
+    "Cybersecurity",
+    "IT Consulting",
+    "Support & Maintenance",
+    "Integration Services",
+    "ERP/CRM Solutions",
+    "Tech Staffing / Resource Augmentation",
+  ];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
+    designation: "",
+    service: "",
     message: "",
   });
+  const [messageCount, setMessageCount] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
@@ -151,9 +174,28 @@ const Contact = () => {
   }, []);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
+
+    // Limits
+    const limits: Record<string, number> = {
+      name: 30,
+      phone: 15,
+      company: 50,
+      designation: 50,
+      message: 300,
+    };
+
+    if (limits[name] && value.length > limits[name]) return;
+
+    // Update message counter
+    if (name === "message") {
+      setMessageCount(value.length);
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -162,18 +204,29 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setSubmitStatus("idle");
 
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setSubmitStatus("error");
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
     const googleFormURL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSesXV-fCO8oYN1cvrODy6cqGf0Ao-DhvPgtrR_-0jNrWAY1gg/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLScbmQa9Hc9-hNHGj8AVVVsAVRIR1JVDsHKpggvG0G3rPKfyvg/formResponse";
 
     const formBody = new FormData();
-    formBody.append("entry.1034807482", formData.name); // Name
-    formBody.append("entry.748039128", formData.email); // Email
-    formBody.append("entry.442978354", formData.phone); // Phone
-    formBody.append("entry.1517918904", formData.company); // Company
-    formBody.append("entry.1350125836", formData.message); // Message
+    formBody.append("entry.1074030697", formData.name); // Name
+    formBody.append("entry.913986537", formData.email); // Email
+    formBody.append("entry.1462838736", formData.phone); // Phone
+    formBody.append("entry.1485178666", formData.company); // Company
+    formBody.append("entry.1112075466", formData.designation); // Designation
+    formBody.append("entry.1501056122", formData.service); // NEW field
+    formBody.append("entry.1533686460", formData.message); // Message
 
     try {
       await fetch(googleFormURL, {
@@ -183,7 +236,15 @@ const Contact = () => {
       });
 
       setSubmitStatus("success");
-      setFormData({ name: "", phone: "", email: "", company: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        designation: "",
+        message: "",
+        service: "",
+      });
     } catch (error) {
       setSubmitStatus("error");
       console.error("Google Form submission error:", error);
@@ -191,6 +252,16 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    if (submitStatus === "success") {
+      const timer = setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 4000); // hide after 4 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
 
   const contactInfo = [
     {
@@ -203,13 +274,13 @@ const Contact = () => {
       icon: <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
       title: "Phone",
       value: "9211508849, +91-120-454-8122",
-      href: "tel:+15551234567",
+      href: isMobile ? "tel:9211508849" : undefined,
     },
     {
       icon: <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
       title: "Location",
       value:
-        "616-617, 6th Floor, Tower-B, Ithum, Plot A-40, Sector-62, Noida, Uttar Pradesh 201309",
+        "Office no. 616 & 617, 6th Floor, Tower-B, Ithum, Plot A-40, Sector-62, Noida, Uttar Pradesh 201309",
       href: "https://www.google.com/maps?q=28.627342575507704,77.37247588037425",
     },
     {
@@ -313,7 +384,8 @@ const Contact = () => {
               )}
 
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid md:grid-cols-3 gap-6">
+                {/* NAME + PHONE */}
+                <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="name"
@@ -325,6 +397,7 @@ const Contact = () => {
                       type="text"
                       id="name"
                       name="name"
+                      maxLength={30}
                       value={formData.name}
                       onChange={handleInputChange}
                       required
@@ -332,23 +405,7 @@ const Contact = () => {
                       placeholder="Your name"
                     />
                   </div>
-                  <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] mb-2"
-                    >
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="form-input"
-                      placeholder="Your company"
-                    />
-                  </div>
+
                   <div>
                     <label
                       htmlFor="phone"
@@ -360,6 +417,7 @@ const Contact = () => {
                       type="text"
                       id="phone"
                       name="phone"
+                      maxLength={15}
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
@@ -369,6 +427,7 @@ const Contact = () => {
                   </div>
                 </div>
 
+                {/* EMAIL */}
                 <div>
                   <label
                     htmlFor="email"
@@ -387,6 +446,79 @@ const Contact = () => {
                     placeholder="your@email.com"
                   />
                 </div>
+
+                {/* COMPANY + DESIGNATION */}
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  {/* COMPANY */}
+                  <div>
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] mb-2"
+                    >
+                      Company
+                    </label>
+                    <input
+                      id="company"
+                      name="company"
+                      maxLength={50}
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="form-input"
+                      placeholder="Your company"
+                    />
+                  </div>
+
+                  {/* DESIGNATION → only show if company has value */}
+                  {formData.company.trim() !== "" && (
+                    <div className="transition-all duration-300">
+                      <label
+                        htmlFor="designation"
+                        className="block text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] mb-2"
+                      >
+                        Designation
+                      </label>
+                      <input
+                        id="designation"
+                        name="designation"
+                        maxLength={50}
+                        value={formData.designation}
+                        onChange={handleInputChange}
+                        className="form-input"
+                        placeholder="Your designation"
+                      />
+                    </div>
+                  )}
+                </div>
+                {/* SERVICE SELECTION DROPDOWN */}
+                <div>
+                  <label
+                    htmlFor="service"
+                    className="block text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] mb-2"
+                  >
+                    Service Required *
+                  </label>
+
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    required
+                    className="form-input"
+                  >
+                    <option value="" disabled>
+                      Select a service
+                    </option>
+
+                    {serviceOptions.map((opt, idx) => (
+                      <option key={idx} value={opt}>
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* MESSAGE */}
                 <div>
                   <label
                     htmlFor="message"
@@ -394,6 +526,7 @@ const Contact = () => {
                   >
                     Message *
                   </label>
+
                   <textarea
                     id="message"
                     name="message"
@@ -401,9 +534,15 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
+                    maxLength={300}
                     className="form-input resize-none"
                     placeholder="Tell us about your project..."
                   />
+
+                  {/* Character Counter */}
+                  <div className="text-right text-xs mt-1 text-[#656d76] dark:text-[#8b949e]">
+                    {messageCount}/300
+                  </div>
                 </div>
 
                 <button
@@ -431,25 +570,51 @@ const Contact = () => {
               </div>
 
               <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    key={index}
-                    href={info.href}
-                    className="flex items-center p-4 rounded-lg hover:bg-white dark:hover:bg-[#161b22] transition-colors duration-200 group"
-                  >
-                    <div className="text-2xl mr-4">{info.icon}</div>
-                    <div>
-                      <div className="font-medium text-[#24292f] dark:text-[#f0f6fc] group-hover:text-[#0969da] dark:group-hover:text-[#58a6ff] transition-colors duration-200">
-                        {info.title}
+                {contactInfo.map((info, index) => {
+                  const isPhone = info.title === "Phone";
+                  const link = isPhone && !isMobile ? undefined : info.href;
+
+                  return (
+                    <a
+                      key={index}
+                      href={link}
+                      target={link?.startsWith("http") ? "_blank" : undefined}
+                      rel={
+                        link?.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      className={`flex items-center justify-between p-4 rounded-lg transition-colors duration-200 group
+        ${
+          link
+            ? "hover:bg-white dark:hover:bg-[#161b22] cursor-pointer"
+            : "cursor-default pointer-events-none"
+        }
+      `}
+                    >
+                      <div className="flex items-center">
+                        <div className="text-2xl mr-4">{info.icon}</div>
+                        <div>
+                          <div className="font-medium text-[#24292f] dark:text-[#f0f6fc]">
+                            {info.title}
+                          </div>
+                          <div className="text-[#656d76] dark:text-[#8b949e] text-sm">
+                            {info.value}
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-[#656d76] dark:text-[#8b949e] text-sm">
-                        {info.value}
-                      </div>
-                    </div>
-                  </a>
-                ))}
+
+                      {/* Arrow appears only if clickable */}
+                      {link && (
+                        <ArrowUpRight
+                          className="w-5 h-5 text-[#656d76] dark:text-[#8b949e] opacity-60 
+          group-hover:opacity-100 group-hover:text-[#0969da] 
+          dark:group-hover:text-[#58a6ff] transition-all duration-200"
+                        />
+                      )}
+                    </a>
+                  );
+                })}
               </div>
 
               <div className="card p-6">
@@ -458,7 +623,7 @@ const Contact = () => {
                 </h4>
                 <div className="space-y-2 text-sm text-[#656d76] dark:text-[#8b949e]">
                   <div>Monday - Friday: 10:00 AM - 7:00 PM</div>
-                  <div>Saturday, Sunday: Closed</div>
+                  <div>Saturday - Sunday: Closed</div>
                 </div>
               </div>
             </div>

@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
             and used strictly to respond or provide services.
           </p>
 
-          <div className="bg-yellow-100/70 dark:bg-yellow-600/20 p-4 rounded-lg mt-4 text-[14px]">
+          <div className="bg-blue-100/70 dark:bg-blue-600/20 p-4 rounded-lg mt-4 text-[14px]">
             <p className="font-semibold">Note:</p>
             <p className="mt-1">
               We do <strong>not</strong> store any financial information like credit/debit
@@ -191,7 +191,7 @@ export default function PrivacyPolicyPage() {
             <li>Confidentiality agreements</li>
           </ul>
 
-          <div className="bg-yellow-100/70 dark:bg-yellow-600/20 p-4 rounded-lg mt-4 text-[14px]">
+          <div className="bg-blue-100/70 dark:bg-blue-600/20 p-4 rounded-lg mt-4 text-[14px]">
             We strive to secure your data, but no online transmission is 100% secure.
             Information shared electronically is done at your own risk.
           </div>

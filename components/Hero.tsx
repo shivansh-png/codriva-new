@@ -28,7 +28,7 @@ const Hero = () => {
     subtitle: "Strong Engineering Culture",
   },
   {
-    image: "/assets/images/4815.jpg",
+    image: "/assets/images/4815.png",
     title: "100% On Time Delivery",
     subtitle: "Commitment",
   },

@@ -20,6 +20,8 @@ const projects = [
     image:
       "https://lottie.host/45aec96d-c60f-48e2-bcab-caca2d4faee1/JgNqUG4t1M.lottie",
     tags: ["E-commerce", "POS Systems", "Payment Integration"],
+    heading: "Innovate Your Retail Journey with Us",
+    para: "In today's fast-paced digital marketplace, Retail and E-Commerce businesses face unique challenges...We empower retailers with data-driven insights, mobile-first solutions, omnichannel systems...Whether launching a new store or modernizing, Codriva helps you stay competitive...",
     category: "retail",
     link: "/industries/retail",
   },
@@ -32,7 +34,15 @@ const projects = [
       "End-to-end travel and hospitality solutions including booking engines, hotel management systems, digital check-in, and customer experience automation.",
     image:
       "https://lottie.host/2f63fcca-4205-4593-bb7e-a24e0cf7a2f9/ZmzFxUyN6F.lottie",
-    tags: ["Booking Systems", "Hotel Management", "Digital Check-in", "Travel Apps"],
+    tags: [
+      "Booking Systems",
+      "Hotel Management",
+      "Digital Check-in",
+      "Travel Apps",
+    ],
+    heading:
+      "Transform the Travel Experience with Intelligent Digital Solutions",
+    para: "The travel and hospitality industry demands seamless guest experiences, efficient operations, and real-time service delivery. We build intelligent platforms that enhance bookings, streamline hotel operations, automate check-ins, and improve customer engagement. Whether you’re scaling a travel brand or optimizing hospitality operations, Codriva helps create delightful, connected journeys for your customers.",
     category: "travel",
     link: "/industries/travel",
   },
@@ -46,6 +56,9 @@ const projects = [
     image:
       "https://lottie.host/00431ad0-ac06-4ffb-ac30-267d7784ced1/mMYyHBa6xX.lottie",
     tags: ["Online Ordering", "POS Integration", "Kitchen Automation"],
+    heading: "Next-Gen Solutions for Modern Dining & Cloud Kitchens",
+    para: "Restaurants and cloud kitchens thrive on speed, accuracy, and customer satisfaction. Our solutions simplify online ordering, integrate POS systems, optimize kitchen workflows, and enable real-time delivery visibility. From dine-in brands to multi-kitchen delivery ecosystems, Codriva empowers food businesses to operate smarter, faster, and more profitably.",
+
     category: "restaurant",
     link: "/industries/restaurant",
   },
@@ -58,6 +71,9 @@ const projects = [
     image:
       "https://lottie.host/8578b848-0614-4e6d-8e69-59d10eef7409/POo2B7iI12.lottie",
     tags: ["Supply Chain", "Warehouse Management", "Tracking"],
+    heading: "Redefining Logistics With Smart Automation and Visibility",
+    para: "Logistics and supply chain organizations need precision, transparency, and strong coordination. We develop systems that offer advanced tracking, optimized routing, warehouse automation, and data-driven decision making. Whether managing fleets, distribution, or warehousing, Codriva ensures your operations stay efficient, agile, and future-ready.",
+
     category: "logistics",
     link: "/industries/logistics",
   },
@@ -71,6 +87,9 @@ const projects = [
     image:
       "https://lottie.host/5e0afd1a-a128-4b66-9e1e-0a6fcae83fb9/IEbLAlQjUc.lottie",
     tags: ["Telemedicine", "EHR/EMR", "Patient Portals", "Health Analytics"],
+    heading: "Empowering Healthcare Through Secure and Intelligent Technology",
+    para: "Healthcare and life science ecosystems rely on secure, compliant, and patient-centric platforms. We build modern healthcare systems including telemedicine, EHR/EMR, patient portals, and analytics dashboards to enhance care delivery and operational efficiency. Codriva enables healthcare providers to innovate responsibly while improving patient outcomes.",
+
     category: "healthcare",
     link: "/industries/healthcare",
   },
@@ -83,11 +102,14 @@ const projects = [
     image:
       "https://lottie.host/270fdcae-11f5-46a1-998b-c9941ccb23ac/LEZKTOZ4xI.lottie",
     tags: ["Ride-Sharing", "Delivery Apps", "Service Platforms"],
+    heading:
+      "Build High-Performance On-Demand Platforms for the Modern Economy",
+    para: "On-demand businesses require scalable technology, seamless user experiences, and real-time operations. We create platforms for ride-sharing, delivery, and service marketplaces designed for reliability and rapid growth. From intuitive user apps to powerful admin dashboards, Codriva helps you launch and scale on-demand ecosystems with confidence.",
+
     category: "ondemand",
     link: "/industries/ondemand",
   },
 ];
-
 
 const categories = [
   { id: "all", name: "Top Industries" },
