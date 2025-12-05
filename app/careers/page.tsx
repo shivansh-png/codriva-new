@@ -116,7 +116,7 @@ const expertiseData = [
   };
 
   return (
-    <div className="relative overflow-hidden bg-[#C9E0F1]">
+    <div className="relative overflow-hidden bg-[#C9E0F1] dark:bg-[#0d1117]">
       {/* ================================================= */}
       {/* HERO — FULL SCREEN WIDTH WITH BACKGROUND ONLY HERE */}
       {/* ================================================= */}
@@ -133,7 +133,7 @@ const expertiseData = [
             className="w-full h-full object-cover"
           />
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/60 dark:bg-black/70"></div>
         </div>
 
         {/* Overlay Pattern */}
