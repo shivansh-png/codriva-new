@@ -119,14 +119,6 @@ export default function Retail() {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 z-10 text-center text-white px-4 pb-20">
-          <div className="smallrectangle absolute top-20 right-20">
-            <Image
-              src="/assets/images/Group 55.png"
-              alt="containersm"
-              width={100}
-              height={100}
-            />
-          </div>
 
           <Link
             href="/contact"

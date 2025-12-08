@@ -21,28 +21,30 @@ export default function CareersPage() {
     "idle" | "success" | "error"
   >("idle");
 
-const expertiseData = [
-  {
-    image: "/assets/images/5599109_56683.jpg",
-    title: "Growth-Driven Workplace",
-    subtitle: "Clear career paths, mentorship, and continuous upskilling.",
-  },
-  {
-    image: "/assets/images/2455802_331199-PACCJR-924.jpg",
-    title: "Innovation-First Culture",
-    subtitle: "Work with cutting-edge tools and build future-ready products.",
-  },
-  {
-    image: "/assets/images/13641500_5301618.jpg",
-    title: "Work-Life Flexibility",
-    subtitle: "Hybrid and remote options designed for balance and productivity.",
-  },
-  {
-    image: "/assets/images/13514343_SL.112119.25250.41.jpg",
-    title: "Real-World Impact",
-    subtitle: "Build solutions used across industries that create measurable value.",
-  },
-];
+  const expertiseData = [
+    {
+      image: "/assets/images/5599109_56683.jpg",
+      title: "Growth-Driven Workplace",
+      subtitle: "Clear career paths, mentorship, and continuous upskilling.",
+    },
+    {
+      image: "/assets/images/2455802_331199-PACCJR-924.jpg",
+      title: "Innovation-First Culture",
+      subtitle: "Work with cutting-edge tools and build future-ready products.",
+    },
+    {
+      image: "/assets/images/13641500_5301618.jpg",
+      title: "Work-Life Flexibility",
+      subtitle:
+        "Hybrid and remote options designed for balance and productivity.",
+    },
+    {
+      image: "/assets/images/13514343_SL.112119.25250.41.jpg",
+      title: "Real-World Impact",
+      subtitle:
+        "Build solutions used across industries that create measurable value.",
+    },
+  ];
 
   const openPositions = [
     {
@@ -66,8 +68,27 @@ const expertiseData = [
     },
   ];
 
+  const [messageCount, setMessageCount] = useState(0);
+
   const handleChange = (e: any) => {
     const { name, value, files } = e.target;
+
+    // Limits like Contact page
+    const limits: Record<string, number> = {
+      Name: 30,
+      phone: 15,
+      linkedin: 150,
+      location: 50,
+      message: 2000,
+    };
+
+    // Block input beyond max length
+    if (limits[name] && value.length > limits[name]) return;
+
+    if (name === "message") {
+      setMessageCount(value.length);
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: files ? files[0] : value,
@@ -76,29 +97,63 @@ const expertiseData = [
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setSubmitStatus("idle");
+
+    // --- Email validation ---
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setSubmitStatus("error");
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // --- Phone validation (10–15 digits allowed) ---
+    const phoneRegex = /^[0-9]{7,15}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      setSubmitStatus("error");
+      alert("Please enter a valid phone number.");
+      return;
+    }
+
+    // --- LinkedIn validation ---
+    const linkedinRegex = /^(https?:\/\/)?(www\.)?linkedin\.com\/.+$/i;
+    if (!linkedinRegex.test(formData.linkedin)) {
+      setSubmitStatus("error");
+      alert("Please enter a valid LinkedIn profile URL.");
+      return;
+    }
+
+    // --- Location required ---
+    if (formData.location.trim().length < 2) {
+      setSubmitStatus("error");
+      alert("Location is required.");
+      return;
+    }
+
+    setIsSubmitting(true);
 
     try {
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSeRUSanucmjbdZy4AfBXfuoM8duALZxf9-7yEQNlU2UC0HsEg/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSd2e1L5CF3vLX9Ed5992i6HbBZG9WsKTDZWyXblVViCYD6e7g/formResponse",
         {
           method: "POST",
           mode: "no-cors",
           body: (() => {
             const body = new FormData();
-            body.append("entry.1034807482", formData.Name);
-            body.append("entry.748039128", formData.email);
-            body.append("entry.442978354", formData.phone);
-            body.append("entry.1350125836", formData.message);
-            body.append("entry.1517918904", formData.linkedin);
-            body.append("entry.534075004", formData.location);
+            body.append("entry.913437780", formData.Name);
+            body.append("entry.2024542103", formData.email);
+            body.append("entry.1701224700", formData.phone);
+            body.append("entry.1190405057", formData.message);
+            body.append("entry.1740960277", formData.linkedin);
+            body.append("entry.1645537285", formData.location);
             return body;
           })(),
         }
       );
 
       setSubmitStatus("success");
+
+      // Reset form
       setFormData({
         Name: "",
         email: "",
@@ -108,7 +163,8 @@ const expertiseData = [
         message: "",
         resume: null,
       });
-    } catch {
+      setMessageCount(0);
+    } catch (error) {
       setSubmitStatus("error");
     }
 
@@ -339,7 +395,7 @@ const expertiseData = [
           </div>
         </section>
 
-                {/* ================================================= */}
+        {/* ================================================= */}
         {/* OPEN POSITIONS */}
         {/* ================================================= */}
         <section className="mb-24">
@@ -454,11 +510,16 @@ const expertiseData = [
               <textarea
                 name="message"
                 rows={5}
+                maxLength={2000}
                 value={formData.message}
                 onChange={handleChange}
                 className="form-input peer pt-6 pb-3 resize-none"
                 placeholder=" "
               />
+
+              <div className="text-right text-xs mt-1 text-[#656d76] dark:text-[#8b949e]">
+                {messageCount}/2000
+              </div>
             </div>
 
             <button

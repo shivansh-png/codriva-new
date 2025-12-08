@@ -132,14 +132,6 @@ const Healthcare = () => {
                     <div className="absolute inset-0 bg-black/40"></div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 z-10 text-center text-white px-4 pb-20">
-                    <div className="smallrectangle absolute top-20 right-20">
-                        <Image
-                            src="/assets/images/Group 56.png"
-                            alt="containersm"
-                            width={100}
-                            height={100}
-                        />
-                    </div>
                     <Link
                         href="/contact"
                         className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors mb-8"

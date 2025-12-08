@@ -245,7 +245,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
             <div className="company-part text-center">
               <h3 className="text-3xl font-bold text-blue-600 mb-2">Cod</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-black-300">
                 An evident connection to coding, software development &
                 technology.
               </p>
@@ -255,7 +255,7 @@ const About = () => {
             </div>
             <div className="company-part text-center">
               <h3 className="text-3xl font-bold text-blue-600 mb-2">riva</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-black-300">
                 A smooth flow (like a river) — representing innovation, delivery
                 & agility.
               </p>
@@ -263,7 +263,7 @@ const About = () => {
           </div>
 
           <div className="mb-12">
-            <p className="text-xl text-gray-700 dark:text-gray-200 mb-2">
+            <p className="text-xl text-gray-700 dark:text-black-200 mb-2">
               "Where code meets innovation" &<br />
               <span className="text-blue-600">
                 "Flow of smart solutions through code"
@@ -339,7 +339,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             The Value We Stand For
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">
+          <p className="text-xl text-gray-600 dark:text-black-300 mb-12">
             Our core values lie at the heart of everything we do and define who
             we are.
           </p>

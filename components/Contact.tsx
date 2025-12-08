@@ -214,6 +214,12 @@ const Contact = () => {
       return;
     }
 
+       const phoneRegex = /^[0-9]{7,15}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      setSubmitStatus("error");
+      alert("Please enter a valid phone number.");
+      return;
+    }
     setIsSubmitting(true);
 
     const googleFormURL =

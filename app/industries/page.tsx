@@ -123,7 +123,7 @@ const Industries = () => {
         "/animations/order.json",
     },
     {
-      name: "Healthcare & life Science",
+      name: "Healthcare & Life Science",
       href: "/industries/healthcare",
       lottie:
         "/animations/health.json",
