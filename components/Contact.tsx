@@ -186,7 +186,7 @@ const Contact = () => {
       phone: 15,
       company: 50,
       designation: 50,
-      message: 300,
+      message: 2000,
     };
 
     if (limits[name] && value.length > limits[name]) return;
@@ -268,7 +268,7 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
       title: "Email",
       value: "info@codriva.com",
-      href: "mailto:info@codriva.com",
+      href: "mailto:info@codriva.com?subject=Consultation%20Request%20%E2%80%93%20Technology%20%26%20Software%20Services",
     },
     {
       icon: <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
@@ -280,7 +280,7 @@ const Contact = () => {
       icon: <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
       title: "Location",
       value:
-        "Office no. 616 & 617, 6th Floor, Tower-B, Ithum, Plot A-40, Sector-62, Noida, Uttar Pradesh 201309",
+        "Office No. 616 & 617, 6th Floor, Tower-B, Ithum, Plot A-40, Sector-62, Noida, Uttar Pradesh 201309",
       href: "https://www.google.com/maps?q=28.627342575507704,77.37247588037425",
     },
     {
@@ -534,14 +534,14 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    maxLength={300}
+                    maxLength={2000}
                     className="form-input resize-none"
                     placeholder="Tell us about your project..."
                   />
 
                   {/* Character Counter */}
                   <div className="text-right text-xs mt-1 text-[#656d76] dark:text-[#8b949e]">
-                    {messageCount}/300
+                    {messageCount}/2000
                   </div>
                 </div>
 

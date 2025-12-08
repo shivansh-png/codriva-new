@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import DotLottie from "@/components/DotLottie";
 
-const BOT_LOTTIE =
-  "https://lottie.host/07b142ca-f04f-408b-b41d-e6385350b87c/DArSwGzDtk.lottie";
-
+//const BOT_LOTTIE =
+  //"https://lottie.host/07b142ca-f04f-408b-b41d-e6385350b87c/DArSwGzDtk.lottie";
+const BOT_LOTTIE ="/animations/bot.json"
 export default function ChatBotPopup({ delayMs = 4000 }) {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);

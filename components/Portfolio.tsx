@@ -18,7 +18,7 @@ const projects = [
     description:
       "Custom e-commerce platforms with advanced inventory management, payment gateways, and omnichannel retail solutions.",
     image:
-      "https://lottie.host/45aec96d-c60f-48e2-bcab-caca2d4faee1/JgNqUG4t1M.lottie",
+      "/animations/retail.json",
     tags: ["E-commerce", "POS Systems", "Payment Integration"],
     heading: "Innovate Your Retail Journey with Us",
     para: "In today's fast-paced digital marketplace, Retail and E-Commerce businesses face unique challenges...We empower retailers with data-driven insights, mobile-first solutions, omnichannel systems...Whether launching a new store or modernizing, Codriva helps you stay competitive...",
@@ -33,7 +33,7 @@ const projects = [
     description:
       "End-to-end travel and hospitality solutions including booking engines, hotel management systems, digital check-in, and customer experience automation.",
     image:
-      "https://lottie.host/2f63fcca-4205-4593-bb7e-a24e0cf7a2f9/ZmzFxUyN6F.lottie",
+      "/animations/travel.json",
     tags: [
       "Booking Systems",
       "Hotel Management",
@@ -54,7 +54,7 @@ const projects = [
     description:
       "Smart restaurant and cloud kitchen solutions featuring online ordering, POS integration, menu management, and real-time delivery tracking.",
     image:
-      "https://lottie.host/00431ad0-ac06-4ffb-ac30-267d7784ced1/mMYyHBa6xX.lottie",
+      "/animations/order.json",
     tags: ["Online Ordering", "POS Integration", "Kitchen Automation"],
     heading: "Next-Gen Solutions for Modern Dining & Cloud Kitchens",
     para: "Restaurants and cloud kitchens thrive on speed, accuracy, and customer satisfaction. Our solutions simplify online ordering, integrate POS systems, optimize kitchen workflows, and enable real-time delivery visibility. From dine-in brands to multi-kitchen delivery ecosystems, Codriva empowers food businesses to operate smarter, faster, and more profitably.",
@@ -69,7 +69,7 @@ const projects = [
     description:
       "End-to-end logistics solutions with real-time tracking, warehouse management, and supply chain optimization.",
     image:
-      "https://lottie.host/8578b848-0614-4e6d-8e69-59d10eef7409/POo2B7iI12.lottie",
+      "/animations/trade.json",
     tags: ["Supply Chain", "Warehouse Management", "Tracking"],
     heading: "Redefining Logistics With Smart Automation and Visibility",
     para: "Logistics and supply chain organizations need precision, transparency, and strong coordination. We develop systems that offer advanced tracking, optimized routing, warehouse automation, and data-driven decision making. Whether managing fleets, distribution, or warehousing, Codriva ensures your operations stay efficient, agile, and future-ready.",
@@ -85,7 +85,7 @@ const projects = [
     description:
       "Advanced healthcare and life science platforms including patient management systems, telemedicine, EHR/EMR, and health analytics dashboards.",
     image:
-      "https://lottie.host/5e0afd1a-a128-4b66-9e1e-0a6fcae83fb9/IEbLAlQjUc.lottie",
+      "/animations/health.json",
     tags: ["Telemedicine", "EHR/EMR", "Patient Portals", "Health Analytics"],
     heading: "Empowering Healthcare Through Secure and Intelligent Technology",
     para: "Healthcare and life science ecosystems rely on secure, compliant, and patient-centric platforms. We build modern healthcare systems including telemedicine, EHR/EMR, patient portals, and analytics dashboards to enhance care delivery and operational efficiency. Codriva enables healthcare providers to innovate responsibly while improving patient outcomes.",
@@ -100,7 +100,7 @@ const projects = [
     description:
       "Scalable on-demand service platforms for ride-sharing, delivery, and service-based businesses.",
     image:
-      "https://lottie.host/270fdcae-11f5-46a1-998b-c9941ccb23ac/LEZKTOZ4xI.lottie",
+      "/animations/demand.json",
     tags: ["Ride-Sharing", "Delivery Apps", "Service Platforms"],
     heading:
       "Build High-Performance On-Demand Platforms for the Modern Economy",

@@ -60,73 +60,73 @@ const Industries = () => {
       name: "Retail & E-Commerce",
       href: "/industries/retail",
       lottie:
-        "https://lottie.host/45aec96d-c60f-48e2-bcab-caca2d4faee1/JgNqUG4t1M.lottie",
+        "/animations/retail.json",
     },
     {
       name: "EdTech",
       href: "/industries/edtech",
       lottie:
-        "https://lottie.host/ec99b463-a384-4c6c-ad6c-e855caed9da6/mLC7PWXoZw.lottie",
+        "/animations/quiz.json",
     },
     {
       name: "FinTech & Banking",
       href: "/industries/fintech",
       lottie:
-        "https://lottie.host/9f1ea2cf-0e7b-4dad-8277-b1809846f4fd/5De4ysgqVx.lottie",
+        "/animations/Business.json",
     },
     {
       name: "Logistics & Supply Chain",
       href: "/industries/logistics",
       lottie:
-        "https://lottie.host/8578b848-0614-4e6d-8e69-59d10eef7409/POo2B7iI12.lottie",
+        "/animations/trade.json",
     },
     {
       name: "Real Estate and PropTech",
       href: "/industries/realestate",
       lottie:
-        "https://lottie.host/6d7c6dd5-064a-4848-ba96-edf17c2f44d2/wugQgJQdSv.lottie",
+        "/animations/prop.json",
     },
     {
       name: "On Demand Platforms",
       href: "/industries/ondemand",
       lottie:
-        "https://lottie.host/270fdcae-11f5-46a1-998b-c9941ccb23ac/LEZKTOZ4xI.lottie",
+        "/animations/demand.json",
     },
     {
       name: "Telecom",
       href: "/industries/telecom",
       lottie:
-        "https://lottie.host/478e9da4-c089-40bf-93d7-8eb0d50b1719/6KIKfPUi7o.lottie",
+        "/animations/telecom.json",
     },
     {
       name: "Events & Ticketing",
       href: "/industries/events",
       lottie:
-        "https://lottie.host/a5383162-c8c4-445a-a91f-9b93b3e31e70/5cbIhu0xHE.lottie",
+        "/animations/ticket.json",
     },
     {
       name: "Media & news",
       href: "/industries/media",
       lottie:
-        "https://lottie.host/ed3cf8c2-df61-40ee-adec-a2ea28ea2213/HkDMPYa2JE.lottie",
+        "/animations/media.json",
     },
     {
       name: "Travel & Hospitality",
       href: "/industries/travel",
       lottie:
-        "https://lottie.host/2f63fcca-4205-4593-bb7e-a24e0cf7a2f9/ZmzFxUyN6F.lottie",
+        "/animations/travel.json",
     },
     {
       name: "Restaurant & Cloud kitchen",
       href: "/industries/restaurant",
       lottie:
-        "https://lottie.host/00431ad0-ac06-4ffb-ac30-267d7784ced1/mMYyHBa6xX.lottie",
+        "/animations/order.json",
     },
     {
       name: "Healthcare & life Science",
       href: "/industries/healthcare",
       lottie:
-        "https://lottie.host/5e0afd1a-a128-4b66-9e1e-0a6fcae83fb9/IEbLAlQjUc.lottie",
+        "/animations/health.json",
     },
   ];
 
