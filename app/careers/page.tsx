@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ExpertiseCard from "@/components/ExpertiseCard";
+import OpenPositions from "@/components/OpenPositions";
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
@@ -395,41 +396,29 @@ export default function CareersPage() {
           </div>
         </section>
 
-        {/* ================================================= */}
-        {/* OPEN POSITIONS */}
-        {/* ================================================= */}
-        <section className="mb-24">
-          <h2 className="text-3xl font-bold text-center mb-10 text-[#24292f] dark:text-[#f0f6fc]">
-            Open Positions
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {openPositions.map((job, i) => (
-              <div key={i} className="card p-8 hover-card transition-all">
-                <h3 className="text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc] mb-2">
-                  {job.title}
-                </h3>
-                <p className="text-sm text-[#656d76] dark:text-[#8b949e] mb-2">
-                  {job.type} • {job.location}
-                </p>
-                <p className="text-sm text-[#656d76] dark:text-[#8b949e] mb-4">
-                  {job.description}
-                </p>
-                <Link href="#apply" className="btn-primary text-center">
-                  Apply Now
-                </Link>
-              </div>
-            ))}
-          </div>
-        </section>
+        <OpenPositions />
 
         {/* ================================================= */}
         {/* WORK FROM ANYWHERE */}
         {/* ================================================= */}
         <section className="mb-32 w-full">
           <h1 className="text-center text-3xl font-bold mb-12 text-[#24292f] dark:text-[#f0f6fc]">
-            Work From Anywhere. You Decide.
+            Don't see a position that fits you?.
           </h1>
+         <h2 className="text-center text-2xl font-bold mb-12 text-[#24292f] dark:text-[#f0f6fc]">
+  <Link
+    href="#apply"
+    className="text-transparent bg-clip-text bg-gradient-to-r 
+               from-blue-600 via-blue-700 to-blue-800
+               dark:from-blue-400 dark:via-blue-500 dark:to-blue-600
+               underline decoration-transparent hover:decoration-blue-600 
+               dark:hover:decoration-blue-400 transition"
+  >
+    Apply anyway
+  </Link>{" "}
+  and we will notify you when a position opens.
+</h2>
+
 
           {/* FULL WIDTH IMAGE */}
           <div className="w-full h-[620px] relative rounded-2xl overflow-hidden shadow-xl">
