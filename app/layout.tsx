@@ -16,13 +16,16 @@ export const metadata: Metadata = {
         type: 'website',
         locale: 'en_US',
     },
-    icons: {
-        icon: [
-            { url: '/assets/images/logo_separate.png', type: 'image/jpeg', sizes: '32x32' },
-            { url: '/favicon.ico', sizes: '32x32' }
-        ],
-        apple: { url: '/images/favicon.jpeg', sizes: '32x32' },
-    },
+ icons: {
+  icon: [
+    { url: '/favicon.ico', sizes: '32x32', type: 'image/png' },
+    { url: '/favicon.ico', sizes: '64x64', type: 'image/png' }
+  ],
+  apple: [
+    { url: '/favicon.ico', sizes: '180x180', type: 'image/png' }
+  ]
+},
+
     metadataBase: new URL('https://codriva.com'),
 }
 

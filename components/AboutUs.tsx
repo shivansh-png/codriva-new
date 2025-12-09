@@ -39,7 +39,7 @@ const AboutUs = () => {
     }, [])
 
     return (
-        <div ref={companyRef} className="py-20" style={{color: "#ffffff", fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"}}>
+        <div ref={companyRef} className="py-20 bg-[#C9E0F1] dark:bg-slate-900" style={{color: "#ffffff", fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"}}>
             <div className="container-max text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12">
                     We are shaping the company of tomorrow
