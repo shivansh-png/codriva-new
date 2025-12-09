@@ -194,7 +194,7 @@ const Services = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop&auto=format&q=80")`,
+            backgroundImage: `url("/assets/images/OurServicesBg.jpg")`,
           }}
         ></div>
       </div>

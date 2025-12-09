@@ -259,7 +259,7 @@ const Portfolio = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop&auto=format&q=80")`,
+            backgroundImage: `url("/assets/images/IndustriesHomeBg.jpg")`,
           }}
         ></div>
       </div>
