@@ -78,7 +78,7 @@ const Navigation = () => {
             <Link
               key={item.name}
               href={item.href}
-            className={`
+              className={`
   text-xl nav-link rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black
   ${isScrolled ? "text-black" : ""}
 
@@ -93,10 +93,14 @@ const Navigation = () => {
 
   ${
     // FORCE BLACK TEXT for ALL /services/* subpages
-    (pathname.startsWith("/services/") || pathname === "/contact" || pathname === "/terms-of-service" || pathname === "/privacy-policy") ? "text-black" : ""
+    pathname.startsWith("/services/") ||
+    pathname === "/contact" ||
+    pathname === "/terms-of-service" ||
+    pathname === "/privacy-policy"
+      ? "text-black"
+      : ""
   }
 `}
-
             >
               {item.name}
             </Link>
@@ -126,7 +130,16 @@ const Navigation = () => {
             <svg
               className="w-5 h-5"
               fill="none"
-              stroke="#f8f8f8ff"
+              stroke={
+                pathname.startsWith("/services/") ||
+                pathname === "/contact" ||
+                pathname === "/terms-of-service" ||
+                pathname === "/privacy-policy"
+                  ? "#000000" // forced black for exceptions
+                  : isScrolled
+                  ? "#000000" // scrolled
+                  : "#ffffff" // default
+              }
               viewBox="0 0 24 24"
             >
               <path

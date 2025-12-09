@@ -113,7 +113,7 @@ export default function ChatBotPopup({ delayMs = 4000 }) {
               }}
             >
               <span className="font-semibold text-[15px] text-[#24292f]">
-                Free Consultation
+                Free Consultations
               </span>
             </div>
 
@@ -123,7 +123,7 @@ export default function ChatBotPopup({ delayMs = 4000 }) {
                 e.stopPropagation();
                 closeBubble();
               }}
-              className="absolute top-1 right-4 w-6 h-6 bg-gray-300 text-gray-700 rounded-full text-base flex items-center justify-center shadow"
+              className="absolute top-1 right-4 w-6 h-6 bg-gray-400 dark:bg-gray-300 text-gray-700 rounded-full text-base flex items-center justify-center shadow"
               style={{ zIndex: 60 }}
             >
               ×
