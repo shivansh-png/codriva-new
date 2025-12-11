@@ -331,7 +331,7 @@ export default function JobsWithFilters() {
   /* ---------------------------------------- */
 
   return (
-    <section className="container-max py-20">
+    <section id="open-positions" className="container-max py-20">
       <h2 className="text-3xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-12 text-center">
         Open Positions
       </h2>

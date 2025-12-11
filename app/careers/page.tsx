@@ -234,7 +234,7 @@ export default function CareersPage() {
           {/* CTA Buttons (optional – remove if not needed) */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/careers/openings"
+              href="#open-positions"
               className="btn-primary text-lg px-8 py-3 magnetic"
             >
               View Open Positions
