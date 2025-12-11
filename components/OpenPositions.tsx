@@ -278,7 +278,7 @@ export default function JobsWithFilters() {
     "UI/UX Design",
   ];
 
-  const locationFilters = ["Noida, Sector 62 (WFO)", "Gurgaon", "Remote"];
+  const locationFilters = ["Noida, Sector 62 (WFO)", "Remote"];
   const experienceFilters = [
     { label: "0-2", min: 0, max: 2 },
     { label: "3-5", min: 3, max: 5 },
@@ -436,7 +436,7 @@ export default function JobsWithFilters() {
             Showing {filteredJobs.length} positions
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-3">
             {filteredJobs.map((job, i) => (
               <button
                 key={i}
@@ -453,9 +453,22 @@ export default function JobsWithFilters() {
             ))}
 
             {filteredJobs.length === 0 && (
-              <p className="text-center text-gray-500 dark:text-gray-400 py-10">
-                No matching roles found.
-              </p>
+              <div className="text-center text-gray-500 dark:text-gray-400 py-10 space-y-3">
+                <p className="text-lg font-medium text-[#24292f] dark:text-[#f0f6fc]">
+                  No openings for that
+                </p>
+
+                <p className="text-sm text-[#656d76] dark:text-[#8b949e]">
+                  Apply anyway and we will contact you if a position opens up.
+                </p>
+
+                <Link
+                  href="#apply"
+                  className="text-blue-600 dark:text-blue-400 font-semibold underline hover:opacity-80 transition"
+                >
+                  Apply anyway
+                </Link>
+              </div>
             )}
           </div>
         </div>
@@ -466,7 +479,7 @@ export default function JobsWithFilters() {
       /* ---------------------------------------- */}
       {selectedJob && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50 p-4">
-          <div className="bg-white dark:bg-[#0d1117] w-full max-w-3xl rounded-2xl p-8 shadow-xl overflow-y-auto max-h-[90vh] relative">
+          <div className="modal-scroll bg-white dark:bg-[#0d1117] w-full max-w-3xl rounded-2xl p-8 shadow-xl overflow-y-auto max-h-[90vh] relative">
             <button
               onClick={() => setSelectedJob(null)}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
@@ -486,16 +499,19 @@ export default function JobsWithFilters() {
               Experience: {selectedJob.experience} years
             </p>
 
-            <Link
-  href="#"
-  className="btn-primary inline-block mb-6"
-  onClick={() => {
-    setSelectedJob({ ...selectedJob, apply: true });
-  }}
->
-  Apply Now
-</Link>
+           {/* APPLY BUTTON — hidden when form is open */}
+{!selectedJob.apply && (
+  <button
+    className="btn-primary inline-block mb-6"
+    onClick={() =>
+      setSelectedJob((prev: any) => ({ ...prev, apply: true }))
+    }
+  >
+    Apply Now
+  </button>
+)}
 
+{/* FORM WHEN APPLY IS CLICKED */}
 {selectedJob.apply && (
   <CareersApplicationForm
     presetPosition={selectedJob.title}

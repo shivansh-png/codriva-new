@@ -288,42 +288,41 @@ export default function CareersPage() {
         {/* ================================================= */}
         {/* TEXT + SIDE IMAGE */}
         {/* ================================================= */}
-        <section className="grid lg:grid-cols-2 gap-16 items-center mb-28 mt-16 h-screen container-max dark:bg-[#0d1117]">
-          <div className="space-y-9">
-            <h1 className="text-3xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
-              Discover Your Next Big Opportunity at Codriva
-            </h1>
+        <section className="grid lg:grid-cols-2 gap-12 items-center mb-20 mt-16 container-max dark:bg-[#0d1117]">
+  <div className="space-y-6">
+    <h1 className="text-3xl font-bold text-[#24292f] dark:text-[#f0f6fc]">
+      Discover Your Next Big Opportunity at Codriva
+    </h1>
 
-            <p className="text-lg text-[#656d76] dark:text-[#8b949e]">
-              At Codriva, we’re more than a technology company — we’re a hub of
-              innovation that empowers businesses across industries to grow,
-              scale, and transform. From FinTech and Healthcare to E-Commerce,
-              EdTech, Logistics, and Real Estate, our diverse domain expertise
-              allows our teams to work on impactful projects that shape the
-              future of digital experiences.
-            </p>
-            <p className="text-lg text-[#656d76] dark:text-[#8b949e]">
-              With a strong foundation in custom software development, cloud
-              solutions, UI/UX design, mobile app development, data analytics,
-              and emerging technologies like IoT and AI, we offer a dynamic
-              environment where talent thrives.
-            </p>
-            <p className="text-lg text-[#656d76] dark:text-[#8b949e]">
-              oin us and unlock your potential through continuous learning,
-              cross-functional collaboration, and a culture that values
-              innovation, ownership, and excellence.
-            </p>
-          </div>
+    <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
+      Codriva is a technology-driven environment where innovation, collaboration,
+      and learning are at the core. We work across industries like FinTech,
+      Healthcare, E-Commerce, EdTech, Logistics, and Real Estate—giving our teams
+      the opportunity to build impactful, real-world digital solutions.
+    </p>
 
-          <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/assets/images/4667026_16.jpg"
-              alt="Career Opportunity"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </section>
+    <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
+      With capabilities spanning custom software development, cloud engineering,
+      UI/UX design, mobile apps, data analytics, IoT, and AI, we empower people
+      to grow alongside cutting-edge technologies.
+    </p>
+
+    <p className="text-lg text-[#656d76] dark:text-[#8b949e] leading-relaxed">
+      Join us to elevate your career through continuous learning, mentorship,
+      and a culture that values ownership, innovation, and excellence.
+    </p>
+  </div>
+
+  <div className="relative w-full h-[520px] rounded-xl overflow-hidden shadow-lg">
+    <Image
+      src="/assets/images/4667026_16.jpg"
+      alt="Career Opportunity"
+      fill
+      className="object-cover"
+    />
+  </div>
+</section>
+
 
         {/* ================================================= */}
         {/* ALTERNATING VALUES SECTION (FULL WIDTH IMAGES) */}
@@ -452,7 +451,7 @@ export default function CareersPage() {
         {/* ================================================= */}
         {/* APPLICATION FORM — UNCHANGED */}
         {/* ================================================= */}
-      <CareersApplicationForm presetPosition={"Other / Not Listed"}/>
+      <CareersApplicationForm />
       </div>
     </div>
   );
