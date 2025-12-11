@@ -15,19 +15,20 @@ const Contact = () => {
     if (window.innerWidth <= 768) setIsMobile(true);
   }, []);
   const serviceOptions = [
-    "Software Development",
-    "Mobile App Development",
-    "Website Development",
-    "UI/UX Design",
-    "Cloud & DevOps",
     "AI & Data Services",
-    "Quality Assurance",
+    "Cloud & DevOps",
     "Cybersecurity",
-    "IT Consulting",
-    "Support & Maintenance",
-    "Integration Services",
     "ERP/CRM Solutions",
+    "IT Consulting",
+    "Integration Services",
+    "Mobile App Development",
+    "Quality Assurance",
+    "Support & Maintenance",
+    "Software Development",
     "Tech Staffing / Resource Augmentation",
+    "UI/UX Design",
+    "Website Development",
+    "Other",
   ];
 
   const [formData, setFormData] = useState({
@@ -214,7 +215,7 @@ const Contact = () => {
       return;
     }
 
-       const phoneRegex = /^[0-9]{7,15}$/;
+    const phoneRegex = /^[0-9]{7,15}$/;
     if (!phoneRegex.test(formData.phone)) {
       setSubmitStatus("error");
       alert("Please enter a valid phone number.");

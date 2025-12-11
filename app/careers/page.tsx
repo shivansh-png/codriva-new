@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ExpertiseCard from "@/components/ExpertiseCard";
 import OpenPositions from "@/components/OpenPositions";
+import CareersApplicationForm from "@/components/CareersApplicationForm";
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
@@ -451,75 +452,7 @@ export default function CareersPage() {
         {/* ================================================= */}
         {/* APPLICATION FORM — UNCHANGED */}
         {/* ================================================= */}
-        <section
-          id="apply"
-          className="max-w-3xl mx-auto card p-10 rounded-2xl shadow-xl mb-24"
-        >
-          <h2 className="text-3xl font-bold text-center mb-6 text-[#24292f] dark:text-[#f0f6fc]">
-            Apply Now
-          </h2>
-
-          {submitStatus === "success" && (
-            <div className="p-4 mb-6 bg-green-100 border border-green-300 text-green-800 rounded">
-              Application submitted successfully.
-            </div>
-          )}
-
-          {submitStatus === "error" && (
-            <div className="p-4 mb-6 bg-red-100 border border-red-300 text-red-800 rounded">
-              Something went wrong. Try again.
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Input Fields */}
-            {[
-              ["Name", "Name *"],
-              ["email", "Email *"],
-              ["phone", "Phone *"],
-              ["linkedin", "LinkedIn *"],
-              ["location", "Location *"],
-            ].map(([name, label]) => (
-              <div className="relative" key={name}>
-                <label className="floating-label">{label}</label>
-                <input
-                  type="text"
-                  name={name}
-                  required
-                  value={(formData as any)[name]}
-                  onChange={handleChange}
-                  className="form-input peer pt-6 pb-3"
-                  placeholder=" "
-                />
-              </div>
-            ))}
-
-            <div className="relative">
-              <label className="floating-label">Message (optional)</label>
-              <textarea
-                name="message"
-                rows={5}
-                maxLength={2000}
-                value={formData.message}
-                onChange={handleChange}
-                className="form-input peer pt-6 pb-3 resize-none"
-                placeholder=" "
-              />
-
-              <div className="text-right text-xs mt-1 text-[#656d76] dark:text-[#8b949e]">
-                {messageCount}/2000
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="btn-primary bg-blue-600 w-full py-3 text-lg disabled:opacity-50"
-            >
-              {isSubmitting ? "Submitting..." : "Submit Application"}
-            </button>
-          </form>
-        </section>
+      <CareersApplicationForm presetPosition={"Other / Not Listed"}/>
       </div>
     </div>
   );

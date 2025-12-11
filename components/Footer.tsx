@@ -215,7 +215,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-[#30363d] py-8">
+        <div className="py-9">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-[#f0f6fc] text-sm mb-4 md:mb-0">
               Copyright ©{new Date().getFullYear()} Codriva All Rights Reserved.
