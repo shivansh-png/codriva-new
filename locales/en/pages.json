@@ -168,5 +168,364 @@
       "title": "Ready to Transform Your Retail Business?",
       "description": "Let's discuss how we can help you innovate and grow."
     }
+  },
+  "aboutPage": {
+    "hero": {
+      "alt": "About Codriva Background",
+      "title": {
+        "firstPart": "Get To Know",
+        "highlight": "Codriva"
+      },
+      "subtitle": "Learn who we are, what we believe in, and how we work to create meaningful technology that empowers businesses worldwide."
+    },
+    "guidingPrinciples": {
+      "title": {
+        "firstLine": "Our Guiding",
+        "highlight": "Principles"
+      },
+      "description": "At Codriva, our guiding principles shape every decision and drive our commitment to excellence. We believe in innovation, integrity, and collaboration as the foundation for building lasting partnerships and delivering impactful solutions. Our customer-centric approach ensures that we always prioritize your needs, while our dedication to quality and continuous improvement empowers us to stay ahead in a rapidly evolving digital landscape. These principles inspire our team to create technology that not only meets but exceeds expectations, fostering trust and long-term success.",
+      "imageAlt": "Guiding principles illustration showing team collaboration"
+    },
+    "growth": {
+      "title": "Our Growth",
+      "description": "At Codriva, growth is more than just numbers — it's a reflection of our unwavering commitment to innovation, quality, and client success. Since our inception, we have consistently expanded our capabilities, embraced emerging technologies, and forged strong partnerships to deliver exceptional digital solutions. Our growth story is fueled by a passionate team, forward-thinking strategies, and a customer-first mindset that drives us to exceed expectations. As we evolve, we remain dedicated to empowering businesses worldwide and shaping the future of technology.",
+      "imageAlt": "Growth chart illustration showing worldwide reach"
+    },
+    "values": {
+      "title": "The Value We Stand For",
+      "subtitle": "Our core values lie at the heart of everything we do and define who we are.",
+      "quality": "Quality - Commitment to excellence in everything we do",
+      "transparency": "Transparency - Open and honest communication",
+      "collaboration": "Collaboration - Working together for success",
+      "integrity": "Integrity - Doing the right thing always",
+      "ownership": "Ownership - Taking responsibility for outcomes"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "imageAlt": "Services Background",
+      "title": {
+        "firstPart": "Explore Our",
+        "highlight": "Services"
+      },
+      "subtitle": "Comprehensive digital services crafted to help your business scale, innovate, and succeed."
+    },
+    "services": {
+      "customSoftware": {
+        "title": "Custom Software Development",
+        "description": "Custom software development is the art of crafting tailored digital solutions that align precisely with a business's unique goals, workflows, and challenges. Unlike generic, off-the-shelf software designed for the masses, custom applications are purpose-built to address specific needs, unlock operational efficiency, and deliver a seamless user experience."
+      },
+      "uiUx": {
+        "title": "UI/UX Design",
+        "description": "User interface (UI) and user experience (UX) design are at the heart of impactful digital products. At Codriva, we create intuitive, responsive, and aesthetically engaging interfaces that enhance usability and ensure seamless user journeys across all platforms and devices."
+      },
+      "mobileApp": {
+        "title": "Mobile App Development",
+        "description": "Mobile app development is the creation of seamless, high-performing applications designed for smartphones, tablets, and other mobile devices. At Codriva, we specialize in building intuitive, feature-rich mobile apps that help businesses connect with users on the go — across Android, iOS, or both through cross-platform solutions."
+      },
+      "productEngineering": {
+        "title": "Product Engineering",
+        "description": "Product engineering is the comprehensive process of designing, developing, testing, and launching a product by applying engineering principles throughout its lifecycle. It begins with understanding user needs and defining technical specifications, followed by prototyping, rigorous quality testing, and market release."
+      },
+      "cloudDevops": {
+        "title": "Cloud & DevOps",
+        "description": "Cloud devOps combines cloud computing with DevOps practices to streamline the development, deployment, and management of applications in cloud environments. It involves automating infrastructure setup, continuous integration and delivery (CI/CD), monitoring, and scaling using platforms like AWS, Azure, and Google Cloud."
+      },
+      "apiIntegration": {
+        "title": "API & System Integration",
+        "description": "API system integration involves connecting diverse software systems and applications through Application Programming Interfaces (APIs) to enable seamless communication and data sharing. This integration allows disparate systems—such as payment gateways, customer databases, or third-party services—to function together as a unified platform."
+      },
+      "dataAnalytics": {
+        "title": "Data & Analytics",
+        "description": "Data analytics is the process of gathering, organizing, and analyzing raw data to uncover valuable insights, patterns, and trends that drive informed decision-making. Using advanced tools and techniques, it transforms complex data into clear, actionable information."
+      },
+      "aiMl": {
+        "title": "AI & Machine Learning",
+        "description": "Artificial intelligence (AI) is a branch of computer science focused on enabling machines to simulate human intelligence—ranging from language comprehension to autonomous decision-making. A key subset, Machine Learning (ML), empowers systems to learn from data and improve over time without explicit programming."
+      },
+      "bigData": {
+        "title": "Big Data Solution",
+        "description": "Big data Solutions enable businesses to process and analyze vast amounts of structured and unstructured data to extract valuable insights. Utilizing advanced tools and technologies, these solutions support smarter decision-making, real-time analytics, and enhanced operational efficiency."
+      },
+      "itConsulting": {
+        "title": "IT Consulting",
+        "description": "IT consulting helps businesses align their technology strategies with core business objectives. From selecting the right software and infrastructure to enhancing cybersecurity and optimizing operations, IT consultants provide expert guidance for effective and efficient technology use."
+      },
+      "qaTesting": {
+        "title": "QA & Testing",
+        "description": "Quality assurance & Testing ensure that software applications are reliable, secure, and perform optimally before release. Using a blend of manual and automated testing techniques, QA teams detect bugs, performance bottlenecks, and usability issues to deliver a seamless, error-free user experience."
+      },
+      "supportMaintenance": {
+        "title": "Support & Maintenance",
+        "description": "Support & maintenance services ensure your software remains reliable and efficient long after deployment. This includes regular updates, bug fixes, performance monitoring, and responsive technical support to promptly resolve any issues."
+      }
+    }
+  },
+  "industriesPage": {
+    "hero": {
+      "imageAlt": "Industries Hero Background",
+      "title": "Empowering Industries with Innovative Solutions",
+      "subtitle": "From FinTech and Retail to Healthcare and Travel, we build scalable digital solutions tailored to your industry's needs."
+    },
+    "grid": {
+      "title": "Industries Focused Expertise",
+      "knowMore": "Know more"
+    },
+    "industries": {
+      "retail": {
+        "name": "Retail & E-Commerce"
+      },
+      "edtech": {
+        "name": "EdTech"
+      },
+      "fintech": {
+        "name": "FinTech & Banking"
+      },
+      "logistics": {
+        "name": "Logistics & Supply Chain"
+      },
+      "realestate": {
+        "name": "Real Estate and PropTech"
+      },
+      "ondemand": {
+        "name": "On Demand Platforms"
+      },
+      "telecom": {
+        "name": "Telecom"
+      },
+      "events": {
+        "name": "Events & Ticketing"
+      },
+      "media": {
+        "name": "Media & News"
+      },
+      "travel": {
+        "name": "Travel & Hospitality"
+      },
+      "restaurant": {
+        "name": "Restaurant & Cloud Kitchen"
+      },
+      "healthcare": {
+        "name": "Healthcare & Life Science"
+      }
+    }
+  },
+  "servicesDetails": {
+    "customSoftware": {
+      "description1": "is the art of crafting tailored digital solutions that align precisely with a business's unique goals, workflows, and challenges. Unlike generic, off-the-shelf software designed for the masses, custom applications are purpose-built to address specific needs, unlock operational efficiency, and deliver a seamless user experience.",
+      "description2": "At Codriva, we specialize in developing robust, scalable, and secure custom software that integrates effortlessly with your existing systems and grows with your organization. From core business applications to innovative digital products, we work closely with clients to design intuitive interfaces, optimize performance, and ensure every feature serves a strategic purpose.",
+      "description3": "Whether you're modernizing legacy systems or building from the ground up, our end-to-end approach ensures full control over functionality, architecture, and data — resulting in software that fits your business like a glove and drives long-term value."
+    }
+  },
+  "advantages": {
+    "title": "Why Choose Codriva?",
+    "subtitle": "We deliver exceptional results through our expertise, innovation, and commitment to excellence.",
+    "expertDevelopment": {
+      "title": "Expert Development",
+      "description": "Cutting-edge technologies and best practices for robust solutions."
+    },
+    "dedicatedTeam": {
+      "title": "Dedicated Team",
+      "description": "Experienced professionals committed to your project's success."
+    },
+    "fastDelivery": {
+      "title": "Fast Delivery",
+      "description": "Efficient processes to deliver high-quality solutions on time."
+    },
+    "costEfficient": {
+      "title": "Cost Efficient",
+      "description": "Optimized development processes that reduce cost without compromising quality."
+    }
+  },
+  "cta": {
+    "default": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Let's discuss how we can help you achieve your goals with innovative digital solutions."
+    }
+  },
+  "industriesCTA": {
+    "retail": {
+      "title": "Empower Your Retail & E-Commerce Growth",
+      "subtitle": "Boost conversions, streamline operations, and deliver seamless shopping experiences with our tailored retail tech solutions.",
+      "button": "Build Your Retail Solution"
+    },
+    "edtech": {
+      "title": "Reinvent Learning with Modern EdTech",
+      "subtitle": "Create engaging, scalable, and interactive digital learning platforms that empower institutions and learners.",
+      "button": "Start Your EdTech Project"
+    },
+    "fintech": {
+      "title": "Accelerate Innovation in FinTech",
+      "subtitle": "Build secure, high-performance financial products that redefine digital banking, payments, and financial automation.",
+      "button": "Build FinTech Solutions"
+    },
+    "logistics": {
+      "title": "Optimize Your Logistics & Supply Chain",
+      "subtitle": "Enhance tracking, automation, and real-time visibility with our intelligent logistics platforms.",
+      "button": "Transform Your Logistics"
+    },
+    "realestate": {
+      "title": "Digitize Property & Real Estate Experiences",
+      "subtitle": "From virtual tours to property management platforms, create seamless real estate digital ecosystems.",
+      "button": "Build PropTech Solutions"
+    },
+    "ondemand": {
+      "title": "Launch Your On-Demand Service Platform",
+      "subtitle": "From delivery apps to home services, we build scalable on-demand platforms that users love.",
+      "button": "Start Your On-Demand Platform"
+    },
+    "telecom": {
+      "title": "Modernize Telecom with Smarter Software",
+      "subtitle": "Power telecom operations with automated systems, analytics, and digital customer engagement solutions.",
+      "button": "Build Telecom Solutions"
+    },
+    "events": {
+      "title": "Power Seamless Events & Ticketing Experiences",
+      "subtitle": "Build platforms for event discovery, ticketing, live analytics, and user engagement.",
+      "button": "Build an Event Platform"
+    },
+    "media": {
+      "title": "Transform Media & News Delivery",
+      "subtitle": "Develop platforms for streaming, news distribution, content delivery, and digital publishing.",
+      "button": "Start Your Media Project"
+    },
+    "travel": {
+      "title": "Reimagine Travel & Hospitality Experiences",
+      "subtitle": "Create seamless booking, concierge, and travel management platforms built for global experiences.",
+      "button": "Build Travel Solutions"
+    },
+    "restaurant": {
+      "title": "Digitize Your Restaurant & Cloud Kitchen",
+      "subtitle": "Enhance ordering, delivery, operations, and customer retention with modern restaurant tech solutions.",
+      "button": "Start Your Restaurant Project"
+    },
+    "healthcare": {
+      "title": "Advance Healthcare with Intelligent Tech",
+      "subtitle": "Build secure, compliant, and patient-centric healthcare platforms for the future of medical innovation.",
+      "button": "Build Healthcare Solutions"
+    }
+  },
+  "servicesCTA": {
+    "custom-software-development": {
+      "title": "Build Custom Software Tailored to Your Vision",
+      "subtitle": "From concept to deployment, we craft software engineered for performance, scalability, and long-term growth.",
+      "button": "Start Custom Development"
+    },
+    "ui-ux-design": {
+      "title": "Create Beautiful & Intuitive Digital Experiences",
+      "subtitle": "Delight users with stunning UI and seamless UX crafted through research-driven design.",
+      "button": "Improve Your Product UX"
+    },
+    "mobile-app-development": {
+      "title": "Launch High-Quality Mobile Apps",
+      "subtitle": "We build fast, reliable, and feature-rich Android/iOS apps tailored for user engagement and business scale.",
+      "button": "Build Your Mobile App"
+    },
+    "product-engineering": {
+      "title": "Bring Your Product Idea to Life",
+      "subtitle": "From MVP to full-scale product, engineer robust, scalable solutions with a complete product lifecycle approach.",
+      "button": "Start Product Engineering"
+    },
+    "cloud-devops": {
+      "title": "Scale Efficiently with Cloud & DevOps",
+      "subtitle": "Optimize infrastructure, automate deployments, and improve reliability with modern cloud-native DevOps practices.",
+      "button": "Upgrade Your Cloud Ops"
+    },
+    "api-system-integration": {
+      "title": "Integrate Your Systems Seamlessly",
+      "subtitle": "Connect applications, automate workflows, and build unified systems through robust API integrations.",
+      "button": "Integrate Your Systems"
+    },
+    "data-analytics": {
+      "title": "Turn Data Into Actionable Insights",
+      "subtitle": "Unlock decision-making power with real-time dashboards, analytics models, and data strategy solutions.",
+      "button": "Start Data Transformation"
+    },
+    "ai-machine-learning": {
+      "title": "Leverage AI for Intelligent Automation",
+      "subtitle": "Build AI-powered systems that learn, predict, and automate across your operations.",
+      "button": "Start Your AI Project"
+    },
+    "big-data-solution": {
+      "title": "Process & Analyze Big Data at Scale",
+      "subtitle": "Deploy data pipelines, processing engines, and insights dashboards for enterprise-level data operations.",
+      "button": "Build Big Data Systems"
+    },
+    "it-consulting": {
+      "title": "Make Smarter Technology Decisions",
+      "subtitle": "Get expert guidance across strategy, architecture, modernization, and digital transformation.",
+      "button": "Get IT Consulting"
+    },
+    "qa-testing": {
+      "title": "Ensure Quality with Comprehensive Testing",
+      "subtitle": "Deliver stable, secure, and high-performance software through rigorous QA and automated testing.",
+      "button": "Test Your Product"
+    },
+    "support-maintenance": {
+      "title": "Keep Your Software Running Smoothly",
+      "subtitle": "Ensure reliability with monitoring, updates, bug fixes, optimizations, and ongoing support.",
+      "button": "Get Support & Maintenance"
+    }
+  },
+  "servicesDetail": {
+    "uiUx": {
+      "uiHighlight": "User interface (UI)",
+      "description1": "and user experience (UX) design are at the heart of impactful digital products. At Codriva, we create intuitive, responsive, and aesthetically engaging interfaces that enhance usability and ensure seamless user journeys across all platforms and devices.",
+      "description2": "In the context of support systems and business applications, effective UI design simplifies complex interactions — enabling users to report issues, request assistance, and track progress with ease. Our design approach balances visual appeal with functional clarity, using purposeful layouts, meaningful iconography, and interactive elements that guide users effortlessly through your software.",
+      "description3": "With a focus on accessibility, responsiveness, and user behavior, our UI/UX solutions don't just look good — they make every digital touchpoint more efficient, enjoyable, and aligned with your brand's values."
+    }
+  },
+  "servicesDetail": {
+    "mobileApp": {
+      "description1": "is the creation of seamless, high-performing applications designed for smartphones, tablets, and other mobile devices. At Codriva, we specialize in building intuitive, feature-rich mobile apps that help businesses connect with users on the go — across Android, iOS, or both through cross-platform solutions.",
+      "description2": "Our process covers the full lifecycle — from user-centric interface design and scalable architecture to rigorous testing and deployment on platforms like the App Store and Google Play. We leverage both native technologies (Java/Kotlin for Android, Swift for iOS) and modern cross-platform frameworks like Flutter and React Native to deliver apps that are responsive, fast, and secure.",
+      "description3": "In an increasingly mobile-first world, our solutions ensure your brand is always within reach — delivering exceptional user experiences, boosting engagement, and driving business growth through powerful digital mobility."
+    },
+    "productEngineering": {
+      "description": "is the comprehensive process of designing, developing, testing, and launching a product by applying engineering principles throughout its lifecycle. It begins with understanding user needs and defining technical specifications, followed by prototyping, rigorous quality testing, and market release. The primary goal is to deliver a high-quality, cost-effective product that fulfills both user expectations and business objectives. Applicable to software and hardware, product engineering encompasses all stages—from design and development to deployment and ongoing maintenance."
+    },
+    "cloudDevops": {
+      "highlight": "Cloud DevOps",
+      "description": "combines cloud computing with DevOps practices to streamline the development, deployment, and management of applications in cloud environments. It involves automating infrastructure setup, continuous integration and delivery (CI/CD), monitoring, and scaling using platforms like AWS, Azure, and Google Cloud. The goal is to accelerate software delivery, enhance reliability, and foster seamless collaboration between development and operations teams. By adopting Cloud DevOps, organizations can deploy updates faster, resolve issues promptly, and optimize resource management efficiently."
+    },
+    "apiIntegration": {
+      "highlight": "API system integration",
+      "description": "involves connecting diverse software systems and applications through Application Programming Interfaces (APIs) to enable seamless communication and data sharing. This integration allows disparate systems—such as payment gateways, customer databases, or third-party services—to function together as a unified platform. By automating workflows and enabling real-time data exchange, API integration reduces manual effort, enhances operational efficiency, and delivers a cohesive user experience across multiple platforms."
+    },
+    "dataAnalytics": {
+      "highlight": "Data analytics",
+      "description": "is the process of gathering, organizing, and analyzing raw data to uncover valuable insights, patterns, and trends that drive informed decision-making. Using advanced tools and techniques, it transforms complex data into clear, actionable information. Businesses leverage data analytics to enhance performance, forecast outcomes, understand customer behavior, and solve challenges efficiently. This field encompasses various types, including descriptive, diagnostic, predictive, and prescriptive analytics."
+    },
+    "aiMl": {
+      "highlight": "Artificial intelligence (AI)",
+      "description": "is a branch of computer science focused on enabling machines to simulate human intelligence—ranging from language comprehension to autonomous decision-making. A key subset, Machine Learning (ML), empowers systems to learn from data and improve over time without explicit programming. Together, AI and ML are revolutionizing industries by automating processes, enhancing user experiences, and enabling smarter, data-driven decisions."
+    },
+    "bigData": {
+      "highlight": "Big data",
+      "description": "Solutions enable businesses to process and analyze vast amounts of structured and unstructured data to extract valuable insights. Utilizing advanced tools and technologies, these solutions support smarter decision-making, real-time analytics, and enhanced operational efficiency. From customer behavior analysis to predictive maintenance and market forecasting, big data empowers organizations to stay competitive in today's data-driven landscape."
+    },
+    "itConsulting": {
+      "highlight": "IT consulting",
+      "description": "helps businesses align their technology strategies with core business objectives. From selecting the right software and infrastructure to enhancing cybersecurity and optimizing operations, IT consultants provide expert guidance for effective and efficient technology use. Whether planning a digital transformation or seeking ongoing tech support, IT consulting delivers customized solutions that drive growth, innovation, and competitive advantage."
+    },
+    "qaTesting": {
+      "highlight": "Quality assurance",
+      "description": "& Testing ensure that software applications are reliable, secure, and perform optimally before release. Using a blend of manual and automated testing techniques, QA teams detect bugs, performance bottlenecks, and usability issues to deliver a seamless, error-free user experience. A robust QA process enhances product quality while reducing time-to-market and long-term costs."
+    },
+    "supportMaintenance": {
+      "highlight": "Support & maintenance services",
+      "description": "ensure your software remains reliable and efficient long after deployment. This includes regular updates, bug fixes, performance monitoring, and responsive technical support to promptly resolve any issues. Through proactive maintenance and continuous care, we help minimize downtime, strengthen security, and keep your systems operating at peak performance."
+    }
+  },
+  "uiUxDesignPage": {
+    "title": "UI/UX Design",
+    "hero": {
+      "title": "UI/UX Design",
+      "description1Part1": "User interface (UI)",
+      "description1Part2": "and user experience (UX) design are at the heart of impactful digital products. At Codriva, we create intuitive, responsive, and aesthetically engaging interfaces that enhance usability and ensure seamless user journeys across all platforms and devices.",
+      "description2": "In the context of support systems and business applications, effective UI design simplifies complex interactions — enabling users to report issues, request assistance, and track progress with ease. Our design approach balances visual appeal with functional clarity, using purposeful layouts, meaningful iconography, and interactive elements that guide users effortlessly through your software.",
+      "description3": "With a focus on accessibility, responsiveness, and user behavior, our UI/UX solutions don't just look good — they make every digital touchpoint more efficient, enjoyable, and aligned with your brand's values.",
+      "imageAlt": "UI/UX Design"
+    }
   }
 }

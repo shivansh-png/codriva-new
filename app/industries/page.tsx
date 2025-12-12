@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -6,12 +6,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import DotLottie from "@/components/DotLottie";
 import Image from "next/image";
+import { useTranslation } from 'react-i18next';
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 const Industries = () => {
+  const { t } = useTranslation(['pages', 'common']);
+  
   const sectionRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const focusedRef = useRef<HTMLDivElement>(null);
@@ -57,126 +60,112 @@ const Industries = () => {
 
   const industries = [
     {
-      name: "Retail & E-Commerce",
+      name: t('pages:industriesPage.industries.retail.name'),
       href: "/industries/retail",
-      lottie:
-        "/animations/retail.json",
+      lottie: "/animations/retail.json",
     },
     {
-      name: "EdTech",
+      name: t('pages:industriesPage.industries.edtech.name'),
       href: "/industries/edtech",
-      lottie:
-        "/animations/quiz.json",
+      lottie: "/animations/quiz.json",
     },
     {
-      name: "FinTech & Banking",
+      name: t('pages:industriesPage.industries.fintech.name'),
       href: "/industries/fintech",
-      lottie:
-        "/animations/Business.json",
+      lottie: "/animations/Business.json",
     },
     {
-      name: "Logistics & Supply Chain",
+      name: t('pages:industriesPage.industries.logistics.name'),
       href: "/industries/logistics",
-      lottie:
-        "/animations/trade.json",
+      lottie: "/animations/trade.json",
     },
     {
-      name: "Real Estate and PropTech",
+      name: t('pages:industriesPage.industries.realestate.name'),
       href: "/industries/realestate",
-      lottie:
-        "/animations/prop.json",
+      lottie: "/animations/prop.json",
     },
     {
-      name: "On Demand Platforms",
+      name: t('pages:industriesPage.industries.ondemand.name'),
       href: "/industries/ondemand",
-      lottie:
-        "/animations/demand.json",
+      lottie: "/animations/demand.json",
     },
     {
-      name: "Telecom",
+      name: t('pages:industriesPage.industries.telecom.name'),
       href: "/industries/telecom",
-      lottie:
-        "/animations/telecom.json",
+      lottie: "/animations/telecom.json",
     },
     {
-      name: "Events & Ticketing",
+      name: t('pages:industriesPage.industries.events.name'),
       href: "/industries/events",
-      lottie:
-        "/animations/ticket.json",
+      lottie: "/animations/ticket.json",
     },
     {
-      name: "Media & news",
+      name: t('pages:industriesPage.industries.media.name'),
       href: "/industries/media",
-      lottie:
-        "/animations/media.json",
+      lottie: "/animations/media.json",
     },
     {
-      name: "Travel & Hospitality",
+      name: t('pages:industriesPage.industries.travel.name'),
       href: "/industries/travel",
-      lottie:
-        "/animations/travel.json",
+      lottie: "/animations/travel.json",
     },
     {
-      name: "Restaurant & Cloud kitchen",
+      name: t('pages:industriesPage.industries.restaurant.name'),
       href: "/industries/restaurant",
-      lottie:
-        "/animations/order.json",
+      lottie: "/animations/order.json",
     },
     {
-      name: "Healthcare & Life Science",
+      name: t('pages:industriesPage.industries.healthcare.name'),
       href: "/industries/healthcare",
-      lottie:
-        "/animations/health.json",
+      lottie: "/animations/health.json",
     },
   ];
 
   return (
     <section id="industries" ref={sectionRef} className="relative bg-[#C9E0F1]">
       {/* HERO */}
-<div
-  ref={heroRef}
-  className="relative h-[85vh] flex items-center justify-center text-center px-6 overflow-hidden"
->
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <Image
-      src="/assets/images/supervisor.png"
-      alt="Industries Hero"
-      fill
-      className="object-cover"
-      priority
-    />
-    <div className="absolute inset-0 bg-black/50"></div>
-  </div>
+      <div
+        ref={heroRef}
+        className="relative h-[85vh] flex items-center justify-center text-center px-6 overflow-hidden"
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/images/supervisor.png"
+            alt={t('pages:industriesPage.hero.imageAlt')}
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
 
-  {/* HERO CONTENT */}
-  <div className="relative z-10 max-w-4xl mx-auto">
-    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-      Empowering Industries with Innovative Solutions
-    </h1>
+        {/* HERO CONTENT */}
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            {t('pages:industriesPage.hero.title')}
+          </h1>
 
-    <p className="text-lg md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-      From FinTech and Retail to Healthcare and Travel, we build scalable digital
-      solutions tailored to your industry's needs.
-    </p>
+          <p className="text-lg md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+            {t('pages:industriesPage.hero.subtitle')}
+          </p>
 
-    {/* CTA Button */}
-    <Link
-      href="/contact"
-      className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
-    >
-      Let&apos;s Talk <i className="fas fa-arrow-right"></i>
-    </Link>
-  </div>
-</div>
-
+          {/* CTA Button */}
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+          >
+            {t('common:buttons.letsTalk')} <i className="fas fa-arrow-right"></i>
+          </Link>
+        </div>
+      </div>
 
       {/* INDUSTRIES GRID */}
       <div ref={focusedRef} className="py-20  bg-[#C9E0F1] dark:bg-gray-900">
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Industries Focused Expertise
+              {t('pages:industriesPage.grid.title')}
             </h2>
           </div>
 
@@ -205,7 +194,7 @@ const Industries = () => {
                       <h3 className="text-xl font-bold mb-2">
                         {industry.name}
                       </h3>
-                      <span className="text-sm">Know more →</span>
+                      <span className="text-sm">{t('pages:industriesPage.grid.knowMore')} →</span>
                     </div>
                   </div>
                 </Link>

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -6,11 +6,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
 import AboutUs from "./AboutUs";
+import { useTranslation } from 'react-i18next';
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 const About = () => {
+  const { t } = useTranslation(['pages', 'common']);
+  
   const sectionRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const guidingRef = useRef<HTMLDivElement>(null);
@@ -141,8 +145,8 @@ const About = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/unsplash_60.png" // ← same image you want to keep
-            alt="About Background"
+            src="/assets/images/unsplash_60.png"
+            alt={t('pages:aboutPage.hero.alt')}
             fill
             className="object-cover"
             priority
@@ -156,16 +160,14 @@ const About = () => {
         {/* HERO TEXT */}
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight font-display">
-            Get To Know
+            {t('pages:aboutPage.hero.title.firstPart')}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100">
-              {" "}
-              Codriva
+              {" "}{t('pages:aboutPage.hero.title.highlight')}
             </span>
           </h1>
 
           <p className="text-lg md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Learn who we are, what we believe in, and how we work to create
-            meaningful technology that empowers businesses worldwide.
+            {t('pages:aboutPage.hero.subtitle')}
           </p>
 
           <Link
@@ -173,7 +175,7 @@ const About = () => {
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 
       text-white px-8 py-3 rounded-lg text-lg font-medium shadow-lg transition-colors"
           >
-            Let's Talk <i className="fas fa-arrow-right"></i>
+            {t('common:buttons.letsTalk')} <i className="fas fa-arrow-right"></i>
           </Link>
         </div>
       </div>
@@ -184,33 +186,26 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Our Guiding
+                {t('pages:aboutPage.guidingPrinciples.title.firstLine')}
                 <br />
-                <span className="text-blue-600">Principles</span>
+                <span className="text-blue-600">
+                  {t('pages:aboutPage.guidingPrinciples.title.highlight')}
+                </span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                At Codriva, our guiding principles shape every decision and
-                drive our commitment to excellence. We believe in innovation,
-                integrity, and collaboration as the foundation for building
-                lasting partnerships and delivering impactful solutions. Our
-                customer-centric approach ensures that we always prioritize your
-                needs, while our dedication to quality and continuous
-                improvement empowers us to stay ahead in a rapidly evolving
-                digital landscape. These principles inspire our team to create
-                technology that not only meets but exceeds expectations,
-                fostering trust and long-term success.
+                {t('pages:aboutPage.guidingPrinciples.description')}
               </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
               >
-                Let's Talk <i className="fas fa-arrow-right"></i>
+                {t('common:buttons.letsTalk')} <i className="fas fa-arrow-right"></i>
               </Link>
             </div>
             <div className="relative">
               <Image
                 src="/assets/images/group-people-working-team.png"
-                alt="Guiding principles"
+                alt={t('pages:aboutPage.guidingPrinciples.imageAlt')}
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"
@@ -221,7 +216,7 @@ const About = () => {
       </div>
 
       {/* Company Name Breakdown */}
-     <AboutUs />
+      <AboutUs />
 
       {/* Growth Section */}
       <div ref={growthRef} className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -229,25 +224,16 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Our Growth
+                {t('pages:aboutPage.growth.title')}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                At Codriva, growth is more than just numbers — it's a reflection
-                of our unwavering commitment to innovation, quality, and client
-                success. Since our inception, we have consistently expanded our
-                capabilities, embraced emerging technologies, and forged strong
-                partnerships to deliver exceptional digital solutions. Our
-                growth story is fueled by a passionate team, forward-thinking
-                strategies, and a customer-first mindset that drives us to
-                exceed expectations. As we evolve, we remain dedicated to
-                empowering businesses worldwide and shaping the future of
-                technology.
+                {t('pages:aboutPage.growth.description')}
               </p>
             </div>
             <div className="relative">
               <Image
                 src="/assets/images/worldmap.png"
-                alt="Growth chart illustration"
+                alt={t('pages:aboutPage.growth.imageAlt')}
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"
@@ -268,18 +254,17 @@ const About = () => {
       >
         <div className="container-max text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            The Value We Stand For
+            {t('pages:aboutPage.values.title')}
           </h2>
           <p className="text-xl text-gray-600 dark:text-black-300 mb-12">
-            Our core values lie at the heart of everything we do and define who
-            we are.
+            {t('pages:aboutPage.values.subtitle')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="value-item">
               <Image
                 src="/assets/images/Group 46.png"
-                alt="Quality value"
+                alt={t('pages:aboutPage.values.quality')}
                 width={250}
                 height={250}
                 className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
@@ -288,7 +273,7 @@ const About = () => {
             <div className="value-item">
               <Image
                 src="/assets/images/Group 47.png"
-                alt="Transparency value"
+                alt={t('pages:aboutPage.values.transparency')}
                 width={250}
                 height={250}
                 className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
@@ -297,7 +282,7 @@ const About = () => {
             <div className="value-item">
               <Image
                 src="/assets/images/Group 48.png"
-                alt="Collaboration value"
+                alt={t('pages:aboutPage.values.collaboration')}
                 width={250}
                 height={250}
                 className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
@@ -309,7 +294,7 @@ const About = () => {
             <div className="value-item">
               <Image
                 src="/assets/images/Group 49.png"
-                alt="Integrity value"
+                alt={t('pages:aboutPage.values.integrity')}
                 width={250}
                 height={250}
                 className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
@@ -318,10 +303,10 @@ const About = () => {
             <div className="value-item">
               <Image
                 src="/assets/images/Group 50.png"
-                alt="Ownership value"
+                alt={t('pages:aboutPage.values.ownership')}
                 width={250}
                 height={250}
-                className="mx-auto transition-transform hover:scale-105 duration-300 contrast-125"
+                className="mx-auto transition-transform hover:scale-105 duration-300 contrast-300 contrast-125"
               />
             </div>
           </div>

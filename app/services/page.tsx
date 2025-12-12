@@ -1,8 +1,13 @@
+'use client';
+
 import MainServices from "@/components/MainServices";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from 'react-i18next';
 
 export default function AllServicesPage() {
+  const { t } = useTranslation(['pages', 'common']);
+
   return (
     <section className="relative overflow-hidden min-h-screen bg-[#C9E0F1]">
       
@@ -20,13 +25,13 @@ export default function AllServicesPage() {
       {/* ========================== */}
       <div className="relative z-10">
         
-        {/* HERO BACKGROUND IMAGE (YOU WILL ADD) */}
+        {/* HERO BACKGROUND IMAGE */}
         <div className="relative h-[85vh] w-full overflow-hidden rounded-b-3xl">
           <Image
-            src="/assets/images/2149406783.jpg"                 // ← you will add your path
-            alt="Services Background"
+            src="/assets/images/2149406783.jpg"
+            alt={t('pages:servicesPage.hero.imageAlt')}
             fill
-            className="object-cover "
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
@@ -34,14 +39,14 @@ export default function AllServicesPage() {
         {/* HERO TEXT */}
         <div className="absolute top-0 left-0 w-full h-[70vh] flex flex-col items-center justify-center text-center px-6 z-20">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-display">
-            Explore Our  
+            {t('pages:servicesPage.hero.title.firstPart')}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-200 to-blue-100">
-              {" "}Services
+              {" "}{t('pages:servicesPage.hero.title.highlight')}
             </span>
           </h1>
 
           <p className="text-lg md:text-2xl text-white/90 max-w-3xl leading-relaxed">
-            Comprehensive digital services crafted to help your business scale, innovate, and succeed.
+            {t('pages:servicesPage.hero.subtitle')}
           </p>
 
           {/* CTA BUTTON */}
@@ -50,10 +55,9 @@ export default function AllServicesPage() {
             className="mt-8 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 
               text-white px-8 py-3 rounded-lg text-lg font-medium shadow-lg transition-colors"
           >
-            Lets talk
+            {t('common:buttons.letsTalk')}
           </Link>
         </div>
-
       </div>
 
       {/* ========================== */}

@@ -168,5 +168,364 @@
       "title": "Prêt à transformer votre entreprise de vente au détail?",
       "description": "Discutons de la façon dont nous pouvons vous aider à innover et à croître."
     }
+  },
+  "aboutPage": {
+    "hero": {
+      "alt": "Fond de page À propos de Codriva",
+      "title": {
+        "firstPart": "Faites Connaissance avec",
+        "highlight": "Codriva"
+      },
+      "subtitle": "Découvrez qui nous sommes, ce en quoi nous croyons et comment nous travaillons pour créer une technologie significative qui donne du pouvoir aux entreprises dans le monde entier."
+    },
+    "guidingPrinciples": {
+      "title": {
+        "firstLine": "Nos Principes",
+        "highlight": "Directeurs"
+      },
+      "description": "Chez Codriva, nos principes directeurs façonnent chaque décision et animent notre engagement envers l'excellence. Nous croyons en l'innovation, l'intégrité et la collaboration comme fondement de la construction de partenariats durables et de la livraison de solutions impactantes. Notre approche centrée sur le client garantit que nous priorisons toujours vos besoins, tandis que notre dévouement à la qualité et à l'amélioration continue nous permet de rester en avance dans un paysage numérique en évolution rapide. Ces principes inspirent notre équipe à créer une technologie qui non seulement répond mais dépasse les attentes, favorisant la confiance et le succès à long terme.",
+      "imageAlt": "Illustration des principes directeurs montrant la collaboration d'équipe"
+    },
+    "growth": {
+      "title": "Notre Croissance",
+      "description": "Chez Codriva, la croissance est plus que de simples chiffres — c'est le reflet de notre engagement inébranlable envers l'innovation, la qualité et la réussite client. Depuis notre création, nous avons constamment étendu nos capacités, adopté les technologies émergentes et forgé des partenariats solides pour fournir des solutions numériques exceptionnelles. Notre histoire de croissance est alimentée par une équipe passionnée, des stratégies visionnaires et un état d'esprit client d'abord qui nous pousse à dépasser les attentes. Au fur et à mesure que nous évoluons, nous restons dédiés à donner du pouvoir aux entreprises dans le monde entier et à façonner l'avenir de la technologie.",
+      "imageAlt": "Illustration de graphique de croissance montrant la portée mondiale"
+    },
+    "values": {
+      "title": "Les Valeurs que Nous Défendons",
+      "subtitle": "Nos valeurs fondamentales sont au cœur de tout ce que nous faisons et définissent qui nous sommes.",
+      "quality": "Qualité - Engagement envers l'excellence dans tout ce que nous faisons",
+      "transparency": "Transparence - Communication ouverte et honnête",
+      "collaboration": "Collaboration - Travailler ensemble pour le succès",
+      "integrity": "Intégrité - Faire toujours ce qui est juste",
+      "ownership": "Propriété - Prendre la responsabilité des résultats"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "imageAlt": "Fond de Services",
+      "title": {
+        "firstPart": "Explorez Nos",
+        "highlight": "Services"
+      },
+      "subtitle": "Services numériques complets conçus pour aider votre entreprise à se développer, innover et réussir."
+    },
+    "services": {
+      "customSoftware": {
+        "title": "Développement de Logiciel Personnalisé",
+        "description": "Le développement de logiciel personnalisé est l'art de créer des solutions numériques sur mesure qui s'alignent précisément sur les objectifs, flux de travail et défis uniques d'une entreprise. Contrairement aux logiciels génériques conçus pour les masses, les applications personnalisées sont construites avec un objectif spécifique pour répondre à des besoins précis, débloquer l'efficacité opérationnelle et offrir une expérience utilisateur fluide."
+      },
+      "uiUx": {
+        "title": "Conception UI/UX",
+        "description": "La conception d'interface utilisateur (UI) et d'expérience utilisateur (UX) est au cœur des produits numériques impactants. Chez Codriva, nous créons des interfaces intuitives, réactives et esthétiquement engageantes qui améliorent la convivialité et assurent des parcours utilisateur fluides sur toutes les plateformes et appareils."
+      },
+      "mobileApp": {
+        "title": "Développement d'Application Mobile",
+        "description": "Le développement d'application mobile est la création d'applications fluides et performantes conçues pour smartphones, tablettes et autres appareils mobiles. Chez Codriva, nous nous spécialisons dans la construction d'applications mobiles intuitives et riches en fonctionnalités qui aident les entreprises à se connecter avec les utilisateurs en déplacement — sur Android, iOS, ou les deux grâce à des solutions multiplateformes."
+      },
+      "productEngineering": {
+        "title": "Ingénierie de Produit",
+        "description": "L'ingénierie de produit est le processus complet de conception, développement, test et lancement d'un produit en appliquant les principes d'ingénierie tout au long de son cycle de vie. Elle commence par la compréhension des besoins des utilisateurs et la définition des spécifications techniques, suivies par le prototypage, des tests qualité rigoureux et la mise sur le marché."
+      },
+      "cloudDevops": {
+        "title": "Cloud & DevOps",
+        "description": "Cloud DevOps combine l'informatique en nuage avec les pratiques DevOps pour rationaliser le développement, le déploiement et la gestion des applications dans des environnements cloud. Cela implique l'automatisation de la configuration de l'infrastructure, l'intégration et la livraison continues (CI/CD), la surveillance et la mise à l'échelle à l'aide de plateformes comme AWS, Azure et Google Cloud."
+      },
+      "apiIntegration": {
+        "title": "API & Intégration Système",
+        "description": "L'intégration système API implique la connexion de divers systèmes logiciels et applications via des interfaces de programmation d'application (API) pour permettre une communication fluide et le partage de données. Cette intégration permet à des systèmes disparates — tels que les passerelles de paiement, bases de données clients ou services tiers — de fonctionner ensemble comme une plateforme unifiée."
+      },
+      "dataAnalytics": {
+        "title": "Données & Analytique",
+        "description": "L'analytique des données est le processus de collecte, d'organisation et d'analyse de données brutes pour découvrir des informations précieuses, des modèles et des tendances qui guident une prise de décision éclairée. En utilisant des outils et techniques avancés, elle transforme des données complexes en informations claires et exploitables."
+      },
+      "aiMl": {
+        "title": "IA & Apprentissage Automatique",
+        "description": "L'intelligence artificielle (IA) est une branche de l'informatique axée sur la capacité des machines à simuler l'intelligence humaine — allant de la compréhension du langage à la prise de décision autonome. Un sous-ensemble clé, l'Apprentissage Automatique (ML), permet aux systèmes d'apprendre à partir des données et de s'améliorer au fil du temps sans programmation explicite."
+      },
+      "bigData": {
+        "title": "Solution Big Data",
+        "description": "Les solutions Big Data permettent aux entreprises de traiter et d'analyser de vastes quantités de données structurées et non structurées pour extraire des informations précieuses. En utilisant des outils et technologies avancés, ces solutions soutiennent une prise de décision plus intelligente, l'analytique en temps réel et une efficacité opérationnelle améliorée."
+      },
+      "itConsulting": {
+        "title": "Conseil IT",
+        "description": "Le conseil IT aide les entreprises à aligner leurs stratégies technologiques avec les objectifs commerciaux fondamentaux. De la sélection du bon logiciel et infrastructure à l'amélioration de la cybersécurité et l'optimisation des opérations, les consultants IT fournissent des conseils d'experts pour une utilisation efficace et efficiente de la technologie."
+      },
+      "qaTesting": {
+        "title": "QA & Test",
+        "description": "L'assurance qualité et les tests garantissent que les applications logicielles sont fiables, sécurisées et performent de manière optimale avant la publication. Utilisant un mélange de techniques de test manuelles et automatisées, les équipes QA détectent les bogues, les goulots d'étranglement de performance et les problèmes d'utilisabilité pour offrir une expérience utilisateur fluide et sans erreur."
+      },
+      "supportMaintenance": {
+        "title": "Support & Maintenance",
+        "description": "Les services de support et maintenance garantissent que votre logiciel reste fiable et efficace longtemps après son déploiement. Cela inclut des mises à jour régulières, des corrections de bogues, une surveillance des performances et un support technique réactif pour résoudre rapidement tout problème."
+      }
+    }
+  },
+  "industriesPage": {
+    "hero": {
+      "imageAlt": "Arrière-plan Héro Industries",
+      "title": "Autonomiser les Industries avec des Solutions Innovantes",
+      "subtitle": "De la FinTech et du Commerce de détail à la Santé et au Voyage, nous construisons des solutions numériques évolutives adaptées aux besoins de votre industrie."
+    },
+    "grid": {
+      "title": "Expertise Centrée sur les Industries",
+      "knowMore": "En savoir plus"
+    },
+    "industries": {
+      "retail": {
+        "name": "Commerce de détail et E-commerce"
+      },
+      "edtech": {
+        "name": "EdTech"
+      },
+      "fintech": {
+        "name": "FinTech et Banque"
+      },
+      "logistics": {
+        "name": "Logistique et Chaîne d'approvisionnement"
+      },
+      "realestate": {
+        "name": "Immobilier et PropTech"
+      },
+      "ondemand": {
+        "name": "Plateformes à la Demande"
+      },
+      "telecom": {
+        "name": "Télécom"
+      },
+      "events": {
+        "name": "Événements et Billetterie"
+      },
+      "media": {
+        "name": "Médias et Actualités"
+      },
+      "travel": {
+        "name": "Voyage et Hôtellerie"
+      },
+      "restaurant": {
+        "name": "Restaurant et Cuisine Cloud"
+      },
+      "healthcare": {
+        "name": "Santé et Sciences de la Vie"
+      }
+    }
+  },
+  "servicesDetails": {
+    "customSoftware": {
+      "description1": "est l'art de créer des solutions numériques sur mesure qui s'alignent précisément sur les objectifs, flux de travail et défis uniques d'une entreprise. Contrairement aux logiciels génériques conçus pour les masses, les applications personnalisées sont construites avec un objectif spécifique pour répondre à des besoins précis, débloquer l'efficacité opérationnelle et offrir une expérience utilisateur fluide.",
+      "description2": "Chez Codriva, nous nous spécialisons dans le développement de logiciels personnalisés robustes, évolutifs et sécurisés qui s'intègrent facilement à vos systèmes existants et évoluent avec votre organisation. Des applications métier principales aux produits numériques innovants, nous travaillons en étroite collaboration avec les clients pour concevoir des interfaces intuitives, optimiser les performances et garantir que chaque fonctionnalité sert un objectif stratégique.",
+      "description3": "Que vous modernisiez des systèmes hérités ou construisiez à partir de zéro, notre approche de bout en bout garantit un contrôle total sur la fonctionnalité, l'architecture et les données — ce qui donne un logiciel qui s'adapte parfaitement à votre entreprise et génère une valeur à long terme."
+    }
+  },
+  "advantages": {
+    "title": "Pourquoi Choisir Codriva?",
+    "subtitle": "Nous livrons des résultats exceptionnels grâce à notre expertise, innovation et engagement envers l'excellence.",
+    "expertDevelopment": {
+      "title": "Développement Expert",
+      "description": "Technologies de pointe et meilleures pratiques pour des solutions robustes."
+    },
+    "dedicatedTeam": {
+      "title": "Équipe Dédiée",
+      "description": "Professionnels expérimentés engagés dans le succès de votre projet."
+    },
+    "fastDelivery": {
+      "title": "Livraison Rapide",
+      "description": "Processus efficaces pour livrer des solutions de haute qualité à temps."
+    },
+    "costEfficient": {
+      "title": "Efficacité des Coûts",
+      "description": "Processus de développement optimisés qui réduisent les coûts sans compromettre la qualité."
+    }
+  },
+  "cta": {
+    "default": {
+      "title": "Prêt à Transformer Votre Entreprise?",
+      "subtitle": "Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs avec des solutions numériques innovantes."
+    }
+  },
+  "industriesCTA": {
+    "retail": {
+      "title": "Autonomisez Votre Croissance dans le Commerce de Détail et l'E-commerce",
+      "subtitle": "Boostez les conversions, rationalisez les opérations et offrez des expériences d'achat fluides avec nos solutions technologiques de vente au détail sur mesure.",
+      "button": "Construisez Votre Solution Retail"
+    },
+    "edtech": {
+      "title": "Réinventez l'Apprentissage avec l'EdTech Moderne",
+      "subtitle": "Créez des plateformes d'apprentissage numériques engageantes, évolutives et interactives qui autonomisent les institutions et les apprenants.",
+      "button": "Démarrez Votre Projet EdTech"
+    },
+    "fintech": {
+      "title": "Accélérez l'Innovation dans la FinTech",
+      "subtitle": "Construisez des produits financiers sécurisés et performants qui redéfinissent la banque numérique, les paiements et l'automatisation financière.",
+      "button": "Construisez des Solutions FinTech"
+    },
+    "logistics": {
+      "title": "Optimisez Votre Logistique et Chaîne d'Approvisionnement",
+      "subtitle": "Améliorez le suivi, l'automatisation et la visibilité en temps réel avec nos plateformes logistiques intelligentes.",
+      "button": "Transformez Votre Logistique"
+    },
+    "realestate": {
+      "title": "Numérisez les Expériences Immobilières",
+      "subtitle": "Des visites virtuelles aux plateformes de gestion immobilière, créez des écosystèmes numériques immobiliers fluides.",
+      "button": "Construisez des Solutions PropTech"
+    },
+    "ondemand": {
+      "title": "Lancez Votre Plateforme de Services à la Demande",
+      "subtitle": "Des applications de livraison aux services à domicile, nous construisons des plateformes à la demande évolutives que les utilisateurs adorent.",
+      "button": "Démarrez Votre Plateforme à la Demande"
+    },
+    "telecom": {
+      "title": "Modernisez les Télécoms avec des Logiciels plus Intelligents",
+      "subtitle": "Alimentez les opérations télécoms avec des systèmes automatisés, des analyses et des solutions d'engagement client numérique.",
+      "button": "Construisez des Solutions Télécoms"
+    },
+    "events": {
+      "title": "Alimentez des Expériences d'Événements et de Billetterie Fluides",
+      "subtitle": "Construisez des plateformes pour la découverte d'événements, la billetterie, les analyses en direct et l'engagement utilisateur.",
+      "button": "Construisez une Plateforme d'Événements"
+    },
+    "media": {
+      "title": "Transformez la Diffusion des Médias et de l'Actualité",
+      "subtitle": "Développez des plateformes pour le streaming, la distribution de nouvelles, la diffusion de contenu et l'édition numérique.",
+      "button": "Démarrez Votre Projet Média"
+    },
+    "travel": {
+      "title": "Réimaginez les Expériences de Voyage et d'Hôtellerie",
+      "subtitle": "Créez des plateformes de réservation, conciergerie et gestion de voyage fluides construites pour des expériences mondiales.",
+      "button": "Construisez des Solutions Voyage"
+    },
+    "restaurant": {
+      "title": "Numérisez Votre Restaurant et Cuisine Cloud",
+      "subtitle": "Améliorez la commande, la livraison, les opérations et la fidélisation des clients avec des solutions technologiques de restaurant modernes.",
+      "button": "Démarrez Votre Projet Restaurant"
+    },
+    "healthcare": {
+      "title": "Faites Avancer la Santé avec une Technologie Intelligente",
+      "subtitle": "Construisez des plateformes de santé sécurisées, conformes et centrées sur le patient pour l'avenir de l'innovation médicale.",
+      "button": "Construisez des Solutions de Santé"
+    }
+  },
+  "servicesCTA": {
+    "custom-software-development": {
+      "title": "Construisez un Logiciel Personnalisé Adapté à Votre Vision",
+      "subtitle": "Du concept au déploiement, nous créons des logiciels conçus pour la performance, l'évolutivité et la croissance à long terme.",
+      "button": "Démarrez le Développement Personnalisé"
+    },
+    "ui-ux-design": {
+      "title": "Créez des Expériences Numériques Magnifiques et Intuitives",
+      "subtitle": "Ravissez les utilisateurs avec des UI magnifiques et des UX fluides créées grâce à un design basé sur la recherche.",
+      "button": "Améliorez l'UX de Votre Produit"
+    },
+    "mobile-app-development": {
+      "title": "Lancez des Applications Mobiles de Haute Qualité",
+      "subtitle": "Nous construisons des applications Android/iOS rapides, fiables et riches en fonctionnalités adaptées à l'engagement utilisateur et à l'échelle commerciale.",
+      "button": "Construisez Votre Application Mobile"
+    },
+    "product-engineering": {
+      "title": "Donnez Vie à Votre Idée de Produit",
+      "subtitle": "Du MVP au produit à grande échelle, concevez des solutions robustes et évolutives avec une approche complète du cycle de vie du produit.",
+      "button": "Démarrez l'Ingénierie de Produit"
+    },
+    "cloud-devops": {
+      "title": "Évoluez Efficacement avec le Cloud et DevOps",
+      "subtitle": "Optimisez l'infrastructure, automatisez les déploiements et améliorez la fiabilité avec des pratiques DevOps cloud-natives modernes.",
+      "button": "Améliorez Vos Opérations Cloud"
+    },
+    "api-system-integration": {
+      "title": "Intégrez Vos Systèmes de Manière Fluide",
+      "subtitle": "Connectez des applications, automatisez les flux de travail et construisez des systèmes unifiés grâce à des intégrations API robustes.",
+      "button": "Intégrez Vos Systèmes"
+    },
+    "data-analytics": {
+      "title": "Transformez les Données en Informations Actionnables",
+      "subtitle": "Libérez le pouvoir décisionnel avec des tableaux de bord en temps réel, des modèles d'analyse et des solutions de stratégie de données.",
+      "button": "Démarrez la Transformation des Données"
+    },
+    "ai-machine-learning": {
+      "title": "Tirez Parti de l'IA pour l'Automatisation Intelligente",
+      "subtitle": "Construisez des systèmes alimentés par l'IA qui apprennent, prédisent et automatisent à travers vos opérations.",
+      "button": "Démarrez Votre Projet IA"
+    },
+    "big-data-solution": {
+      "title": "Traitez et Analysez le Big Data à Grande Échelle",
+      "subtitle": "Déployez des pipelines de données, des moteurs de traitement et des tableaux de bord d'analyses pour des opérations de données au niveau de l'entreprise.",
+      "button": "Construisez des Systèmes Big Data"
+    },
+    "it-consulting": {
+      "title": "Prenez des Décisions Technologiques plus Intelligentes",
+      "subtitle": "Obtenez des conseils d'experts en stratégie, architecture, modernisation et transformation numérique.",
+      "button": "Obtenez du Conseil IT"
+    },
+    "qa-testing": {
+      "title": "Garantissez la Qualité avec des Tests Compréhensifs",
+      "subtitle": "Livrez des logiciels stables, sécurisés et performants grâce à des tests QA rigoureux et automatisés.",
+      "button": "Testez Votre Produit"
+    },
+    "support-maintenance": {
+      "title": "Maintenez Votre Logiciel en Parfait État de Fonctionnement",
+      "subtitle": "Garantissez la fiabilité avec la surveillance, les mises à jour, les corrections de bugs, les optimisations et le support continu.",
+      "button": "Obtenez du Support et de la Maintenance"
+    }
+  },
+  "servicesDetail": {
+    "uiUx": {
+      "uiHighlight": "Interface utilisateur (UI)",
+      "description1": "et la conception d'expérience utilisateur (UX) sont au cœur des produits numériques impactants. Chez Codriva, nous créons des interfaces intuitives, réactives et esthétiquement engageantes qui améliorent la convivialité et assurent des parcours utilisateur fluides sur toutes les plateformes et appareils.",
+      "description2": "Dans le contexte des systèmes de support et des applications métier, une conception UI efficace simplifie les interactions complexes — permettant aux utilisateurs de signaler des problèmes, de demander de l'aide et de suivre les progrès avec facilité. Notre approche de conception équilibre l'attrait visuel avec la clarté fonctionnelle, utilisant des mises en page intentionnelles, une iconographie significative et des éléments interactifs qui guident les utilisateurs sans effort à travers votre logiciel.",
+      "description3": "En se concentrant sur l'accessibilité, la réactivité et le comportement des utilisateurs, nos solutions UI/UX ne font pas que bien paraître — elles rendent chaque point de contact numérique plus efficace, agréable et aligné avec les valeurs de votre marque."
+    }
+  },
+  "servicesDetail": {
+    "mobileApp": {
+      "description1": "est la création d'applications fluides et performantes conçues pour smartphones, tablettes et autres appareils mobiles. Chez Codriva, nous nous spécialisons dans la construction d'applications mobiles intuitives et riches en fonctionnalités qui aident les entreprises à se connecter avec les utilisateurs en déplacement — sur Android, iOS, ou les deux grâce à des solutions multiplateformes.",
+      "description2": "Notre processus couvre l'ensemble du cycle de vie — de la conception d'interface centrée sur l'utilisateur et de l'architecture évolutive aux tests rigoureux et au déploiement sur des plateformes comme l'App Store et Google Play. Nous exploitons à la fois les technologies natives (Java/Kotlin pour Android, Swift pour iOS) et les frameworks multiplateformes modernes comme Flutter et React Native pour livrer des applications réactives, rapides et sécurisées.",
+      "description3": "Dans un monde de plus en plus mobile-first, nos solutions garantissent que votre marque est toujours à portée de main — offrant des expériences utilisateur exceptionnelles, stimulant l'engagement et favorisant la croissance commerciale grâce à une puissante mobilité numérique."
+    },
+    "productEngineering": {
+      "description": "est le processus complet de conception, développement, test et lancement d'un produit en appliquant les principes d'ingénierie tout au long de son cycle de vie. Elle commence par la compréhension des besoins des utilisateurs et la définition des spécifications techniques, suivies par le prototypage, des tests qualité rigoureux et la mise sur le marché. L'objectif principal est de livrer un produit de haute qualité et rentable qui satisfait à la fois les attentes des utilisateurs et les objectifs commerciaux. Applicable au logiciel et au matériel, l'ingénierie de produit englobe toutes les étapes — de la conception et du développement au déploiement et à la maintenance continue."
+    },
+    "cloudDevops": {
+      "highlight": "Cloud DevOps",
+      "description": "combine l'informatique en nuage avec les pratiques DevOps pour rationaliser le développement, le déploiement et la gestion des applications dans des environnements cloud. Cela implique l'automatisation de la configuration de l'infrastructure, l'intégration et la livraison continues (CI/CD), la surveillance et la mise à l'échelle à l'aide de plateformes comme AWS, Azure et Google Cloud. L'objectif est d'accélérer la livraison de logiciels, d'améliorer la fiabilité et de favoriser une collaboration fluide entre les équipes de développement et d'exploitation. En adoptant le Cloud DevOps, les organisations peuvent déployer des mises à jour plus rapidement, résoudre les problèmes rapidement et optimiser la gestion des ressources efficacement."
+    },
+    "apiIntegration": {
+      "highlight": "L'intégration système API",
+      "description": "implique la connexion de divers systèmes logiciels et applications via des interfaces de programmation d'application (API) pour permettre une communication fluide et le partage de données. Cette intégration permet à des systèmes disparates — tels que les passerelles de paiement, bases de données clients ou services tiers — de fonctionner ensemble comme une plateforme unifiée. En automatisant les flux de travail et en permettant l'échange de données en temps réel, l'intégration API réduit l'effort manuel, améliore l'efficacité opérationnelle et offre une expérience utilisateur cohérente sur plusieurs plateformes."
+    },
+    "dataAnalytics": {
+      "highlight": "L'analytique des données",
+      "description": "est le processus de collecte, d'organisation et d'analyse de données brutes pour découvrir des informations précieuses, des modèles et des tendances qui guident une prise de décision éclairée. En utilisant des outils et techniques avancés, elle transforme des données complexes en informations claires et exploitables. Les entreprises tirent parti de l'analytique des données pour améliorer les performances, prévoir les résultats, comprendre le comportement des clients et résoudre les défis efficacement. Ce domaine englobe divers types, notamment l'analytique descriptive, diagnostique, prédictive et prescriptive."
+    },
+    "aiMl": {
+      "highlight": "L'intelligence artificielle (IA)",
+      "description": "est une branche de l'informatique axée sur la capacité des machines à simuler l'intelligence humaine — allant de la compréhension du langage à la prise de décision autonome. Un sous-ensemble clé, l'Apprentissage Automatique (ML), permet aux systèmes d'apprendre à partir des données et de s'améliorer au fil du temps sans programmation explicite. Ensemble, l'IA et le ML révolutionnent les industries en automatisant les processus, en améliorant les expériences utilisateur et en permettant des décisions plus intelligentes et basées sur les données."
+    },
+    "bigData": {
+      "highlight": "Le Big Data",
+      "description": "Les solutions permettent aux entreprises de traiter et d'analyser de vastes quantités de données structurées et non structurées pour extraire des informations précieuses. En utilisant des outils et technologies avancés, ces solutions soutiennent une prise de décision plus intelligente, l'analytique en temps réel et une efficacité opérationnelle améliorée. De l'analyse du comportement des clients à la maintenance prédictive et à la prévision du marché, le Big Data permet aux organisations de rester compétitives dans le paysage actuel axé sur les données."
+    },
+    "itConsulting": {
+      "highlight": "Le conseil IT",
+      "description": "aide les entreprises à aligner leurs stratégies technologiques avec les objectifs commerciaux fondamentaux. De la sélection du bon logiciel et infrastructure à l'amélioration de la cybersécurité et l'optimisation des opérations, les consultants IT fournissent des conseils d'experts pour une utilisation efficace et efficiente de la technologie. Que vous planifiez une transformation numérique ou recherchiez un support technique continu, le conseil IT fournit des solutions personnalisées qui stimulent la croissance, l'innovation et l'avantage concurrentiel."
+    },
+    "qaTesting": {
+      "highlight": "L'assurance qualité",
+      "description": "et les tests garantissent que les applications logicielles sont fiables, sécurisées et performent de manière optimale avant la publication. Utilisant un mélange de techniques de test manuelles et automatisées, les équipes QA détectent les bogues, les goulots d'étranglement de performance et les problèmes d'utilisabilité pour offrir une expérience utilisateur fluide et sans erreur. Un processus QA robuste améliore la qualité du produit tout en réduisant le time-to-market et les coûts à long terme."
+    },
+    "supportMaintenance": {
+      "highlight": "Les services de support et maintenance",
+      "description": "garantissent que votre logiciel reste fiable et efficace longtemps après son déploiement. Cela inclut des mises à jour régulières, des corrections de bogues, une surveillance des performances et un support technique réactif pour résoudre rapidement tout problème. Grâce à une maintenance proactive et des soins continus, nous aidons à minimiser les temps d'arrêt, à renforcer la sécurité et à maintenir vos systèmes fonctionnant à des performances optimales."
+    }
+  },
+  "uiUxDesignPage": {
+    "title": "Conception UI/UX",
+    "hero": {
+      "title": "Conception UI/UX",
+      "description1Part1": "L'interface utilisateur (UI)",
+      "description1Part2": "et l'expérience utilisateur (UX) sont au cœur des produits numériques impactants. Chez Codriva, nous créons des interfaces intuitives, réactives et esthétiquement engageantes qui améliorent la facilité d'utilisation et garantissent des parcours utilisateur fluides sur toutes les plateformes et tous les appareils.",
+      "description2": "Dans le contexte des systèmes de support et des applications métier, une conception UI efficace simplifie les interactions complexes — permettant aux utilisateurs de signaler des problèmes, de demander de l'aide et de suivre les progrès en toute simplicité. Notre approche de conception équilibre l'attrait visuel avec la clarté fonctionnelle, en utilisant des mises en page réfléchies, une iconographie significative et des éléments interactifs qui guident les utilisateurs sans effort à travers votre logiciel.",
+      "description3": "En mettant l'accent sur l'accessibilité, la réactivité et le comportement des utilisateurs, nos solutions UI/UX ne se contentent pas d'être belles — elles rendent chaque point de contact numérique plus efficace, agréable et aligné sur les valeurs de votre marque.",
+      "imageAlt": "Conception UI/UX"
+    }
   }
 }
