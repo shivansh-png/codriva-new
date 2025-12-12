@@ -16,10 +16,6 @@ import commonFr from '../locales/fr/common.json';
 import homeFr from '../locales/fr/home.json';
 import pagesFr from '../locales/fr/pages.json';
 
-import commonDe from '../locales/de/common.json';
-import homeDe from '../locales/de/home.json';
-import pagesDe from '../locales/de/pages.json';
-
 const resources = {
   en: {
     common: commonEn,
@@ -35,12 +31,7 @@ const resources = {
     common: commonFr,
     home: homeFr,
     pages: pagesFr,
-  },
-  de: {
-    common: commonDe,
-    home: homeDe,
-    pages: pagesDe,
-  },
+  } 
 };
 
 // Check if running on server or client
@@ -82,7 +73,7 @@ const initI18n = () => {
     setTimeout(() => {
       const storedLang = localStorage.getItem('i18nextLng');
       const browserLang = navigator.language.split('-')[0];
-      const supportedLangs = ['en', 'hi', 'fr', 'de'];
+      const supportedLangs = ['en', 'hi', 'fr'];
       
       let langToUse = 'en';
       if (storedLang && supportedLangs.includes(storedLang)) {
