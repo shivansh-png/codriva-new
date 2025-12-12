@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "about": "À propos",
+    "services": "Services",
+    "industries": "Industries",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "freeConsultations": "Consultations gratuites"
+  },
+  "buttons": {
+    "letsTalk": "Parlons",
+    "getFreeConsultation": "Obtenir une consultation gratuite",
+    "ourExpertise": "Notre expertise",
+    "viewAllServices": "Voir tous les services",
+    "viewAllIndustries": "Voir toutes les industries",
+    "viewMore": "Voir plus ↗",
+    "moreServices": "Plus de services",
+    "learnMore": "En savoir plus",
+    "readMore": "Lire la suite"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "home": "Accueil",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "close": "Fermer",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "ok": "OK",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "footer": {
+    "connect": "Se connecter",
+    "company": "Entreprise",
+    "industries": "Industries",
+    "services": "Services",
+    "copyright": "Copyright ©{{year}} Codriva Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "description": "Votre partenaire technologique de confiance. Nous fournissons des solutions logicielles personnalisées, des services de transformation numérique et des conseils technologiques innovants.",
+    "links": {
+      "about": "À propos",
+      "services": "Services",
+      "industries": "Industries",
+      "careers": "Carrières",
+      "contactUs": "Contactez-nous",
+      "retailEcommerce": "Commerce de détail & E-commerce",
+      "travelHospitality": "Voyage & Hôtellerie",
+      "restaurantCloudKitchen": "Restaurant & Cloud Kitchen",
+      "logisticsSupplyChain": "Logistique & Chaîne d'approvisionnement",
+      "healthcareLifeScience": "Santé & Sciences de la vie",
+      "onDemandPlatforms": "Plateformes à la demande",
+      "viewMore": "Voir plus ↗",
+      "customSoftwareDevelopment": "Développement de logiciels personnalisés",
+      "mobileAppDevelopment": "Développement d'applications mobiles",
+      "apiSystemIntegration": "API et intégration système",
+      "aiMachineLearning": "IA et apprentissage automatique",
+      "dataAnalytics": "Analyse de données",
+      "supportMaintenance": "Support et maintenance"
+    }
+  }
+}

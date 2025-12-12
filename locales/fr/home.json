@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "title": "Transformez votre entreprise avec",
+    "titleHighlight": "l'innovation numérique",
+    "subtitle": "Nous fournissons des solutions logicielles exceptionnelles, des services de transformation numérique et des conseils technologiques pour aider votre entreprise à évoluer et à réussir.",
+    "expertise": {
+      "teamExperience": "20+ Années d'expérience d'équipe",
+      "teamExperienceSubtitle": "Expérience d'équipe",
+      "industriesServed": "6+ Industries servies",
+      "industriesServedSubtitle": "Industries servies",
+      "engineeringCulture": "Culture d'ingénierie forte en croissance rapide",
+      "engineeringCultureSubtitle": "Culture d'ingénierie forte",
+      "deliveryCommitment": "Engagement de livraison 100% à temps",
+      "deliveryCommitmentSubtitle": "Livraison à temps"
+    }
+  },
+  "services": {
+    "title": "Nos",
+    "titleHighlight": "Services",
+    "subtitle": "Nous offrons une gamme complète de services numériques pour aider votre entreprise à prospérer dans le monde moderne.",
+    "list": [
+      {
+        "title": "Développement de logiciels personnalisés",
+        "description": "Solutions sur mesure construites à partir de zéro pour répondre à vos besoins métier uniques.",
+        "features": [
+          "Applications Web",
+          "Apps mobiles",
+          "Développement API",
+          "Intégration système"
+        ]
+      },
+      {
+        "title": "Développement d'applications mobiles",
+        "description": "Applications mobiles haute performance construites pour une grande utilisabilité, scalabilité et engagement.",
+        "features": [
+          "Apps natives iOS & Android",
+          "Solutions multiplateformes",
+          "UI/UX pour mobile",
+          "Déploiement et optimisation"
+        ]
+      },
+      {
+        "title": "API et intégration système",
+        "description": "Connectivité transparente entre vos produits, outils et plateformes.",
+        "features": [
+          "Intégration API tierce",
+          "Développement API personnalisé",
+          "Intégration système existant",
+          "Automatisation"
+        ]
+      },
+      {
+        "title": "IA et apprentissage automatique",
+        "description": "Solutions intelligentes qui automatisent les processus et fournissent des insights précieux.",
+        "features": [
+          "Analytique prédictive",
+          "NLP",
+          "Vision par ordinateur",
+          "Automatisation"
+        ]
+      },
+      {
+        "title": "Analytique des données",
+        "description": "Transformez les données brutes en insights actionnables pour une meilleure prise de décision.",
+        "features": [
+          "Visualisation de données",
+          "Intelligence d'affaires",
+          "Rapports",
+          "Tableaux de bord"
+        ]
+      },
+      {
+        "title": "Support et maintenance",
+        "description": "Support proactif et fiable pour garder vos systèmes sécurisés, mis à jour et performants.",
+        "features": [
+          "Correction de bugs",
+          "Optimisation performance",
+          "Correctifs de sécurité",
+          "Surveillance continue"
+        ]
+      }
+    ],
+    "readyToStart": {
+      "title": "Prêt à commencer votre projet?",
+      "subtitle": "Discutons de la façon dont nous pouvons aider à donner vie à votre vision avec nos solutions technologiques de pointe."
+    }
+  },
+  "about": {
+    "title": "Nous façonnons l'entreprise de demain",
+    "companyBreakdown": {
+      "title": "L'histoire de Codriva",
+      "cod": {
+        "title": "Cod",
+        "description": "Une connexion évidente au codage, développement logiciel et technologie."
+      },
+      "riva": {
+        "title": "riva",
+        "description": "Un flux fluide (comme une rivière) — représentant l'innovation, la livraison et l'agilité."
+      },
+      "motto": {
+        "line1": "Où le code rencontre l'innovation",
+        "line2": "Flux de solutions intelligentes par le code"
+      },
+      "implication": "Impliquant \"nous vous aidons à arriver au succès par le code.\""
+    }
+  }
+}

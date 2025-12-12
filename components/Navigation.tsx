@@ -1,22 +1,34 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
 import SimpleThemeToggle from "./SimpleThemeToggle";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const navItems = [
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Industries", href: "/industries" },
-  { name: "Careers", href: "/careers" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
+
 
 const Navigation = () => {
+  const { t } = useTranslation(['common', 'pages']);
+  const { currentLanguage } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+
+  // Skip translation for careers page as requested
+  const isCareersPage = typeof window !== 'undefined' && window.location.pathname.startsWith('/careers');
+
+  const navItems = [
+    { name: t('common:navigation.about'), href: "/about" },
+    { name: t('common:navigation.services'), href: "/services" },
+    { name: t('common:navigation.industries'), href: "/industries" },
+    { name: "Careers", href: "/careers" }, // Keep original text for careers page
+
+  ];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -44,11 +56,10 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-200 ${
-        isScrolled
-          ? "bg-white/80 dark:bg-[#0d1117]/80 backdrop-blur-md border-b border-[#d0d7de] dark:border-[#30363d]"
-          : "bg-transparent"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-200 ${isScrolled
+        ? "bg-white/80 dark:bg-[#0d1117]/80 backdrop-blur-md border-b border-[#d0d7de] dark:border-[#30363d]"
+        : "bg-transparent"
+        }`}
     >
       <div className="flex items-center justify-between h-16 px-4 md:px-10">
         {/* Logo */}
@@ -83,23 +94,23 @@ const Navigation = () => {
   ${isScrolled ? "text-black" : ""}
 
   ${
-    // highlight active non-root pages
-    pathname.startsWith(item.href) && item.href !== "/"
-      ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
-      : pathname === "/" && item.href === "/"
-      ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
-      : ""
-  }
+                // highlight active non-root pages
+                pathname.startsWith(item.href) && item.href !== "/"
+                  ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
+                  : pathname === "/" && item.href === "/"
+                    ? "bg-[#0969da] text-white hover:bg-[#0969da]/90"
+                    : ""
+                }
 
   ${
-    // FORCE BLACK TEXT for ALL /services/* subpages
-    pathname.startsWith("/services/") ||
-    pathname === "/contact" ||
-    pathname === "/terms-of-service" ||
-    pathname === "/privacy-policy"
-      ? "text-black"
-      : ""
-  }
+                // FORCE BLACK TEXT for ALL /services/* subpages
+                pathname.startsWith("/services/") ||
+                  pathname === "/contact" ||
+                  pathname === "/terms-of-service" ||
+                  pathname === "/privacy-policy"
+                  ? "text-black"
+                  : ""
+                }
 `}
             >
               {item.name}
@@ -109,6 +120,10 @@ const Navigation = () => {
 
         {/* Right side actions */}
         <div className="flex items-center space-x-3">
+
+          {/* Language Switcher */}
+          <LanguageSwitcher />
+
           {/* scale wrapper makes the toggle smaller on small screens */}
           <div className="transform scale-90 md:scale-100">
             <SimpleThemeToggle />
@@ -119,7 +134,7 @@ const Navigation = () => {
             onClick={() => router.push("/contact")}
             className="btn-primary text-sm md:text-base px-2 md:px-5 py-1 md:py-3 whitespace-nowrap"
           >
-            Free Consultations
+            {t('common:navigation.freeConsultations')}
           </button>
 
           {/* Mobile menu button */}
@@ -132,13 +147,13 @@ const Navigation = () => {
               fill="none"
               stroke={
                 pathname.startsWith("/services/") ||
-                pathname === "/contact" ||
-                pathname === "/terms-of-service" ||
-                pathname === "/privacy-policy"
+                  pathname === "/contact" ||
+                  pathname === "/terms-of-service" ||
+                  pathname === "/privacy-policy"
                   ? "#000000" // forced black for exceptions
                   : isScrolled
-                  ? "#000000" // scrolled
-                  : "#ffffff" // default
+                    ? "#000000" // scrolled
+                    : "#ffffff" // default
               }
               viewBox="0 0 24 24"
             >
@@ -161,11 +176,10 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left px-3 py-2 text-sm font-medium rounded-md ${
-                  pathname === item.href
-                    ? "bg-[#0969da] text-white"
-                    : "text-[#24292f] dark:text-[#f0f6fc] hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black"
-                }`}
+                className={`block w-full text-left px-3 py-2 text-sm font-medium rounded-md ${pathname === item.href
+                  ? "bg-[#0969da] text-white"
+                  : "text-[#24292f] dark:text-[#f0f6fc] hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] hover:text-black"
+                  }`}
               >
                 {item.name}
               </button>

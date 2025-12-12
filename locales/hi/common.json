@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "about": "हमारे बारे में",
+    "services": "सेवाएं",
+    "industries": "उद्योग",
+    "careers": "करियर",
+    "contact": "संपर्क",
+    "freeConsultations": "निःशुल्क परामर्श"
+  },
+  "buttons": {
+     "letsTalk": "चलिए बात करते हैं",
+    "getFreeConsultation": "निःशुल्क परामर्श प्राप्त करें",
+    "ourExpertise": "हमारी विशेषज्ञता",
+    "viewAllServices": "सभी सेवाएं देखें",
+    "viewAllIndustries": "सभी उद्योग देखें",
+    "viewMore": "और देखें ↗",
+    "moreServices": "अधिक सेवाएं",
+    "learnMore": "और जानें",
+    "readMore": "और पढ़ें"
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "home": "होम",
+    "back": "वापस",
+    "next": "अगला",
+    "previous": "पिछला",
+    "close": "बंद करें",
+    "submit": "जमा करें",
+    "cancel": "रद्द करें",
+    "ok": "ठीक है",
+    "yes": "हाँ",
+    "no": "नहीं"
+  },
+  "footer": {
+    "connect": "कनेक्ट करें",
+    "company": "कंपनी",
+    "industries": "उद्योग",
+    "services": "सेवाएं",
+    "copyright": "कॉपीराइट ©{{year}} कोडरिवा सर्वाधिकार सुरक्षित।",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfService": "सेवा की शर्तें",
+    "description": "आपका विश्वसनीय प्रौद्योगिकी भागीदार। हम कस्टम सॉफ्टवेयर समाधान, डिजिटल ट्रांसफॉर्मेशन सेवाएं और नवीन तकनीकी परामर्श प्रदान करते हैं।",
+    "links": {
+      "about": "हमारे बारे में",
+      "services": "सेवाएं",
+      "industries": "उद्योग",
+      "careers": "करियर",
+      "contactUs": "संपर्क करें",
+      "retailEcommerce": "रिटेल और ई-कॉमर्स",
+      "travelHospitality": "यात्रा और आतिथ्य",
+      "restaurantCloudKitchen": "रेस्तरां और क्लाउड किचन",
+      "logisticsSupplyChain": "लॉजिस्टिक्स और आपूर्ति श्रृंखला",
+      "healthcareLifeScience": "स्वास्थ्य सेवा और लाइफ साइंस",
+      "onDemandPlatforms": "ऑन-डिमांड प्लेटफॉर्म",
+      "viewMore": "और देखें ↗",
+      "customSoftwareDevelopment": "कस्टम सॉफ्टवेयर डेवलपमेंट",
+      "mobileAppDevelopment": "मोबाइल ऐप डेवलपमेंट",
+      "apiSystemIntegration": "API और सिस्टम इंटीग्रेशन",
+      "aiMachineLearning": "AI और मशीन लर्निंग",
+      "dataAnalytics": "डेटा एनालिटिक्स",
+      "supportMaintenance": "सपोर्ट और मेंटेनेंस"
+    }
+  }
+}

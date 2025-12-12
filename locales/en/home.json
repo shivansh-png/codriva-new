@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "title": "Transform your business with",
+    "titleHighlight": "digital innovation",
+    "subtitle": "We deliver exceptional software solutions, digital transformation services, and technology consulting to help your business scale and succeed.",
+    "expertise": {
+      "teamExperience": "20+ Years Team Experience",
+      "teamExperienceSubtitle": "Team Experience",
+      "industriesServed": "6+ Industries Served",
+      "industriesServedSubtitle": "Industries Served",
+      "engineeringCulture": "Fast-Growing Strong Engineering Culture",
+      "engineeringCultureSubtitle": "Strong Engineering Culture",
+      "deliveryCommitment": "100% On Time Delivery Commitment",
+      "deliveryCommitmentSubtitle": "On Time Delivery"
+    }
+  },
+  "services": {
+    "title": "Our",
+    "titleHighlight": "Services",
+    "subtitle": "We offer a comprehensive range of digital services to help your business thrive in the modern world.",
+    "list": [
+      {
+        "title": "Custom Software Development",
+        "description": "Tailored solutions built from the ground up to meet your unique business needs.",
+        "features": [
+          "Web Applications",
+          "Mobile Apps",
+          "API Development",
+          "System Integration"
+        ]
+      },
+      {
+        "title": "Mobile App Development",
+        "description": "High-performance mobile applications built for great usability, scalability, and engagement across devices.",
+        "features": [
+          "Native iOS & Android Apps",
+          "Cross-platform Solutions",
+          "UI/UX for Mobile",
+          "App Store Deployment & Optimization"
+        ]
+      },
+      {
+        "title": "API & System Integration",
+        "description": "Seamless connectivity between your products, tools, and platforms to ensure smooth data flow and optimized operations.",
+        "features": [
+          "Third-party API Integration",
+          "Custom API Development",
+          "Legacy System Integration",
+          "Workflow Automation"
+        ]
+      },
+      {
+        "title": "AI & Machine Learning",
+        "description": "Intelligent solutions that automate processes and provide valuable insights.",
+        "features": [
+          "Predictive Analytics",
+          "NLP",
+          "Computer Vision",
+          "Automation"
+        ]
+      },
+      {
+        "title": "Data Analytics",
+        "description": "Transform raw data into actionable insights for better decision making.",
+        "features": [
+          "Data Visualization",
+          "Business Intelligence",
+          "Reporting",
+          "Dashboards"
+        ]
+      },
+      {
+        "title": "Support & Maintenance",
+        "description": "Proactive, reliable support to keep your systems secure, updated, and performing at their best.",
+        "features": [
+          "Bug Fixes & Issue Resolution",
+          "Performance Optimization",
+          "Security Patching",
+          "Continuous Monitoring"
+        ]
+      }
+    ],
+    "readyToStart": {
+      "title": "Ready to start your project?",
+      "subtitle": "Let's discuss how we can help bring your vision to life with our cutting-edge technology solutions."
+    }
+  },
+  "about": {
+    "title": "We are shaping the company of tomorrow",
+    "companyBreakdown": {
+      "title": "The Codriva Story",
+      "cod": {
+        "title": "Cod",
+        "description": "An evident connection to coding, software development & technology."
+      },
+      "riva": {
+        "title": "riva",
+        "description": "A smooth flow (like a river) — representing innovation, delivery & agility."
+      },
+      "motto": {
+        "line1": "Where code meets innovation",
+        "line2": "Flow of smart solutions through code"
+      },
+      "implication": "Implying \"we help you arrive at success through code.\""
+    }
+  }
+}

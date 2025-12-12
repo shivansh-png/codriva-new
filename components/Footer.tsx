@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useRef } from "react";
@@ -6,12 +7,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
 import { useLayoutEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+
 const Footer = () => {
+  const { t } = useTranslation(['common', 'pages']);
   const footerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -30,73 +34,73 @@ const Footer = () => {
   }, []);
 
   const footerLinks = {
-    Company: [
-      { name: "About", href: "/about" },
-      { name: "Services", href: "/services" },
-      { name: "Industries", href: "/industries" },
-      { name: "Careers", href: "/careers" },
-      { name: "Contact Us", href: "/contact" },
+    [t('common:footer.company')]: [
+      { name: t('common:footer.links.about'), href: "/about" },
+      { name: t('common:footer.links.services'), href: "/services" },
+      { name: t('common:footer.links.industries'), href: "/industries" },
+      { name: t('common:footer.links.careers'), href: "/careers" },
+      { name: t('common:footer.links.contactUs'), href: "/contact" },
     ],
 
-    Industries: [
+    [t('common:footer.industries')]: [
       {
-        name: "Retail & E-Commerce",
+        name: t('common:footer.links.retailEcommerce'),
         href: "/industries/retail",
       },
       {
-        name: "Travel & Hospitality",
+        name: t('common:footer.links.travelHospitality'),
         href: "/industries/travel",
       },
       {
-        name: "Restaurant & Cloud Kitchen",
+        name: t('common:footer.links.restaurantCloudKitchen'),
         href: "/industries/restaurant",
       },
       {
-        name: "Logistics & Supply Chain",
+        name: t('common:footer.links.logisticsSupplyChain'),
         href: "/industries/logistics",
       },
       {
-        name: "Healthcare & life Science",
+        name: t('common:footer.links.healthcareLifeScience'),
         href: "/industries/healthcare",
       },
       {
-        name: "On Demand Platforms",
+        name: t('common:footer.links.onDemandPlatforms'),
         href: "/industries/ondemand",
       },
       {
-        name: "View More ↗",
+        name: t('common:footer.links.viewMore'),
         href: "/industries",
         viewMore: true,
       },
     ],
 
-    Services: [
+    [t('common:footer.services')]: [
       {
-        name: "Custom Software Development",
+        name: t('common:footer.links.customSoftwareDevelopment'),
         href: "/services/custom-software-development",
       },
       {
-        name: "Mobile App Development",
+        name: t('common:footer.links.mobileAppDevelopment'),
         href: "/services/mobile-app-development",
       },
       {
-        name: "API & System Integration",
+        name: t('common:footer.links.apiSystemIntegration'),
         href: "/services/api-system-integration",
       },
       {
-        name: "AI & Machine Learning",
+        name: t('common:footer.links.aiMachineLearning'),
         href: "/services/ai-machine-learning",
       },
       {
-        name: "Data Analytics",
+        name: t('common:footer.links.dataAnalytics'),
         href: "/services/data-analytics",
       },
       {
-        name: "Support & Maintenance",
+        name: t('common:footer.links.supportMaintenance'),
         href: "/services/support-maintenance",
       },
       {
-        name: "View More ↗",
+        name: t('common:footer.links.viewMore'),
         href: "/services",
         viewMore: true,
       },
@@ -136,9 +140,7 @@ const Footer = () => {
               </a>
 
               <p className="text-[#f0f6fc] mb-6 leading-relaxed">
-                Your trusted technology partner. We deliver custom software
-                solutions, digital transformation services, and innovative
-                technology consulting.
+                {t('common:footer.description')}
               </p>
 
               {/* Social icons */}
@@ -165,7 +167,9 @@ const Footer = () => {
               </div>
 
               {/* CONNECT */}
-              <h3 className="text-white font-bold text-xl tracking-wide mb-3 uppercase">Connect</h3>
+              <h3 className="text-white font-bold text-xl tracking-wide mb-3 uppercase">
+                {t('common:footer.connect')}
+              </h3>
               <ul className="space-y-3">
                 <li>
                   <a
@@ -199,9 +203,8 @@ const Footer = () => {
                       <li key={link.name}>
                         <Link
                           href={link.href}
-                          className={`text-lg text-[#f0f6fc] hover:text-white transition ${
-                            link.viewMore ? "underline underline-offset-4" : ""
-                          }`}
+                          className={`text-lg text-[#f0f6fc] hover:text-white transition ${link.viewMore ? "underline underline-offset-4" : ""
+                            }`}
                         >
                           {link.name}
                         </Link>
@@ -218,7 +221,7 @@ const Footer = () => {
         <div className="border-t border-[#30363d] py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-[#f0f6fc] text-sm mb-4 md:mb-0">
-              Copyright ©{new Date().getFullYear()} Codriva All Rights Reserved.
+              {t('common:footer.copyright', { year: new Date().getFullYear() })}
             </p>
 
             <div className="flex space-x-6 text-sm">
@@ -226,13 +229,13 @@ const Footer = () => {
                 href="/privacy-policy"
                 className="text-[#f0f6fc] hover:text-white transition"
               >
-                Privacy Policy
+                {t('common:footer.privacyPolicy')}
               </a>
               <a
                 href="/terms-of-service"
                 className="text-[#f0f6fc] hover:text-white transition"
               >
-                Terms of Service
+                {t('common:footer.termsOfService')}
               </a>
             </div>
           </div>

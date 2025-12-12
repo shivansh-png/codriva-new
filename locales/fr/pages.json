@@ -1,0 +1,172 @@
+{
+  "about": {
+    "title": "À propos de Codriva",
+    "subtitle": "Votre partenaire technologique de confiance pour la transformation numérique et l'innovation.",
+    "description": "Codriva est une entreprise de transformation numérique et de développement de logiciels personnalisés dédiée à aider les entreprises à évoluer plus intelligemment en réimaginant l'expérience client, en rationalisant les opérations et en tirant parti de la technologie pour une croissance mesurable."
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions technologiques complètes adaptées à vos besoins métier.",
+    "description": "Nous offrons une gamme complète de services de développement logiciel et technologiques pour aider votre entreprise à prospérer à l'ère numérique."
+  },
+  "industries": {
+    "title": "Industries que nous servons",
+    "subtitle": "Expertise dans diverses industries avec des solutions sur mesure.",
+    "description": "Notre connaissance approfondie de l'industrie nous permet de fournir des solutions spécialisées pour divers secteurs d'activité."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Prêt à transformer votre entreprise? Discutons de votre projet.",
+    "description": "Contactez notre équipe pour discuter de la façon dont nous pouvons aider à donner vie à votre vision."
+  },
+  "privacyPolicy": {
+    "title": "Politique de confidentialité",
+    "description": "Notre engagement à protéger votre vie privée et vos informations personnelles."
+  },
+  "termsOfService": {
+    "title": "Conditions de service",
+    "description": "Conditions d'utilisation de nos services."
+  },
+  "industries": {
+    "retail": "Vente au détail et commerce électronique",
+    "travel": "Voyage et hôtellerie",
+    "restaurant": "Restaurant et cuisine en nuage",
+    "logistics": "Logistique et chaîne d'approvisionnement",
+    "healthcare": "Soins de santé et sciences de la vie",
+    "ondemand": "Plateformes à la demande",
+    "edtech": "EdTech",
+    "events": "Événements",
+    "fintech": "FinTech",
+    "media": "Médias",
+    "realestate": "Immobilier",
+    "telecom": "Télécommunications"
+  },
+  "services": {
+    "customSoftwareDevelopment": "Développement de logiciels personnalisés",
+    "mobileAppDevelopment": "Développement d'applications mobiles",
+    "apiSystemIntegration": "API et intégration système",
+    "aiMachineLearning": "IA et apprentissage automatique",
+    "dataAnalytics": "Analytique des données",
+    "supportMaintenance": "Support et maintenance",
+    "cloudSolutions": "Solutions cloud",
+    "cybersecurity": "Cybersécurité",
+    "productEngineering": "Ingénierie produit",
+    "qaTesting": "Tests QA",
+    "itConsulting": "Conseil IT",
+    "uiUxDesign": "Design UI/UX",
+    "webDevelopment": "Développement web",
+    "cloudDevOps": "Cloud DevOps",
+    "bigDataSolution": "Solutions big data"
+  },
+  "portfolio": {
+    "title": "Nos Industries et Services",
+    "subtitle": "Découvrez notre expertise dans diverses industries",
+    "categories": {
+      "all": "Tous",
+      "retail": "Détail",
+      "travel": "Voyage",
+      "restaurant": "Restaurant",
+      "logistics": "Logistique",
+      "healthcare": "Santé",
+      "ondemand": "Sur Demande"
+    },
+    "projects": {
+      "retail": {
+        "title": "Commerce de détail et E-commerce",
+        "description": "Solutions complètes de vente au détail incluant PDV, inventaire et plateformes e-commerce",
+        "tags": {
+          "ecommerce": "E-commerce",
+          "pos": "Système PDV",
+          "payment": "Passerelle de paiement"
+        }
+      },
+      "travel": {
+        "title": "Voyage et Hôtellerie",
+        "description": "Systèmes de réservation, gestion hôtelière et plateformes de voyage",
+        "tags": {
+          "booking": "Réservation",
+          "hotel": "Gestion hôtel",
+          "checkin": "Enregistrement",
+          "travel": "Voyage"
+        }
+      },
+      "restaurant": {
+        "title": "Restaurant et Alimentation",
+        "description": "Commande en ligne, PDV, systèmes d'affichage cuisine",
+        "tags": {
+          "ordering": "Commande",
+          "pos": "PDV",
+          "kitchen": "Cuisine"
+        }
+      },
+      "logistics": {
+        "title": "Logistique et Chaîne d'approvisionnement",
+        "description": "Gestion d'entrepôt, suivi de livraison, chaîne d'approvisionnement",
+        "tags": {
+          "supply": "Chaîne d'approvisionnement",
+          "warehouse": "Entrepôt",
+          "tracking": "Suivi"
+        }
+      },
+      "healthcare": {
+        "title": "Santé et Télémédecine",
+        "description": "Portails patients, systèmes DSE, plateformes de télémédecine",
+        "tags": {
+          "telemedicine": "Télémédecine",
+          "ehr": "DSE",
+          "portals": "Portails",
+          "analytics": "Analytique"
+        }
+      },
+      "ondemand": {
+        "title": "Services sur Demande",
+        "description": "Covoiturage, livraison de nourriture, plateformes de services",
+        "tags": {
+          "ride": "Covoiturage",
+          "delivery": "Livraison",
+          "platforms": "Plateformes"
+        }
+      }
+    },
+    "cta": {
+      "title": "Prêt à Démarrer Votre Projet?",
+      "description": "Construisons ensemble quelque chose d'extraordinaire. Contactez-nous pour une consultation gratuite."
+    }
+  },
+  "retailPage": {
+    "title": "Commerce de détail et E-commerce",
+    "heroSubtitle": "Solutions logicielles intelligentes pour le commerce moderne",
+    "heading": "Innovez votre parcours de vente au détail avec nous",
+    "description": "Dans le marché numérique actuel à rythme effréné, les entreprises de commerce de détail et de commerce électronique sont confrontées à des défis uniques. Nous autonomisons les détaillants avec des informations basées sur les données, des solutions axées sur le mobile, des systèmes omnicanal. Que vous lanciez un nouveau magasin ou modernisiez, nous vous aidons à rester compétitif.",
+    "solutions": {
+      "title": "Solutions que nous proposons",
+      "ecommerce": {
+        "title": "Développement de site web et d'application E-commerce",
+        "points": [
+          "Portails e-commerce personnalisés (B2B / B2C)",
+          "Développement Shopify, WooCommerce, Magento, OpenCart",
+          "Développement d'applications mobiles (Android/iOS) pour les achats"
+        ]
+      },
+      "pos": {
+        "title": "Intégration de système PDV (Point de Vente)",
+        "points": [
+          "Système PDV basé sur le cloud pour les magasins de détail",
+          "Support multi-magasin et multi-utilisateur",
+          "Synchronisation des stocks avec la plateforme e-commerce"
+        ]
+      },
+      "payment": {
+        "title": "Intégration de passerelle de paiement et portefeuille",
+        "points": [
+          "Razorpay, Paytm, Stripe, PayPal, etc.",
+          "Prise en charge UPI, carte de crédit/débit, BNPL"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Prêt à transformer votre entreprise de vente au détail?",
+      "description": "Discutons de la façon dont nous pouvons vous aider à innover et à croître."
+    }
+  }
+}

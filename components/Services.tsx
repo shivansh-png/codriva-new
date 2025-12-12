@@ -5,97 +5,68 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const services = [
-  {
-    icon: "💻",
-    title: "Custom Software Development",
-    description:
-      "Tailored solutions built from the ground up to meet your unique business needs.",
-    features: [
-      "Web Applications",
-      "Mobile Apps",
-      "API Development",
-      "System Integration",
-    ],
-    link: "/services/custom-software-development",
-    bg: "/assets/images/4380747.jpg",
-  },
-  {
-    icon: "📱",
-    title: "Mobile App Development",
-    description:
-      "High-performance mobile applications built for great usability, scalability, and engagement across devices.",
-    features: [
-      "Native iOS & Android Apps",
-      "Cross-platform Solutions",
-      "UI/UX for Mobile",
-      "App Store Deployment & Optimization",
-    ],
-    link: "/services/mobile-app-development",
-    bg: "/assets/images/Mobile-dev.jpg",
-  },
-  {
-    icon: "🔗",
-    title: "API & System Integration",
-    description:
-      "Seamless connectivity between your products, tools, and platforms to ensure smooth data flow and optimized operations.",
-    features: [
-      "Third-party API Integration",
-      "Custom API Development",
-      "Legacy System Integration",
-      "Workflow Automation",
-    ],
-    link: "/services/api-system-integration",
-    bg: "/assets/images/7015995.jpg",
-  },
-  {
-    icon: "🧠",
-    title: "AI & Machine Learning",
-    description:
-      "Intelligent solutions that automate processes and provide valuable insights.",
-    features: ["Predictive Analytics", "NLP", "Computer Vision", "Automation"],
-    link: "/services/ai-machine-learning",
-    bg: "/assets/images/43868976_2304.i039.016.F.m004.c9.AI generated art AI powered content creation isometric.jpg",
-  },
-  {
-    icon: "📊",
-    title: "Data Analytics",
-    description:
-      "Transform raw data into actionable insights for better decision making.",
-    features: [
-      "Data Visualization",
-      "Business Intelligence",
-      "Reporting",
-      "Dashboards",
-    ],
-    link: "/services/data-analytics",
-    bg: "/assets/images/12643932_5031659.jpg",
-  },
-  {
-    icon: "🔧",
-    title: "Support & Maintenance",
-    description:
-      "Proactive, reliable support to keep your systems secure, updated, and performing at their best.",
-    features: [
-      "Bug Fixes & Issue Resolution",
-      "Performance Optimization",
-      "Security Patching",
-      "Continuous Monitoring",
-    ],
-    link: "/services/support-maintenance",
-    bg: "/assets/images/21502.jpg",
-  },
-];
-
 const Services = () => {
+  const { t } = useTranslation(['home', 'common']);
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+
+  const services = [
+    {
+      icon: "💻",
+      title: t('home:services.list.0.title'),
+      description: t('home:services.list.0.description'),
+      features: t('home:services.list.0.features', { returnObjects: true }),
+      link: "/services/custom-software-development",
+      bg: "/assets/images/4380747.jpg",
+    },
+    {
+      icon: "📱",
+      title: t('home:services.list.1.title'),
+      description: t('home:services.list.1.description'),
+      features: t('home:services.list.1.features', { returnObjects: true }),
+      link: "/services/mobile-app-development",
+      bg: "/assets/images/Mobile-dev.jpg",
+    },
+    {
+      icon: "🔗",
+      title: t('home:services.list.2.title'),
+      description: t('home:services.list.2.description'),
+      features: t('home:services.list.2.features', { returnObjects: true }),
+      link: "/services/api-system-integration",
+      bg: "/assets/images/7015995.jpg",
+    },
+    {
+      icon: "🧠",
+      title: t('home:services.list.3.title'),
+      description: t('home:services.list.3.description'),
+      features: t('home:services.list.3.features', { returnObjects: true }),
+      link: "/services/ai-machine-learning",
+      bg: "/assets/images/43868976_2304.i039.016.F.m004.c9.AI generated art AI powered content creation isometric.jpg",
+    },
+    {
+      icon: "📊",
+      title: t('home:services.list.4.title'),
+      description: t('home:services.list.4.description'),
+      features: t('home:services.list.4.features', { returnObjects: true }),
+      link: "/services/data-analytics",
+      bg: "/assets/images/12643932_5031659.jpg",
+    },
+    {
+      icon: "🔧",
+      title: t('home:services.list.5.title'),
+      description: t('home:services.list.5.description'),
+      features: t('home:services.list.5.features', { returnObjects: true }),
+      link: "/services/support-maintenance",
+      bg: "/assets/images/21502.jpg",
+    },
+  ];
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -208,14 +179,13 @@ const Services = () => {
             ref={titleRef}
             className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6 font-display"
           >
-            Our{" "}
+            {t('home:services.title')}{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600">
-              Services
+              {t('home:services.titleHighlight')}
             </span>
           </h2>
           <p className="services-text text-xl text-[#656d76] dark:text-[#f0f6fc] max-w-3xl mx-auto">
-            We offer a comprehensive range of digital services to help your
-            business thrive in the modern world.
+            {t('home:services.subtitle')}
           </p>
         </div>
 
@@ -250,7 +220,7 @@ const Services = () => {
                   </p>
 
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, i) => (
+                    {(service.features as string[]).map((feature, i) => (
                       <li
                         key={i}
                         className="flex items-center text-sm text-[#24292f] dark:text-[#f0f6fc]"
@@ -278,21 +248,20 @@ const Services = () => {
         <div className="text-center mt-16">
           <div className="card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-4">
-              Ready to start your project?
+              {t('home:services.readyToStart.title')}
             </h3>
             <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6">
-              Let's discuss how we can help bring your vision to life with our
-              cutting-edge technology solutions.
+              {t('home:services.readyToStart.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
-                Get a free Consultation
+                {t('common:buttons.getFreeConsultation')}
               </Link>
               <Link
                 href="/services"
                 className="btn-outline dark:text-white dark:border-white"
               >
-                More Services
+                {t('common:buttons.moreServices')}
               </Link>
             </div>
           </div>

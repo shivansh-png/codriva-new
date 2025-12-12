@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "about": "About",
+    "services": "Services",
+    "industries": "Industries",
+    "careers": "Careers",
+    "contact": "Contact",
+    "freeConsultations": "Free Consultations"
+  },
+  "buttons": {
+    "letsTalk": "Let's Talk",
+    "getFreeConsultation": "Get a free Consultation",
+    "ourExpertise": "Our Expertise",
+    "viewAllServices": "View all Services",
+    "viewAllIndustries": "View all Industries",
+    "viewMore": "View More ↗",
+    "moreServices": "More Services",
+    "learnMore": "Learn More",
+    "readMore": "Read More"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "home": "Home",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "footer": {
+  "connect": "Connect",
+  "company": "Company",
+  "industries": "Industries",
+  "services": "Services",
+  "copyright": "Copyright ©{{year}} Codriva All Rights Reserved.",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfService": "Terms of Service",
+  "description": "Your trusted technology partner. We deliver custom software solutions, digital transformation services, and innovative technology consulting.",
+  "links": {
+    "about": "About",
+    "services": "Services",
+    "industries": "Industries",
+    "careers": "Careers",
+    "contactUs": "Contact Us",
+    "retailEcommerce": "Retail & E-Commerce",
+    "travelHospitality": "Travel & Hospitality",
+    "restaurantCloudKitchen": "Restaurant & Cloud Kitchen",
+    "logisticsSupplyChain": "Logistics & Supply Chain",
+    "healthcareLifeScience": "Healthcare & Life Science",
+    "onDemandPlatforms": "On Demand Platforms",
+    "viewMore": "View More ↗",
+    "customSoftwareDevelopment": "Custom Software Development",
+    "mobileAppDevelopment": "Mobile App Development",
+    "apiSystemIntegration": "API & System Integration",
+    "aiMachineLearning": "AI & Machine Learning",
+    "dataAnalytics": "Data Analytics",
+    "supportMaintenance": "Support & Maintenance"
+  }
+}
+}

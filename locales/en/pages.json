@@ -1,0 +1,172 @@
+{
+  "about": {
+    "title": "About Codriva",
+    "subtitle": "Your trusted technology partner for digital transformation and innovation.",
+    "description": "Codriva is a digital transformation and custom software development company dedicated to helping businesses scale smarter by reimagining customer experience, streamlining operations, and leveraging technology for measurable growth."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive technology solutions tailored to your business needs.",
+    "description": "We offer a complete range of software development and technology services to help your business thrive in the digital age."
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Expertise across diverse industries with tailored solutions.",
+    "description": "Our deep industry knowledge enables us to provide specialized solutions for various business verticals."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to transform your business? Let's discuss your project.",
+    "description": "Get in touch with our team to discuss how we can help bring your vision to life."
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "Our commitment to protecting your privacy and personal information."
+  },
+  "termsOfService": {
+    "title": "Terms of Service",
+    "description": "Terms and conditions for using our services."
+  },
+  "industries": {
+    "retail": "Retail & E-Commerce",
+    "travel": "Travel & Hospitality",
+    "restaurant": "Restaurant & Cloud Kitchen",
+    "logistics": "Logistics & Supply Chain",
+    "healthcare": "Healthcare & Life Science",
+    "ondemand": "On Demand Platforms",
+    "edtech": "EdTech",
+    "events": "Events",
+    "fintech": "FinTech",
+    "media": "Media",
+    "realestate": "Real Estate",
+    "telecom": "Telecommunications"
+  },
+  "services": {
+    "customSoftwareDevelopment": "Custom Software Development",
+    "mobileAppDevelopment": "Mobile App Development",
+    "apiSystemIntegration": "API & System Integration",
+    "aiMachineLearning": "AI & Machine Learning",
+    "dataAnalytics": "Data Analytics",
+    "supportMaintenance": "Support & Maintenance",
+    "cloudSolutions": "Cloud Solutions",
+    "cybersecurity": "Cybersecurity",
+    "productEngineering": "Product Engineering",
+    "qaTesting": "QA Testing",
+    "itConsulting": "IT Consulting",
+    "uiUxDesign": "UI/UX Design",
+    "webDevelopment": "Web Development",
+    "cloudDevOps": "Cloud DevOps",
+    "bigDataSolution": "Big Data Solutions"
+  },
+  "portfolio": {
+    "title": "Our Industries & Services",
+    "subtitle": "Explore our expertise across various industries",
+    "categories": {
+      "all": "All",
+      "retail": "Retail",
+      "travel": "Travel",
+      "restaurant": "Restaurant",
+      "logistics": "Logistics",
+      "healthcare": "Healthcare",
+      "ondemand": "On-Demand"
+    },
+    "projects": {
+      "retail": {
+        "title": "Retail & E-Commerce",
+        "description": "Complete retail solutions including POS, inventory, and e-commerce platforms",
+        "tags": {
+          "ecommerce": "E-commerce",
+          "pos": "POS System",
+          "payment": "Payment Gateway"
+        }
+      },
+      "travel": {
+        "title": "Travel & Hospitality",
+        "description": "Booking systems, hotel management, and travel platforms",
+        "tags": {
+          "booking": "Booking",
+          "hotel": "Hotel Mgmt",
+          "checkin": "Check-in",
+          "travel": "Travel"
+        }
+      },
+      "restaurant": {
+        "title": "Restaurant & Food",
+        "description": "Online ordering, POS, kitchen display systems",
+        "tags": {
+          "ordering": "Ordering",
+          "pos": "POS",
+          "kitchen": "Kitchen"
+        }
+      },
+      "logistics": {
+        "title": "Logistics & Supply Chain",
+        "description": "Warehouse management, delivery tracking, supply chain",
+        "tags": {
+          "supply": "Supply Chain",
+          "warehouse": "Warehouse",
+          "tracking": "Tracking"
+        }
+      },
+      "healthcare": {
+        "title": "Healthcare & Telemedicine",
+        "description": "Patient portals, EHR systems, telemedicine platforms",
+        "tags": {
+          "telemedicine": "Telemedicine",
+          "ehr": "EHR",
+          "portals": "Portals",
+          "analytics": "Analytics"
+        }
+      },
+      "ondemand": {
+        "title": "On-Demand Services",
+        "description": "Ride-sharing, food delivery, service platforms",
+        "tags": {
+          "ride": "Ride Sharing",
+          "delivery": "Delivery",
+          "platforms": "Platforms"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Let's build something amazing together. Get in touch for a free consultation."
+    }
+  },
+  "retailPage": {
+    "title": "Retail & E-Commerce",
+    "heroSubtitle": "Smart Software Solutions for Modern Retail",
+    "heading": "Innovate Your Retail Journey with Us",
+    "description": "In today's fast-paced digital marketplace, Retail and E-Commerce businesses face unique challenges. We empower retailers with data-driven insights, mobile-first solutions, omnichannel systems. Whether launching a new store or modernizing, we help you stay competitive.",
+    "solutions": {
+      "title": "Solutions We Serve",
+      "ecommerce": {
+        "title": "E-commerce Website & App Development",
+        "points": [
+          "Custom e-commerce portals (B2B / B2C)",
+          "Shopify, WooCommerce, Magento, OpenCart development",
+          "Mobile app development (Android/iOS) for shopping"
+        ]
+      },
+      "pos": {
+        "title": "POS (Point of Sale) System Integration",
+        "points": [
+          "Cloud-based POS system for retail stores",
+          "Multi-store & multi-user support",
+          "Inventory sync with e-commerce platform"
+        ]
+      },
+      "payment": {
+        "title": "Payment Gateway & Wallet Integration",
+        "points": [
+          "Razorpay, Paytm, Stripe, PayPal, etc.",
+          "Support for UPI, credit/debit card, BNPL"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Retail Business?",
+      "description": "Let's discuss how we can help you innovate and grow."
+    }
+  }
+}

@@ -1,142 +1,126 @@
-"use client";
+'use client';
 
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
-import Lottie from "lottie-react";
 import DotLottie from "./DotLottie";
+import { useTranslation } from 'react-i18next';
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const projects = [
-  {
-    id: 1,
-    title: "Retail & E-Commerce",
-    description:
-      "Custom e-commerce platforms with advanced inventory management, payment gateways, and omnichannel retail solutions.",
-    image:
-      "/animations/retail.json",
-    tags: ["E-commerce", "POS Systems", "Payment Integration"],
-    heading: "Innovate Your Retail Journey with Us",
-    para: "In today's fast-paced digital marketplace, Retail and E-Commerce businesses face unique challenges...We empower retailers with data-driven insights, mobile-first solutions, omnichannel systems...Whether launching a new store or modernizing, Codriva helps you stay competitive...",
-    category: "retail",
-    link: "/industries/retail",
-  },
-
-  // UPDATED
-  {
-    id: 2,
-    title: "Travel & Hospitality",
-    description:
-      "End-to-end travel and hospitality solutions including booking engines, hotel management systems, digital check-in, and customer experience automation.",
-    image:
-      "/animations/travel.json",
-    tags: [
-      "Booking Systems",
-      "Hotel Management",
-      "Digital Check-in",
-      "Travel Apps",
-    ],
-    heading:
-      "Transform the Travel Experience with Intelligent Digital Solutions",
-    para: "The travel and hospitality industry demands seamless guest experiences, efficient operations, and real-time service delivery. We build intelligent platforms that enhance bookings, streamline hotel operations, automate check-ins, and improve customer engagement. Whether you’re scaling a travel brand or optimizing hospitality operations, Codriva helps create delightful, connected journeys for your customers.",
-    category: "travel",
-    link: "/industries/travel",
-  },
-
-  // UPDATED
-  {
-    id: 3,
-    title: "Restaurant & Cloud Kitchen",
-    description:
-      "Smart restaurant and cloud kitchen solutions featuring online ordering, POS integration, menu management, and real-time delivery tracking.",
-    image:
-      "/animations/order.json",
-    tags: ["Online Ordering", "POS Integration", "Kitchen Automation"],
-    heading: "Next-Gen Solutions for Modern Dining & Cloud Kitchens",
-    para: "Restaurants and cloud kitchens thrive on speed, accuracy, and customer satisfaction. Our solutions simplify online ordering, integrate POS systems, optimize kitchen workflows, and enable real-time delivery visibility. From dine-in brands to multi-kitchen delivery ecosystems, Codriva empowers food businesses to operate smarter, faster, and more profitably.",
-
-    category: "restaurant",
-    link: "/industries/restaurant",
-  },
-
-  {
-    id: 4,
-    title: "Logistics & Supply Chain",
-    description:
-      "End-to-end logistics solutions with real-time tracking, warehouse management, and supply chain optimization.",
-    image:
-      "/animations/trade.json",
-    tags: ["Supply Chain", "Warehouse Management", "Tracking"],
-    heading: "Redefining Logistics With Smart Automation and Visibility",
-    para: "Logistics and supply chain organizations need precision, transparency, and strong coordination. We develop systems that offer advanced tracking, optimized routing, warehouse automation, and data-driven decision making. Whether managing fleets, distribution, or warehousing, Codriva ensures your operations stay efficient, agile, and future-ready.",
-
-    category: "logistics",
-    link: "/industries/logistics",
-  },
-
-  // UPDATED
-  {
-    id: 5,
-    title: "Healthcare & life Science",
-    description:
-      "Advanced healthcare and life science platforms including patient management systems, telemedicine, EHR/EMR, and health analytics dashboards.",
-    image:
-      "/animations/health.json",
-    tags: ["Telemedicine", "EHR/EMR", "Patient Portals", "Health Analytics"],
-    heading: "Empowering Healthcare Through Secure and Intelligent Technology",
-    para: "Healthcare and life science ecosystems rely on secure, compliant, and patient-centric platforms. We build modern healthcare systems including telemedicine, EHR/EMR, patient portals, and analytics dashboards to enhance care delivery and operational efficiency. Codriva enables healthcare providers to innovate responsibly while improving patient outcomes.",
-
-    category: "healthcare",
-    link: "/industries/healthcare",
-  },
-
-  {
-    id: 6,
-    title: "On Demand Platforms",
-    description:
-      "Scalable on-demand service platforms for ride-sharing, delivery, and service-based businesses.",
-    image:
-      "/animations/demand.json",
-    tags: ["Ride-Sharing", "Delivery Apps", "Service Platforms"],
-    heading:
-      "Build High-Performance On-Demand Platforms for the Modern Economy",
-    para: "On-demand businesses require scalable technology, seamless user experiences, and real-time operations. We create platforms for ride-sharing, delivery, and service marketplaces designed for reliability and rapid growth. From intuitive user apps to powerful admin dashboards, Codriva helps you launch and scale on-demand ecosystems with confidence.",
-
-    category: "ondemand",
-    link: "/industries/ondemand",
-  },
-];
-
-const categories = [
-  { id: "all", name: "Top Industries" },
-  { id: "retail", name: "Retail & E-Commerce" },
-  { id: "travel", name: "Travel & Hospitality" },
-  { id: "restaurant", name: "Restaurant & Cloud Kitchen" },
-  { id: "logistics", name: "Logistics & Supply Chain" },
-  { id: "healthcare", name: "Healthcare & Life Science" },
-  { id: "ondemand", name: "On Demand Platforms" },
-];
-
 const Portfolio = () => {
+  const { t } = useTranslation(['pages', 'common']);
+  
+  const categories = [
+    { id: "all", name: t('pages:portfolio.categories.all') },
+    { id: "retail", name: t('pages:portfolio.categories.retail') },
+    { id: "travel", name: t('pages:portfolio.categories.travel') },
+    { id: "restaurant", name: t('pages:portfolio.categories.restaurant') },
+    { id: "logistics", name: t('pages:portfolio.categories.logistics') },
+    { id: "healthcare", name: t('pages:portfolio.categories.healthcare') },
+    { id: "ondemand", name: t('pages:portfolio.categories.ondemand') },
+  ];
+
   const [activeCategory, setActiveCategory] = useState("all");
-  const [filteredProjects, setFilteredProjects] = useState(projects);
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  // Get filtered projects based on active category
+  const getFilteredProjects = () => {
+    const allProjects = [
+      {
+        id: 1,
+        title: t('pages:portfolio.projects.retail.title'),
+        description: t('pages:portfolio.projects.retail.description'),
+        image: "/animations/retail.json",
+        tags: [
+          t('pages:portfolio.projects.retail.tags.ecommerce'),
+          t('pages:portfolio.projects.retail.tags.pos'),
+          t('pages:portfolio.projects.retail.tags.payment')
+        ],
+        category: "retail",
+        link: "/industries/retail",
+      },
+      {
+        id: 2,
+        title: t('pages:portfolio.projects.travel.title'),
+        description: t('pages:portfolio.projects.travel.description'),
+        image: "/animations/travel.json",
+        tags: [
+          t('pages:portfolio.projects.travel.tags.booking'),
+          t('pages:portfolio.projects.travel.tags.hotel'),
+          t('pages:portfolio.projects.travel.tags.checkin'),
+          t('pages:portfolio.projects.travel.tags.travel')
+        ],
+        category: "travel",
+        link: "/industries/travel",
+      },
+      {
+        id: 3,
+        title: t('pages:portfolio.projects.restaurant.title'),
+        description: t('pages:portfolio.projects.restaurant.description'),
+        image: "/animations/order.json",
+        tags: [
+          t('pages:portfolio.projects.restaurant.tags.ordering'),
+          t('pages:portfolio.projects.restaurant.tags.pos'),
+          t('pages:portfolio.projects.restaurant.tags.kitchen')
+        ],
+        category: "restaurant",
+        link: "/industries/restaurant",
+      },
+      {
+        id: 4,
+        title: t('pages:portfolio.projects.logistics.title'),
+        description: t('pages:portfolio.projects.logistics.description'),
+        image: "/animations/trade.json",
+        tags: [
+          t('pages:portfolio.projects.logistics.tags.supply'),
+          t('pages:portfolio.projects.logistics.tags.warehouse'),
+          t('pages:portfolio.projects.logistics.tags.tracking')
+        ],
+        category: "logistics",
+        link: "/industries/logistics",
+      },
+      {
+        id: 5,
+        title: t('pages:portfolio.projects.healthcare.title'),
+        description: t('pages:portfolio.projects.healthcare.description'),
+        image: "/animations/health.json",
+        tags: [
+          t('pages:portfolio.projects.healthcare.tags.telemedicine'),
+          t('pages:portfolio.projects.healthcare.tags.ehr'),
+          t('pages:portfolio.projects.healthcare.tags.portals'),
+          t('pages:portfolio.projects.healthcare.tags.analytics')
+        ],
+        category: "healthcare",
+        link: "/industries/healthcare",
+      },
+      {
+        id: 6,
+        title: t('pages:portfolio.projects.ondemand.title'),
+        description: t('pages:portfolio.projects.ondemand.description'),
+        image: "/animations/demand.json",
+        tags: [
+          t('pages:portfolio.projects.ondemand.tags.ride'),
+          t('pages:portfolio.projects.ondemand.tags.delivery'),
+          t('pages:portfolio.projects.ondemand.tags.platforms')
+        ],
+        category: "ondemand",
+        link: "/industries/ondemand",
+      },
+    ];
+
     if (activeCategory === "all") {
-      setFilteredProjects(projects);
-    } else {
-      setFilteredProjects(
-        projects.filter((project) => project.category === activeCategory)
-      );
+      return allProjects;
     }
-  }, [activeCategory]);
+    return allProjects.filter((project) => project.category === activeCategory);
+  };
+
+  const filteredProjects = getFilteredProjects();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -268,6 +252,7 @@ const Portfolio = () => {
       <div className="absolute top-16 right-16 w-20 h-20 bg-blue-400/20 dark:bg-blue-500/30 rounded-full blur-2xl animate-pulse"></div>
       <div className="absolute bottom-16 left-16 w-28 h-28 bg-indigo-400/20 dark:bg-indigo-500/30 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute top-1/3 left-1/3 w-12 h-12 bg-blue-300/20 dark:bg-blue-400/30 rounded-full blur-xl animate-pulse"></div>
+      
       <div className="container-max relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -276,12 +261,11 @@ const Portfolio = () => {
             className="text-4xl md:text-5xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-6 font-display"
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600">
-              Industries
+              {t('pages:portfolio.title')}
             </span>
           </h2>
           <p className="portfolio-text text-xl text-[#656d76] dark:text-[#f0f6fc] max-w-3xl mx-auto mb-6">
-            Discover how we transform businesses across diverse industries with
-            innovative digital solutions.
+            {t('pages:portfolio.subtitle')}
           </p>
 
           {/* Category Filter */}
@@ -292,7 +276,7 @@ const Portfolio = () => {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
                   activeCategory === category.id
-                    ? "bg-[#0969da] text-white dark:bg-[#58a6ff] dark:text-[#f0f6fc ]"
+                    ? "bg-[#0969da] text-white dark:bg-[#58a6ff] dark:text-[#f0f6fc]"
                     : "text-[#656d76] dark:text-[#f0f6fc] hover:bg-[#f0f6fc] dark:hover:bg-[#21262d]"
                 }`}
               >
@@ -312,10 +296,7 @@ const Portfolio = () => {
               key={project.id}
               className="project-card card hover-card overflow-hidden"
             >
-              <Link
-                href={project.link}
-                //className="inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-900 rounded-md hover:bg-gray-100 transition-colors duration-200 font-medium"
-              >
+              <Link href={project.link}>
                 <div className="relative">
                   <DotLottie
                     src={project.image}
@@ -346,22 +327,20 @@ const Portfolio = () => {
         <div className="text-center mt-16">
           <div className="card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-[#24292f] dark:text-[#f0f6fc] mb-4">
-              Ready to Transform Your Industry?
+              {t('pages:portfolio.cta.title')}
             </h3>
             <p className="text-[#656d76] dark:text-[#f0f6fc] mb-6">
-              Discover how our industry-specific solutions can drive your
-              business forward. Let's discuss your unique challenges and
-              opportunities.
+              {t('pages:portfolio.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
-                Get a free Consultation
+                {t('common:buttons.getFreeConsultation')}
               </Link>
               <Link
                 href="/industries"
                 className="btn-outline dark:text-white dark:border-white"
               >
-                More Industries
+                {t('common:buttons.moreServices')}
               </Link>
             </div>
           </div>
